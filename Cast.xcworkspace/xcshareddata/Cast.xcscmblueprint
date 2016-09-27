@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A85F51A06FB492496D8D3F4BBED07031DD9ECE9B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "28FBE7A174A52AACC7306DD60D1AE5B73553FD57" : 9223372036854775807,
+    "A85F51A06FB492496D8D3F4BBED07031DD9ECE9B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C32C5E58-2775-49B5-B706-BEFFF506B239",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "28FBE7A174A52AACC7306DD60D1AE5B73553FD57" : "",
+    "A85F51A06FB492496D8D3F4BBED07031DD9ECE9B" : "Cast\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Cast",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Cast.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.nextacademy.com:MunKeong_Yong\/SpecialContacts",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "28FBE7A174A52AACC7306DD60D1AE5B73553FD57"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:imraphraph\/Cast.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A85F51A06FB492496D8D3F4BBED07031DD9ECE9B"
+    }
+  ]
+}
