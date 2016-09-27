@@ -126,8 +126,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let sourceApplication = options[.sourceApplication] as? String
         let annotation = options[.annotation]
-        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication!, annotation: annotation!)
-        
+        return FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: sourceApplication!, annotation: nil)
+    
 
     }
     
