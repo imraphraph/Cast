@@ -18,6 +18,8 @@
 		530922C01D9A221A00AA9EEB /* Notifications.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530922BF1D9A221A00AA9EEB /* Notifications.storyboard */; };
 		530922C31D9A22A700AA9EEB /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530922C21D9A22A700AA9EEB /* FeedViewController.swift */; };
 		530922C91D9A288E00AA9EEB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 530922C81D9A288E00AA9EEB /* GoogleService-Info.plist */; };
+		530922CB1D9A508400AA9EEB /* CastersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530922CA1D9A508400AA9EEB /* CastersViewController.swift */; };
+		530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530922CC1D9A540700AA9EEB /* DetailCastViewController.swift */; };
 		53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */; };
 		53DEFDF61D9A1C1400078C36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF51D9A1C1400078C36 /* ViewController.swift */; };
 		53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDF71D9A1C1400078C36 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		530922BF1D9A221A00AA9EEB /* Notifications.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notifications.storyboard; sourceTree = "<group>"; };
 		530922C21D9A22A700AA9EEB /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		530922C81D9A288E00AA9EEB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		530922CA1D9A508400AA9EEB /* CastersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastersViewController.swift; sourceTree = "<group>"; };
+		530922CC1D9A540700AA9EEB /* DetailCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCastViewController.swift; sourceTree = "<group>"; };
 		53DEFDF01D9A1C1400078C36 /* Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DEFDF51D9A1C1400078C36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 			isa = PBXGroup;
 			children = (
 				530922C21D9A22A700AA9EEB /* FeedViewController.swift */,
+				530922CA1D9A508400AA9EEB /* CastersViewController.swift */,
+				530922CC1D9A540700AA9EEB /* DetailCastViewController.swift */,
 			);
 			name = FeedViewController;
 			sourceTree = "<group>";
@@ -539,11 +545,13 @@
 			files = (
 				530922AF1D9A1FF700AA9EEB /* SignInViewController.swift in Sources */,
 				53DEFDF61D9A1C1400078C36 /* ViewController.swift in Sources */,
+				530922CB1D9A508400AA9EEB /* CastersViewController.swift in Sources */,
 				53DEFDFC1D9A1C1400078C36 /* Cast.xcdatamodeld in Sources */,
 				530922B41D9A205000AA9EEB /* WelcomeViewController.swift in Sources */,
 				53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */,
 				530922B11D9A200400AA9EEB /* SignUpViewController.swift in Sources */,
 				530922C31D9A22A700AA9EEB /* FeedViewController.swift in Sources */,
+				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
