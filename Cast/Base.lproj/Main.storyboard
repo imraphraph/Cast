@@ -18,9 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pexels-photo" translatesAutoresizingMaskIntoConstraints="NO" id="9km-yI-DVt">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-photo" translatesAutoresizingMaskIntoConstraints="NO" id="9km-yI-DVt">
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose your sign in method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ai-jt-YRI">
@@ -30,6 +28,8 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <color key="textColor" red="0.98080111319999996" green="1" blue="0.96352773300000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cast" translatesAutoresizingMaskIntoConstraints="NO" id="yM4-ri-wZ1">
                                 <constraints>
@@ -89,11 +89,15 @@
                             <constraint firstAttribute="trailing" secondItem="yM4-ri-wZ1" secondAttribute="trailing" constant="68" id="DsR-cr-P9V"/>
                             <constraint firstItem="yM4-ri-wZ1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="K2N-d0-6Le"/>
                             <constraint firstAttribute="trailing" secondItem="7ai-jt-YRI" secondAttribute="trailing" id="QD7-mc-cyb"/>
+                            <constraint firstItem="9km-yI-DVt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RkV-Qi-yFf"/>
                             <constraint firstItem="7ai-jt-YRI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sc8-xG-Puf"/>
                             <constraint firstItem="Ntf-fE-Qj0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YeI-Wd-OYo"/>
+                            <constraint firstAttribute="trailing" secondItem="9km-yI-DVt" secondAttribute="trailing" id="b5o-cC-vcq"/>
                             <constraint firstItem="7ai-jt-YRI" firstAttribute="top" secondItem="yM4-ri-wZ1" secondAttribute="bottom" constant="8" id="fMZ-0E-WkQ"/>
                             <constraint firstItem="yM4-ri-wZ1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="67" id="gyj-lv-odO"/>
+                            <constraint firstItem="9km-yI-DVt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lQa-A2-mzm"/>
                             <constraint firstItem="Ntf-fE-Qj0" firstAttribute="top" secondItem="7ai-jt-YRI" secondAttribute="bottom" constant="8" id="qUw-bJ-3Fd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9km-yI-DVt" secondAttribute="bottom" id="z5d-9d-Y6V"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Rw-IC-gtj"/>
