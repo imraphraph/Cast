@@ -370,6 +370,7 @@
 				TargetAttributes = {
 					53DEFDEF1D9A1C1400078C36 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F35T3HFQ4T;
 						LastSwiftMigration = 0800;
 					};
 					53DEFE061D9A1C1400078C36 = {
@@ -724,6 +725,7 @@
 			baseConfigurationReference = 9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F35T3HFQ4T;
 				INFOPLIST_FILE = Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cast.Cast;
@@ -737,6 +739,7 @@
 			baseConfigurationReference = A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = F35T3HFQ4T;
 				INFOPLIST_FILE = Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cast.Cast;
