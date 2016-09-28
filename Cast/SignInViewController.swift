@@ -11,6 +11,8 @@ import FirebaseAuth
 import FBSDKLoginKit
 
 class SignInViewController: UIViewController {
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +22,14 @@ class SignInViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
+        
         }
 
+    @IBAction func SignUpButton(_ sender: AnyObject) {
+        
+        performSegue(withIdentifier: "SignUpSegue", sender: self)
+        
+    }
     @IBAction func facebookButton(_ sender: AnyObject) {
         
         let facebookLogin = FBSDKLoginManager()
@@ -54,6 +62,24 @@ class SignInViewController: UIViewController {
                 print("successfully authenticated with Firebase")
             }
         })
+    }
+    
+    @IBAction func signInButton(_ sender: AnyObject) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                if error == nil {
+                 print("user authenticated with Firebase")
+                }
+            })
+        }
+        
+    }
+    
+    @IBAction func forgotPassButton(_ sender: AnyObject) {
+        
+        performSegue(withIdentifier: "forgotPassSegue", sender: self)
+        
     }
     }
 
