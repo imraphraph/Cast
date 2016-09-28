@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     
     func dismissKeyboard() {
+        usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         emailTextField.resignFirstResponder()
     }
