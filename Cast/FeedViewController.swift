@@ -8,12 +8,56 @@
 
 import UIKit
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var topScrollView: UIScrollView!
+    
+    var modelImage: [UIImage] = [
+        UIImage(named: "cosplay")!,
+        UIImage(named: "cowgirl")!,
+        UIImage(named: "model")!,
+        UIImage(named: "yuna")!,
+        UIImage(named: "yuna2")!
+    ]
+  
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configurePageControl()
+        
+        self.topScrollView.delegate = self
+        
+        for index in 0..<4 {
+            
+            self.topScrollView.isPagingEnabled = true
+        }
+        
+        pageControl.addTarget(self, action: Selector("changePage:"), for: UIControlEvents.valueChanged)
+    }
+
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        self.pageControl.numberOfPages = 3
+        self.pageControl.currentPage = 0
+        
+    }
+    
+    // MARK : TO CHANGE WHILE CLICKING ON PAGE CONTROL
+    func changePage(sender: AnyObject) -> () {
+        let x = CGFloat(pageControl.currentPage) * topScrollView.frame.size.width
+        topScrollView.setContentOffset(CGPoint(x:x , y:0), animated: true)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +65,25 @@ class FeedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let destination = segue.destination as! CastersViewController
+        if segue.identifier == "1stSegue"{
+        destination.images = [image1.image!]
+        destination.images += modelImage
+            
+        }
+        else if segue.identifier == "2ndSegue"{
+            destination.images = [image2.image!]
+            destination.images += modelImage
+        }
+        else if segue.identifier == "3rdSegue"{
+            destination.images = [image3.image!]
+            destination.images += modelImage
+        }
+        else if segue.identifier == "4thSegue"{
+            destination.images = [image4.image!]
+            destination.images += modelImage
+        }
     }
-    */
-
 }
