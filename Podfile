@@ -11,6 +11,7 @@ target 'Cast' do
   	pod 'GoogleSignIn'
   	pod 'FirebaseDatabase'
   	pod 'Firebase/Storage'
+#    pod 'Bolts-Swift'
 	
 
   target 'CastTests' do
