@@ -146,9 +146,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-Ab-DMO">
-                                <frame key="frameInset" minX="300" minY="115" width="32" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-Ab-DMO">
+                                <frame key="frameInset" minX="310" minY="115" width="32" height="24"/>
                                 <state key="normal" title="Button" image="calendar"/>
                                 <connections>
                                     <action selector="onCalendarPressed:" destination="45W-Hr-Xxz" eventType="touchUpInside" id="3tA-Va-aJv"/>
@@ -172,6 +171,7 @@
                             <constraint firstItem="Pji-dm-d0S" firstAttribute="top" secondItem="HF1-RR-32B" secondAttribute="bottom" constant="25" id="mmv-s3-YJU"/>
                             <constraint firstItem="HF1-RR-32B" firstAttribute="leading" secondItem="P90-q6-jpR" secondAttribute="trailing" constant="10" id="oUT-qi-aOo"/>
                             <constraint firstItem="Rqg-is-MkO" firstAttribute="top" secondItem="Pji-dm-d0S" secondAttribute="bottom" constant="10" id="sR4-De-gYg"/>
+                            <constraint firstItem="yy5-Ab-DMO" firstAttribute="leading" secondItem="HF1-RR-32B" secondAttribute="trailing" id="sVd-Ia-6te"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

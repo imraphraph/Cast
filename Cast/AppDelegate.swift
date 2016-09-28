@@ -17,14 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // load storyboard
-            let storyboard = UIStoryboard(name: "Cast", bundle: Bundle.main)
-
-            // load view controller with the storyboardID of ChatListViewController
-            let ChatListViewController = storyboard.instantiateViewController(withIdentifier: "NewCastVC")
-            
-            self.window?.rootViewController = ChatListViewController
-
         return true
     }
 
