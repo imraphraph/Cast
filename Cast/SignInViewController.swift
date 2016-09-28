@@ -7,29 +7,55 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FBSDKLoginKit
 
 class SignInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func facebookButton(_ sender: AnyObject) {
+        
+        let facebookLogin = FBSDKLoginManager()
+        
+        //read from email address
+        //viewcontroller requesting it
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                print ("Unable to authenticate with Facebook - \(error)")
+            }else if result?.isCancelled == true {
+                print("User cancelled Facebook authentication")
+            } else {
+                print("successfully authenticated with Facebook")
+                //use token string to authenticate with Firebase
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                
+                //calling the firebaseAuthApps
+                self.firebaseAuthByApps(credential)
+            }
+        }  
+        
     }
-    */
+    
+    func firebaseAuthByApps(_ credential: FIRAuthCredential) {
+    
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+             print("unable to authenticate with Firebase - \(error)")
+            } else {
+                print("successfully authenticated with Firebase")
+            }
+        })
+    }
+    }
 
-}
+ 
+

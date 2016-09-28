@@ -28,6 +28,11 @@
 		53DEFE171D9A1C1400078C36 /* CastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFE161D9A1C1400078C36 /* CastUITests.swift */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
+		B5F148DE1D9A741200286B3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */; };
+		B5F148DF1D9A741200286B3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */; };
+		B5F148E31D9A7B7800286B3F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148E21D9A7B7800286B3F /* Bolts.framework */; };
+		B5F148E61D9A7BBD00286B3F /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F148E41D9A7BBD00286B3F /* AccountKitStrings.bundle */; };
+		B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F148E51D9A7BBD00286B3F /* FacebookSDKStrings.bundle */; };
 		CB167F6CEFBE2BCF49E2F95B /* Pods_Cast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37583446EB682F1C0F7FA25 /* Pods_Cast.framework */; };
 		F14527501D9A431600CDDA2F /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274B1D9A431600CDDA2F /* Cast.swift */; };
 		F14527511D9A431600CDDA2F /* Collaborator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274C1D9A431600CDDA2F /* Collaborator.swift */; };
@@ -88,6 +93,12 @@
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B5F148E21D9A7B7800286B3F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		B5F148E41D9A7BBD00286B3F /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
+		B5F148E51D9A7BBD00286B3F /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
+		B5F148E81D9A87CE00286B3F /* Cast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cast.entitlements; sourceTree = "<group>"; };
 		D37583446EB682F1C0F7FA25 /* Pods_Cast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DA57DD8934C9C0A682C6A5 /* Pods-CastUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastUITests/Pods-CastUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F145274B1D9A431600CDDA2F /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
@@ -105,6 +116,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB167F6CEFBE2BCF49E2F95B /* Pods_Cast.framework in Frameworks */,
+				B5F148DE1D9A741200286B3F /* FBSDKCoreKit.framework in Frameworks */,
+				B5F148DF1D9A741200286B3F /* FBSDKLoginKit.framework in Frameworks */,
+				B5F148E31D9A7B7800286B3F /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +227,12 @@
 		53DEFDF21D9A1C1400078C36 /* Cast */ = {
 			isa = PBXGroup;
 			children = (
+				B5F148E81D9A87CE00286B3F /* Cast.entitlements */,
+				B5F148E41D9A7BBD00286B3F /* AccountKitStrings.bundle */,
+				B5F148E51D9A7BBD00286B3F /* FacebookSDKStrings.bundle */,
+				B5F148E21D9A7B7800286B3F /* Bolts.framework */,
+				B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */,
+				B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */,
 				53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */,
 				53DEFE251D9A1C3A00078C36 /* Controllers */,
 				53DEFE241D9A1C2E00078C36 /* Storyboards */,
@@ -365,12 +385,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = com.cast;
 				TargetAttributes = {
 					53DEFDEF1D9A1C1400078C36 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = F35T3HFQ4T;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					53DEFE061D9A1C1400078C36 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -412,12 +438,14 @@
 				530922B81D9A219A00AA9EEB /* Feed.storyboard in Resources */,
 				53DEFE011D9A1C1400078C36 /* LaunchScreen.storyboard in Resources */,
 				530922BA1D9A21A800AA9EEB /* Collaborators.storyboard in Resources */,
+				B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */,
 				530922B61D9A210700AA9EEB /* AppOverview.storyboard in Resources */,
 				53DEFDFE1D9A1C1400078C36 /* Assets.xcassets in Resources */,
 				530922BC1D9A21B500AA9EEB /* Cast.storyboard in Resources */,
 				530922C01D9A221A00AA9EEB /* Notifications.storyboard in Resources */,
 				530922C91D9A288E00AA9EEB /* GoogleService-Info.plist in Resources */,
 				530922BE1D9A21E100AA9EEB /* Search.storyboard in Resources */,
+				B5F148E61D9A7BBD00286B3F /* AccountKitStrings.bundle in Resources */,
 				53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,8 +676,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -694,8 +724,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -714,6 +746,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -724,6 +757,12 @@
 			baseConfigurationReference = 9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cast/Cast.entitlements;
+				DEVELOPMENT_TEAM = F35T3HFQ4T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cast",
+				);
 				INFOPLIST_FILE = Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cast.Cast;
@@ -737,6 +776,12 @@
 			baseConfigurationReference = A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Cast/Cast.entitlements;
+				DEVELOPMENT_TEAM = F35T3HFQ4T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Cast",
+				);
 				INFOPLIST_FILE = Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cast.Cast;
