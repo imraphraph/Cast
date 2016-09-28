@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usernameTextField: UITextField!
 
     @IBOutlet weak var emailTextField: UITextField!
@@ -23,10 +23,24 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
-        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard)))
     }
 
+    
+    func dismissKeyboard() {
+        passwordTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+        
+    }
 
     @IBAction func registerButton(_ sender: AnyObject) {
         
@@ -59,12 +73,4 @@ class SignUpViewController: UIViewController {
 
 
 
-//else {
-//    FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
-//        if error != nil {
-//            print("unable to authenticate with firebase")
-//        }else {
-//            print ("user successfully authenticated with Firebase")
-//        }
-//    })
-//}
+

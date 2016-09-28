@@ -10,13 +10,29 @@ import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard)))
+
+    }
+    
+    
+    func dismissKeyboard() {
+        passwordTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
         
     }
     
