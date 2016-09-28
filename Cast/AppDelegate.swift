@@ -24,6 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let vc = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
         self.window?.rootViewController = vc
         FIRApp.configure()
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 91f5cfed40088fcdff0b40f10f606169253f00e7
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
