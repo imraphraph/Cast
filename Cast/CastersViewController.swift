@@ -8,28 +8,46 @@
 
 import UIKit
 
-class CastersViewController: UIViewController {
-
+class CastersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var images = [UIImage]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(images)
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    //2
+    func collectionView(_ collectionView: UICollectionView,
+                        numberOfItemsInSection section: Int) -> Int {
+        return self.images.count
+    }
+    
+    
+    //3
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! DetailCastCollectionViewCell
+        
+        cell.imageView.image = images[indexPath.row]
 
+        // Configure the cell
+        return cell
+    }
 }
