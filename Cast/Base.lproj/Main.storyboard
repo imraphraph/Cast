@@ -201,6 +201,9 @@
                                 <state key="normal" title="back to main page">
                                     <color key="titleColor" red="0.99803092000000004" green="1" blue="0.99752932780000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToMainButton:" destination="xaz-lV-zg9" eventType="touchUpInside" id="s6j-Ps-l2V"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key in your email to  reset your password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8m-hc-6lk">
                                 <constraints>
@@ -399,7 +402,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HSp-LD-e9R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Kp-3W-PTP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Kp-3W-PTP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

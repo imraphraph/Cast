@@ -76,6 +76,10 @@ class ForgotPassViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func backToMainButton(_ sender: AnyObject) {
+        
+        self.dismiss(animated: true, completion: {})
+    }
     
     }
 
