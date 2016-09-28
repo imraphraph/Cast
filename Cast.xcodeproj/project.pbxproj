@@ -48,6 +48,7 @@
 		F14527541D9A431600CDDA2F /* UserComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274F1D9A431600CDDA2F /* UserComment.swift */; };
 		F14527571D9A46F500CDDA2F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14527551D9A46F500CDDA2F /* DataService.swift */; };
 		F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14527561D9A46F500CDDA2F /* StorageService.swift */; };
+		F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		F145274F1D9A431600CDDA2F /* UserComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserComment.swift; sourceTree = "<group>"; };
 		F14527551D9A46F500CDDA2F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F14527561D9A46F500CDDA2F /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		530922C51D9A23C300AA9EEB /* CastViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */,
 			);
 			name = CastViewController;
 			sourceTree = "<group>";
@@ -221,7 +224,6 @@
 		53DEFDE71D9A1C1400078C36 = {
 			isa = PBXGroup;
 			children = (
-				F145274A1D9A42E400CDDA2F /* Models */,
 				53DEFDF21D9A1C1400078C36 /* Cast */,
 				53DEFE0A1D9A1C1400078C36 /* CastTests */,
 				53DEFE151D9A1C1400078C36 /* CastUITests */,
@@ -251,6 +253,7 @@
 				B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */,
 				B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */,
 				53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */,
+				F145274A1D9A42E400CDDA2F /* Models */,
 				53DEFE251D9A1C3A00078C36 /* Controllers */,
 				53DEFE241D9A1C2E00078C36 /* Storyboards */,
 				53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */,
@@ -333,6 +336,7 @@
 				F145274F1D9A431600CDDA2F /* UserComment.swift */,
 			);
 			name = Models;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,7 +415,6 @@
 				TargetAttributes = {
 					53DEFDEF1D9A1C1400078C36 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = F35T3HFQ4T;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -635,6 +638,7 @@
 				530922C31D9A22A700AA9EEB /* FeedViewController.swift in Sources */,
 				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
 				F14527531D9A431600CDDA2F /* User.swift in Sources */,
+				F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */,
 				F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,7 +790,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cast/Cast.entitlements;
-				DEVELOPMENT_TEAM = F35T3HFQ4T;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cast",
@@ -805,7 +809,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Cast/Cast.entitlements;
-				DEVELOPMENT_TEAM = F35T3HFQ4T;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cast",
