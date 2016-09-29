@@ -7,11 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-<<<<<<< HEAD
-        <!--New Cast Call-->
-=======
-        <!--Cast-->
->>>>>>> 8297d16db45006af5df3012151c5658c78530f1a
+
         <scene sceneID="Oee-UG-NEa">
             <objects>
                 <viewController storyboardIdentifier="NewCastVC" title="Cast" id="45W-Hr-Xxz" customClass="NewCastViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
