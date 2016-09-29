@@ -25,6 +25,14 @@
 		53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */; };
 		53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */; };
 		53B719331D9AC53E001697C1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */; };
+		53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */; };
+		53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */; };
+		53B719421D9BA606001697C1 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */; };
+		53B719431D9BA606001697C1 /* Quicksand-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193C1D9BA5ED001697C1 /* Quicksand-BoldItalic.ttf */; };
+		53B719441D9BA606001697C1 /* Quicksand-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193D1D9BA5ED001697C1 /* Quicksand-Italic.ttf */; };
+		53B719451D9BA606001697C1 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193E1D9BA5ED001697C1 /* Quicksand-Light.ttf */; };
+		53B719461D9BA606001697C1 /* Quicksand-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193F1D9BA5ED001697C1 /* Quicksand-LightItalic.ttf */; };
+		53B719471D9BA606001697C1 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719401D9BA5ED001697C1 /* Quicksand-Regular.ttf */; };
 		53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */; };
 		53DEFDF61D9A1C1400078C36 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */; };
 		53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDF71D9A1C1400078C36 /* Main.storyboard */; };
@@ -89,6 +97,14 @@
 		53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
 		53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
 		53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
+		53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amatic-Bold.ttf"; sourceTree = "<group>"; };
+		53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
+		53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		53B7193C1D9BA5ED001697C1 /* Quicksand-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-BoldItalic.ttf"; sourceTree = "<group>"; };
+		53B7193D1D9BA5ED001697C1 /* Quicksand-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Italic.ttf"; sourceTree = "<group>"; };
+		53B7193E1D9BA5ED001697C1 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		53B7193F1D9BA5ED001697C1 /* Quicksand-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-LightItalic.ttf"; sourceTree = "<group>"; };
+		53B719401D9BA5ED001697C1 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		53DEFDF01D9A1C1400078C36 /* Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +237,49 @@
 			name = NotificationsViewController;
 			sourceTree = "<group>";
 		};
+		53B719341D9BA506001697C1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				53B719411D9BA5F2001697C1 /* Quicksand */,
+				53B719361D9BA52C001697C1 /* Amatic sc */,
+				53B719351D9BA51E001697C1 /* Lobster two */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		53B719351D9BA51E001697C1 /* Lobster two */ = {
+			isa = PBXGroup;
+			children = (
+				53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */,
+				53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */,
+				53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */,
+				53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */,
+			);
+			name = "Lobster two";
+			sourceTree = "<group>";
+		};
+		53B719361D9BA52C001697C1 /* Amatic sc */ = {
+			isa = PBXGroup;
+			children = (
+				53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */,
+				53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */,
+			);
+			name = "Amatic sc";
+			sourceTree = "<group>";
+		};
+		53B719411D9BA5F2001697C1 /* Quicksand */ = {
+			isa = PBXGroup;
+			children = (
+				53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */,
+				53B7193C1D9BA5ED001697C1 /* Quicksand-BoldItalic.ttf */,
+				53B7193D1D9BA5ED001697C1 /* Quicksand-Italic.ttf */,
+				53B7193E1D9BA5ED001697C1 /* Quicksand-Light.ttf */,
+				53B7193F1D9BA5ED001697C1 /* Quicksand-LightItalic.ttf */,
+				53B719401D9BA5ED001697C1 /* Quicksand-Regular.ttf */,
+			);
+			name = Quicksand;
+			sourceTree = "<group>";
+		};
 		53DEFDE71D9A1C1400078C36 = {
 			isa = PBXGroup;
 			children = (
@@ -257,10 +316,7 @@
 				53DEFE251D9A1C3A00078C36 /* Controllers */,
 				53DEFE241D9A1C2E00078C36 /* Storyboards */,
 				53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */,
-				53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */,
-				53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */,
-				53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */,
-				53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */,
+				53B719341D9BA506001697C1 /* Fonts */,
 				53DEFDFF1D9A1C1400078C36 /* LaunchScreen.storyboard */,
 				53DEFE021D9A1C1400078C36 /* Info.plist */,
 				530922C81D9A288E00AA9EEB /* GoogleService-Info.plist */,
@@ -459,6 +515,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B719421D9BA606001697C1 /* Quicksand-Bold.ttf in Resources */,
+				53B719431D9BA606001697C1 /* Quicksand-BoldItalic.ttf in Resources */,
+				53B719441D9BA606001697C1 /* Quicksand-Italic.ttf in Resources */,
+				53B719451D9BA606001697C1 /* Quicksand-Light.ttf in Resources */,
+				53B719461D9BA606001697C1 /* Quicksand-LightItalic.ttf in Resources */,
+				53B719471D9BA606001697C1 /* Quicksand-Regular.ttf in Resources */,
+				53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */,
+				53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */,
 				53B719301D9AC53E001697C1 /* lobster-two.bold-italic.ttf in Resources */,
 				53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */,
 				53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */,
