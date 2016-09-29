@@ -10,16 +10,25 @@ import UIKit
 import CoreData
 import Firebase
 import FBSDKLoginKit
-
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
+        
+        if(Session.isUserLoggedIn()){
+            let storyBoard = UIStoryboard(name: "AppOverview", bundle: Bundle.main)
+            // load view controller with the storyboardID of HomeTabBarController
+            let tabBarController = storyBoard.instantiateViewController(withIdentifier: "AppOverviewID")
+            self.window?.rootViewController = tabBarController
+        }
+        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         return true

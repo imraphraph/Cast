@@ -26,7 +26,7 @@
 		53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */; };
 		53B719331D9AC53E001697C1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */; };
 		53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */; };
-		53DEFDF61D9A1C1400078C36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF51D9A1C1400078C36 /* ViewController.swift */; };
+		53DEFDF61D9A1C1400078C36 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */; };
 		53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDF71D9A1C1400078C36 /* Main.storyboard */; };
 		53DEFDFC1D9A1C1400078C36 /* Cast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDFA1D9A1C1400078C36 /* Cast.xcdatamodeld */; };
 		53DEFDFE1D9A1C1400078C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */; };
@@ -91,7 +91,7 @@
 		53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		53DEFDF01D9A1C1400078C36 /* Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53DEFDF51D9A1C1400078C36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		53DEFDF81D9A1C1400078C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53DEFDFB1D9A1C1400078C36 /* Cast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cast.xcdatamodel; sourceTree = "<group>"; };
 		53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 			children = (
 				530922AE1D9A1FF700AA9EEB /* SignInViewController.swift */,
 				530922B01D9A200400AA9EEB /* SignUpViewController.swift */,
+				53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */,
 				530922B31D9A205000AA9EEB /* WelcomeViewController.swift */,
-				53DEFDF51D9A1C1400078C36 /* ViewController.swift */,
 			);
 			name = SignInControllers;
 			sourceTree = "<group>";
@@ -626,7 +626,7 @@
 				F14527571D9A46F500CDDA2F /* DataService.swift in Sources */,
 				F14527501D9A431600CDDA2F /* Cast.swift in Sources */,
 				530922AF1D9A1FF700AA9EEB /* SignInViewController.swift in Sources */,
-				53DEFDF61D9A1C1400078C36 /* ViewController.swift in Sources */,
+				53DEFDF61D9A1C1400078C36 /* ForgotPassViewController.swift in Sources */,
 				530922CB1D9A508400AA9EEB /* CastersViewController.swift in Sources */,
 				F14527511D9A431600CDDA2F /* Collaborator.swift in Sources */,
 				530922D11D9A72DE00AA9EEB /* DetailCastCollectionViewCell.swift in Sources */,

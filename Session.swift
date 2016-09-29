@@ -14,13 +14,13 @@ open class Session{
     static let sessionKey = "sessionUID"
     static var singleton:Session?
     
-    func storeUserSession() {
+    static func storeUserSession() {
         if let user = FIRAuth.auth()!.currentUser{
             UserDefaults.standard.set(user.uid, forKey: Session.sessionKey)
         }
     }
     
-    func isUserLoggedIn() -> Bool {
+    static func isUserLoggedIn() -> Bool {
         if let _ = UserDefaults.standard.object(forKey: Session.sessionKey) as? String{
             return true
         } else {

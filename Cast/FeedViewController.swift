@@ -29,6 +29,11 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // configure for tabbar
+//        title = ""
+//        tabBarItem.image =
+//        tabBarItem.selectedImage
+        
         configurePageControl()
         
         self.topScrollView.delegate = self
@@ -38,6 +43,7 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
             self.topScrollView.isPagingEnabled = true
         }
         
+        let selector = #selector(changePage(sender:)) // swift 3
         pageControl.addTarget(self, action: Selector("changePage:"), for: UIControlEvents.valueChanged)
     }
 
@@ -49,7 +55,7 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // MARK : TO CHANGE WHILE CLICKING ON PAGE CONTROL
-    func changePage(sender: AnyObject) -> () {
+    func changePage(sender: AnyObject) {
         let x = CGFloat(pageControl.currentPage) * topScrollView.frame.size.width
         topScrollView.setContentOffset(CGPoint(x:x , y:0), animated: true)
     }
