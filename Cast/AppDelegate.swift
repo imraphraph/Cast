@@ -20,8 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
+        let storyboard = UIStoryboard(name: "Cast", bundle: Bundle.main)
+        
+        // load view controller with the storyboardID of ChatListViewController
+        let ChatListViewController = storyboard.instantiateViewController(withIdentifier: "NewCastVC")
+        let navigationController = UINavigationController(rootViewController: ChatListViewController)
+        self.window?.rootViewController = navigationController
+        
         return true
     }
 

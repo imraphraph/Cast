@@ -10,7 +10,7 @@ import Foundation
 import FirebaseStorage
 
 struct StorageService {
-    static let storageRefName="gs://instalkgram.appspot.com"
+    static let storageRefName="gs://cast-e1ba8.appspot.com"
     static let storage = FIRStorage.storage()
     static let storageRef = storage.reference(forURL: storageRefName)
     
