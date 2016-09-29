@@ -10,25 +10,31 @@ import UIKit
 import CoreData
 import Firebase
 import FBSDKLoginKit
-
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         FIRApp.configure()
+
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
-        let storyboard = UIStoryboard(name: "Cast", bundle: Bundle.main)
+
+        FIRDatabase.database().persistenceEnabled = true
         
-        // load view controller with the storyboardID of ChatListViewController
-        let ChatListViewController = storyboard.instantiateViewController(withIdentifier: "NewCastVC")
-        let navigationController = UINavigationController(rootViewController: ChatListViewController)
-        self.window?.rootViewController = navigationController
+        if(Session.isUserLoggedIn()){
+            let storyBoard = UIStoryboard(name: "AppOverview", bundle: Bundle.main)
+            // load view controller with the storyboardID of HomeTabBarController
+            let tabBarController = storyBoard.instantiateViewController(withIdentifier: "AppOverviewID")
+            self.window?.rootViewController = tabBarController
+        }
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
         
         return true
     }
