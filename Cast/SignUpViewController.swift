@@ -7,29 +7,72 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var usernameTextField: UITextField!
 
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    var fireBaseRef = FIRDatabase.database().reference()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        usernameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.dismissKeyboard)))
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func dismissKeyboard() {
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+        
     }
-    */
 
+    @IBAction func registerButton(_ sender: AnyObject) {
+        
+        if let email = emailTextField.text, let password = passwordTextField.text, let username = usernameTextField.text {
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+            if error != nil {
+                let controller = UIAlertController(title: "Registration Failed", message: "Please check if you are connected to the internet", preferredStyle: .alert)
+                let dismissButton = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+                controller.addAction(dismissButton)
+                
+                self.present(controller, animated: true, completion: nil)
+            }else {
+                if let person = user {
+                let userDictionary = ["email": email, "username": username]
+                    self.fireBaseRef.child("users").child(person.uid).setValue(userDictionary)
+                    Session.storeUserSession()
+                }
+                
+            print ("user successfully authenticated with Firebase")
+                self.performSegue(withIdentifier: "welcomeSegue", sender: self)
+            }
+        })
+        }
+        
+    }
+
+    @IBAction func haveAnAccountButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: {});
+    }
 }
+
+
+
+

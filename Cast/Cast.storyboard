@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Cast-->
         <scene sceneID="Oee-UG-NEa">
             <objects>
-                <viewController storyboardIdentifier="NewCastVC" id="45W-Hr-Xxz" customClass="NewCastViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewCastVC" title="Cast" id="45W-Hr-Xxz" customClass="NewCastViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uHd-LV-U4C"/>
                         <viewControllerLayoutGuide type="bottom" id="OXn-6x-r7R"/>
