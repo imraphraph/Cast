@@ -21,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FIRApp.configure()
 
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
+
         FIRDatabase.database().persistenceEnabled = true
         
         if(Session.isUserLoggedIn()){
@@ -31,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+
         
         return true
     }

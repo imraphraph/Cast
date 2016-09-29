@@ -15,9 +15,10 @@ class Cast {
     var castName : String = ""
     var eventDate : Double = 0
     var location : String = ""
-    var rewardAmount : Double = 0
+    var rewardAmount : RewardType = .monetary
     var description : String = ""
     var status : Status = .new
+    var category : Category = .other
     
     var collaborators = [Collaborator]()
 
@@ -25,11 +26,24 @@ class Cast {
         
     }
     
+    enum RewardType {
+        case monetary
+        case tradeforprint
+    }
     
     enum Status {
         case new
+        case ongoing
         case cancelled
         case completed
+    }
+    
+    enum Category {
+        case cat_cosplay
+        case cat_wedding
+        case cat_family
+        case cat_fashion
+        case other
     }
     
 //    invite()
