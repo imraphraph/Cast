@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class SignUpViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var usernameTextField: UITextField!
+
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -23,7 +23,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        usernameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
@@ -32,7 +31,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     
     func dismissKeyboard() {
-        usernameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         emailTextField.resignFirstResponder()
     }
@@ -45,7 +43,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func registerButton(_ sender: AnyObject) {
         
-        if let email = emailTextField.text, let password = passwordTextField.text, let username = usernameTextField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text {
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
             if error != nil {
                 let controller = UIAlertController(title: "Registration Failed", message: "Please check if you are connected to the internet", preferredStyle: .alert)
@@ -55,7 +53,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 self.present(controller, animated: true, completion: nil)
             }else {
                 if let person = user {
-                let userDictionary = ["email": email, "username": username]
+                let userDictionary = ["email": email]
                     self.fireBaseRef.child("users").child(person.uid).setValue(userDictionary)
                     Session.storeUserSession()
                 }

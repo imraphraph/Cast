@@ -42,6 +42,7 @@
 		53DEFE171D9A1C1400078C36 /* CastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFE161D9A1C1400078C36 /* CastUITests.swift */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
+		B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */; };
 		B5F148DE1D9A741200286B3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */; };
 		B5F148DF1D9A741200286B3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */; };
 		B5F148E31D9A7B7800286B3F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148E21D9A7B7800286B3F /* Bolts.framework */; };
@@ -123,6 +124,7 @@
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController2.swift; sourceTree = "<group>"; };
 		B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B5F148E21D9A7B7800286B3F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				530922B01D9A200400AA9EEB /* SignUpViewController.swift */,
 				53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */,
 				530922B31D9A205000AA9EEB /* WelcomeViewController.swift */,
+				B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */,
 			);
 			name = SignInControllers;
 			sourceTree = "<group>";
@@ -250,10 +253,6 @@
 		53B719351D9BA51E001697C1 /* Lobster two */ = {
 			isa = PBXGroup;
 			children = (
-				53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */,
-				53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */,
-				53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */,
-				53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */,
 			);
 			name = "Lobster two";
 			sourceTree = "<group>";
@@ -694,6 +693,7 @@
 				F14527571D9A46F500CDDA2F /* DataService.swift in Sources */,
 				F14527501D9A431600CDDA2F /* Cast.swift in Sources */,
 				530922AF1D9A1FF700AA9EEB /* SignInViewController.swift in Sources */,
+				B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */,
 				53DEFDF61D9A1C1400078C36 /* ForgotPassViewController.swift in Sources */,
 				530922CB1D9A508400AA9EEB /* CastersViewController.swift in Sources */,
 				F14527511D9A431600CDDA2F /* Collaborator.swift in Sources */,

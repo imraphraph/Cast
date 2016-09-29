@@ -24,6 +24,10 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate, UINavigation
         
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectProfileImage)))
         profileImageView.isUserInteractionEnabled = true
+        
+        usernameTextField.delegate = self
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(WelcomeViewController.dismissKeyboard)))
 
     }
     
@@ -71,15 +75,32 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate, UINavigation
 
     @IBAction func submitButton(_ sender: AnyObject) {
         
-        fireBaseRef.ref.child("users").queryOrdered(byChild: "username").queryEqual(toValue: usernameTextField.text).observeSingleEvent(of: .value, with: { (snapshot) in
-            if snapshot.value == nil {
+        if let username = usernameTextField.text {
+            //checks if username exists
+            fireBaseRef.ref.child("users").queryOrdered(byChild: "username").queryEqual(toValue: usernameTextField.text).observeSingleEvent(of: .value, with: { (snapshot) in
                 
-                 self.performSegue(withIdentifier: "fill in here", sender: self)
-            } else {
-                // display error message -> username is not unique
-            }
+                if  !snapshot.exists() {
+                    let userDictionary = ["username": username]
+                    self.fireBaseRef.child("users").child(Session.currentUserUid).setValue(userDictionary)
+                    self.performSegue(withIdentifier: "welcomeSegue2", sender: self)
+                
+                } else {
+                    
+                    let controller = UIAlertController(title: "Username already in use!", message: "please choose another username", preferredStyle: .alert)
+                    let dismissButton = UIAlertAction(title: "Try Again", style: .default, handler: nil)
+                    controller.addAction(dismissButton)
+                    
+                    self.present(controller, animated: true, completion: nil)
+
+                
+                }
             }, withCancel: nil)
         
+    }
+    }
+    
+    func dismissKeyboard() {
+        usernameTextField.resignFirstResponder()
     }
 
 }
