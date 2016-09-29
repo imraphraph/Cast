@@ -109,45 +109,6 @@ class NewCastViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func onDoneBtnPressed(_ sender: AnyObject) {
 
-        var newCast = Cast()
-        if femaleBtn.isSelected {
-            var model = Collaborator()
-            model.gender = .Female
-            model.role = .Model
-            var collList = newCast.collaborators
-            if collList != nil {
-                collList.append(model)
-            } else {
-                newCast.collaborators = [Collaborator]()
-                newCast.collaborators.append(model)
-            }
-        }
-        
-        if maleBtn.isSelected {
-            var model = Collaborator()
-            model.gender = .Male
-            model.role = .Model
-            var collList = newCast.collaborators
-            if collList != nil {
-                collList.append(model)
-            } else {
-                newCast.collaborators = [Collaborator]()
-                newCast.collaborators.append(model)
-            }
-        }
-        
-        if photogphBtn.isSelected {
-            var model = Collaborator()
-            model.role = .Photographer
-            var collList = newCast.collaborators
-            if collList != nil {
-                collList.append(model)
-            } else {
-                newCast.collaborators = [Collaborator]()
-                newCast.collaborators.append(model)
-            }
-        }
-        
         
         guard let castname = nameTxt.text else { return }
         guard let eventDate = eventDateTxt.text else { return }
