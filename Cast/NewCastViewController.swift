@@ -22,6 +22,9 @@ class NewCastViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var descriptionTxt: UITextView!
     
+    @IBOutlet weak var rewardType: UITextField!
+    @IBOutlet weak var categoryTxt: UITextField!
+    
     var defaultDateHeight : CGFloat = 0
     
     @IBOutlet weak var photogphBtn: UIButton!
@@ -36,6 +39,14 @@ class NewCastViewController: UIViewController, UITextFieldDelegate {
         datePickerHeightConstraint.constant = 0
         
         eventDateTxt.delegate=self
+        
+        nameTxt.text = "my wedding"
+        locationTxt.text = "klcc"
+        rewardTxt.text = "1200"
+        descriptionTxt.text = "wedding shooting"
+        rewardType.text = "TFP"
+        categoryTxt.text = "wedding"
+        
         
     }
 
@@ -96,11 +107,6 @@ class NewCastViewController: UIViewController, UITextFieldDelegate {
         }, completion: nil)
     }
     
-    
-
-    
-    
-    
     @IBAction func onDoneBtnPressed(_ sender: AnyObject) {
 
         var newCast = Cast()
@@ -142,20 +148,41 @@ class NewCastViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-    
-            
-        //let castDict = ["created_at":NSDate().timeIntervalSince1970,"userUID":"fz", "castname":nameTxt.text, "event_date": NSDate().timeIntervalSince1970, "location": locationTxt.text, "reward_type":"TTP", "description":descriptionTxt.text, "status":"new","category":"Fashion"] as [String : Any]
         
-        let castDict = ["created_at":NSDate().timeIntervalSince1970]
+        guard let castname = nameTxt.text else { return }
+        guard let eventDate = eventDateTxt.text else { return }
+        guard let location = locationTxt.text else { return }
+        guard let rewardType = rewardType.text else { return }
+        guard let description = descriptionTxt.text else { return }
+        guard let category = categoryTxt.text else { return }
+        
+        var mmodelNeeded : String, photographerNeeded : String, fmodelNeeded : String
+        if femaleBtn.isSelected {
+            fmodelNeeded = "true"
+        } else {
+            fmodelNeeded = "false"
+        }
+        
+        if maleBtn.isSelected {
+            mmodelNeeded = "true"
+        } else {
+            mmodelNeeded = "false"
+        }
+        
+        if photogphBtn.isSelected  {
+            photographerNeeded = "true"
+        } else {
+            photographerNeeded = "false"
+        }
+        
+        
+        let castDict = ["created_at":NSDate().timeIntervalSince1970,"userUID":Session.currentUserUid, "castname":castname, "event_date": NSDate().timeIntervalSince1970, "location": location, "reward_type":rewardType, "description":description, "status":"new","category":category, "female_needed":fmodelNeeded,"male_needed":mmodelNeeded,"photog_needed":photographerNeeded ] as [String : Any]
+        
         
         let castRef = DataService.rootRef.child("casts").childByAutoId()
         castRef.setValue(castDict)
         
-//        for c in newCast.collaborators {
-//            DataService.rootRef.child("casts").child(castRef.key).child("model")
-//            DataService.rootRef.child("casts").child(castRef.key).child("photographer")
-//        }
-//        DataService.userRef.child("fz").child("casts").updateChildValues([castRef.key:true])
+        DataService.userRef.child(Session.currentUserUid).child("casts").updateChildValues([castRef.key:true])
 
 
         
