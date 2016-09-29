@@ -378,10 +378,12 @@
                                                     </constraints>
                                                     <connections>
                                                         <outlet property="collaborateButton" destination="hIV-7j-hDM" id="CNm-ho-qQF"/>
+                                                        <outlet property="collaboratorsImageView" destination="bfh-GW-Hhy" id="hy1-B0-OqM"/>
                                                         <outlet property="dateLabel" destination="5LV-UZ-5hN" id="axB-zt-fL5"/>
                                                         <outlet property="imageView" destination="GQm-uL-zdZ" id="mnr-po-uab"/>
                                                         <outlet property="locationLabel" destination="Yng-hr-Jc9" id="4cQ-Oh-9ON"/>
                                                         <outlet property="nameLabel" destination="Dsx-vd-3qt" id="B6m-rd-84S"/>
+                                                        <outlet property="rewardsImageView" destination="Ybj-8F-evU" id="0af-dx-5QA"/>
                                                     </connections>
                                                 </collectionViewCell>
                                             </cells>
@@ -418,6 +420,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eI0-vO-iHB"/>
                     <connections>
+                        <outlet property="collectionView" destination="1kD-sy-C24" id="ltA-b3-7NE"/>
                         <outlet property="searchDisplayController" destination="7r6-L9-K6C" id="X3O-0K-yVu"/>
                     </connections>
                 </viewController>
@@ -630,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G30-LD-nqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2504.8000000000002" y="463.71814092953525"/>
+            <point key="canvasLocation" x="2412" y="464"/>
         </scene>
     </scenes>
     <resources>

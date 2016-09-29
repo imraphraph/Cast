@@ -10,14 +10,24 @@ import UIKit
 
 class CastersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var collectionView: UICollectionView!
     var images = [UIImage]()
+    var cast = [Cast]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(images)
-        // Do any additional setup after loading the view.
+        DataService.rootRef.child("casts").observe(.childAdded, with: { (snapshot) in
+            
+            if let allCast = Cast(snapshot: snapshot) {
+                self.cast.append(allCast)
+                self.collectionView.reloadData()
+                
+            }
+        
+            
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,7 +45,7 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
     //2
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return self.images.count
+        return self.cast.count
     }
     
     
@@ -45,8 +55,38 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! DetailCastCollectionViewCell
         
+        let currentCast = cast[indexPath.row]
+        
         cell.imageView.image = images[indexPath.row]
-
+        cell.nameLabel.text = currentCast.castName
+        cell.locationLabel.text = currentCast.location
+        
+        let formattedDate = MyDateFormatter.displayDateTime(datetime: currentCast.eventDate)
+        cell.dateLabel.text = formattedDate
+        
+        if currentCast.photogNeeded == "true"{
+            cell.collaboratorsImageView.image = UIImage(named: "camera")
+        } else {
+            cell.collaboratorsImageView.image = UIImage(named: "")
+        }
+        
+        print(currentCast.rewardType)
+        
+        if currentCast.rewardType == .cash {
+            cell.rewardsImageView.image = UIImage(named: "dollar")
+    
+        } else {
+            cell.rewardsImageView.image = UIImage(named: "")
+        }
+        
+        if currentCast.rewardType == .tradeforprint {
+            cell.rewardsImageView.image = UIImage(named: "")
+        } else {
+            cell.rewardsImageView.image = UIImage(named: "")
+        }
+        
+        
+        
         // Configure the cell
         return cell
     }
