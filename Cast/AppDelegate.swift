@@ -24,11 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
-        let storyboard = UIStoryboard(name: "Feed", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "FeedViewController")
-        self.window?.rootViewController = vc
-
         
         return true
     }
