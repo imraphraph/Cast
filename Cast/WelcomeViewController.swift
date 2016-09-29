@@ -7,26 +7,127 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    var fireBaseRef = FIRDatabase.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectProfileImage)))
+        profileImageView.isUserInteractionEnabled = true
 
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        FIRDatabase.database().reference().child("users").child(Session.currentUserUid).observeSingleEvent(of: .value, with: { snapshot in
+            
+            // get user information as Dictionary
+            let userDictionary: [String:AnyObject]? = snapshot.value as? [String:AnyObject]
+            
+            // get profilePicture
+            if let profileImage = userDictionary?["profilePicture"] as? String {
+                
+                let url = NSURL(string:profileImage)
+                URLSession.shared.dataTask(with: url! as URL, completionHandler: {
+                    (data, response, error) in
+                    
+                    if error != nil{
+                        print(error)
+                        return
+                    }
+                    
+                    let image = UIImage(data: data!)
+                    DispatchQueue.main.async(execute: {
+                        self.profileImageView.image = image
+                    })
+                    
+                }).resume()
+            }
+           
+            
+        })
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    func selectProfileImage () {
+        let picker = UIImagePickerController ()
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
     }
+
+
     @IBAction func submitButton(_ sender: AnyObject) {
         
-        self.performSegue(withIdentifier: "submitSegue", sender: self)
+        fireBaseRef.ref.child("users").queryOrdered(byChild: "username").queryEqual(toValue: usernameTextField.text).observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.value == nil {
+                
+                 self.performSegue(withIdentifier: "fill in here", sender: self)
+            } else {
+                // display error message -> username is not unique
+            }
+            }, withCancel: nil)
+        
+    }
+
+}
+
+extension WelcomeViewController : UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var selectedImageFromPicker : UIImage?
+        
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            selectedImageFromPicker = editedImage
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            selectedImageFromPicker = originalImage
+        }
+        
+        if let selectedImage = selectedImageFromPicker {
+            
+            // set the profile image
+            profileImageView.image = selectedImage
+            let storageRef = FIRStorage.storage().reference()
+            let userRef = storageRef.child("profilePicture").child(Session.currentUserUid)
+            
+            if let uploadData = UIImageJPEGRepresentation(selectedImage, 0.7) {
+                
+                userRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                    
+                    if error != nil{
+                        print(error)
+                        return
+                    } else {
+                        if let imageURL = metadata?.downloadURLs?.first {
+                            FIRDatabase.database().reference().child("users").child(Session.currentUserUid).child("profilePicture").setValue(imageURL.absoluteString)
+                            
+                        }
+                    }
+                })
+                
+            }
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
     }
     
-
     
-
 }

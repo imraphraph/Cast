@@ -35,7 +35,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <color key="backgroundColor" red="0.1892885799" green="0.78943062829999999" blue="0.48920147510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="ocD-tC-21U" firstAttribute="centerX" secondItem="h3v-Ys-R6b" secondAttribute="centerX" id="Yut-SF-iyt"/>
                                     <constraint firstItem="ocD-tC-21U" firstAttribute="centerY" secondItem="h3v-Ys-R6b" secondAttribute="centerY" id="Z5L-C4-TXd"/>
