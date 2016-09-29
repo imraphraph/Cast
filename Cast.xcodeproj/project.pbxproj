@@ -163,6 +163,10 @@
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController2.swift; sourceTree = "<group>"; };
+		B5CE8F8E1D9D1AEA00488C27 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
+		B5CE8F8F1D9D1AEA00488C27 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
+		B5CE8F901D9D1AEA00488C27 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
+		B5CE8F911D9D1AEA00488C27 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B5F148E21D9A7B7800286B3F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -292,6 +296,10 @@
 		53B719351D9BA51E001697C1 /* Lobster two */ = {
 			isa = PBXGroup;
 			children = (
+				B5CE8F8E1D9D1AEA00488C27 /* lobster-two.bold-italic.ttf */,
+				B5CE8F8F1D9D1AEA00488C27 /* lobster-two.bold.ttf */,
+				B5CE8F901D9D1AEA00488C27 /* lobster-two.italic.ttf */,
+				B5CE8F911D9D1AEA00488C27 /* lobster-two.regular.ttf */,
 			);
 			name = "Lobster two";
 			sourceTree = "<group>";
