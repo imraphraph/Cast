@@ -66,6 +66,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 
                 //calling the firebaseAuthApps
                 self.firebaseAuthByApps(credential)
+                print("successfully authenticated")
                 self.performSegue(withIdentifier: "overviewSegue", sender: self)
             }
         }
@@ -79,6 +80,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 print("unable to authenticate with Firebase - \(error)")
             } else {
                 print("successfully authenticated with Firebase")
+
             }
         })
     }
@@ -89,6 +91,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error == nil {
                     Session.storeUserSession()
+                    self.performSegue(withIdentifier: "overviewSegue", sender: self)
+
 //                    if let uid = user?.uid{
 //                        print("user authenticated with Firebase")
 //                        
