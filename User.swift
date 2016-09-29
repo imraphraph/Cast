@@ -19,6 +19,7 @@ open class User{
     
     var lastName: String
     var firstName: String
+    var gender : Gender
     
     var email: String
     var phone: String
@@ -26,7 +27,14 @@ open class User{
     var weblinks: String?
     
     var points : Int
-
+    
+    var collaborators = [Collaborator]()
+    
+    enum Gender{
+        case Female
+        case Male
+        case Undefined
+    }
     
     init() {
         username = ""
@@ -39,8 +47,10 @@ open class User{
         profilePhotoURL=""
         weblinks = ""
         points = 0
+        gender = .Undefined
     }
     
+
     init?(snapshot: FIRDataSnapshot){
         guard let dict = snapshot.value as? [String:AnyObject] else { return nil}
         
@@ -98,7 +108,12 @@ open class User{
             self.points = 0
         }
         
-       
+        if let gender = dict["gender"] as? Gender {
+            self.gender = gender
+        } else {
+            self.gender = Gender.Undefined
+        }
+
     
     }
     

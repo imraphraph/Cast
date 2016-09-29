@@ -2,4 +2,116 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cast/NewCastViewController.swift"
+            timestampString = "496813924.123012"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "showView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cast/NewCastViewController.swift"
+            timestampString = "496745563.035266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "NewCastViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cast.NewCastViewController.datePicker.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIDatePicker&gt;"
+                  moduleName = "Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fongtze/Desktop/AmnesiacDeafAunty/Cast/Cast/NewCastViewController.swift"
+                  timestampString = "496745563.817745"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cast.NewCastViewController.datePicker.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIDatePicker&gt;"
+                  moduleName = "Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fongtze/Desktop/AmnesiacDeafAunty/Cast/Cast/NewCastViewController.swift"
+                  timestampString = "496745563.822607"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cast.NewCastViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; Cast.NewCastViewController"
+                  moduleName = "Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fongtze/Desktop/AmnesiacDeafAunty/Cast/Cast/NewCastViewController.swift"
+                  timestampString = "496745563.82544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "174">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Cast.NewCastViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Cast.NewCastViewController&gt;"
+                  moduleName = "Cast"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fongtze/Desktop/AmnesiacDeafAunty/Cast/Cast/NewCastViewController.swift"
+                  timestampString = "496745563.827901"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "User.swift"
+            timestampString = "496812203.140313"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "init(snapshot:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -25,11 +25,18 @@
 		53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */; };
 		53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */; };
 		53B719331D9AC53E001697C1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */; };
+		53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */; };
+		53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */; };
+		53B719421D9BA606001697C1 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */; };
+		53B719431D9BA606001697C1 /* Quicksand-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193C1D9BA5ED001697C1 /* Quicksand-BoldItalic.ttf */; };
+		53B719441D9BA606001697C1 /* Quicksand-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193D1D9BA5ED001697C1 /* Quicksand-Italic.ttf */; };
+		53B719451D9BA606001697C1 /* Quicksand-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193E1D9BA5ED001697C1 /* Quicksand-Light.ttf */; };
+		53B719461D9BA606001697C1 /* Quicksand-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193F1D9BA5ED001697C1 /* Quicksand-LightItalic.ttf */; };
+		53B719471D9BA606001697C1 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719401D9BA5ED001697C1 /* Quicksand-Regular.ttf */; };
 		53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */; };
 		53DEFDF61D9A1C1400078C36 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */; };
 		53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDF71D9A1C1400078C36 /* Main.storyboard */; };
 		53DEFDFC1D9A1C1400078C36 /* Cast.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFDFA1D9A1C1400078C36 /* Cast.xcdatamodeld */; };
-		53DEFDFE1D9A1C1400078C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */; };
 		53DEFE011D9A1C1400078C36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DEFDFF1D9A1C1400078C36 /* LaunchScreen.storyboard */; };
 		53DEFE0C1D9A1C1400078C36 /* CastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFE0B1D9A1C1400078C36 /* CastTests.swift */; };
 		53DEFE171D9A1C1400078C36 /* CastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DEFE161D9A1C1400078C36 /* CastUITests.swift */; };
@@ -48,6 +55,7 @@
 		F14527541D9A431600CDDA2F /* UserComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274F1D9A431600CDDA2F /* UserComment.swift */; };
 		F14527571D9A46F500CDDA2F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14527551D9A46F500CDDA2F /* DataService.swift */; };
 		F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14527561D9A46F500CDDA2F /* StorageService.swift */; };
+		F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18546391D9B72AB00643E18 /* Assets.xcassets */; };
 		F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,12 +97,19 @@
 		53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
 		53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
 		53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
+		53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amatic-Bold.ttf"; sourceTree = "<group>"; };
+		53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
+		53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
+		53B7193C1D9BA5ED001697C1 /* Quicksand-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-BoldItalic.ttf"; sourceTree = "<group>"; };
+		53B7193D1D9BA5ED001697C1 /* Quicksand-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Italic.ttf"; sourceTree = "<group>"; };
+		53B7193E1D9BA5ED001697C1 /* Quicksand-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Light.ttf"; sourceTree = "<group>"; };
+		53B7193F1D9BA5ED001697C1 /* Quicksand-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-LightItalic.ttf"; sourceTree = "<group>"; };
+		53B719401D9BA5ED001697C1 /* Quicksand-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Regular.ttf"; sourceTree = "<group>"; };
 		53DEFDF01D9A1C1400078C36 /* Cast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DEFDF31D9A1C1400078C36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DEFDF51D9A1C1400078C36 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		53DEFDF81D9A1C1400078C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53DEFDFB1D9A1C1400078C36 /* Cast.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cast.xcdatamodel; sourceTree = "<group>"; };
-		53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53DEFE001D9A1C1400078C36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53DEFE021D9A1C1400078C36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53DEFE071D9A1C1400078C36 /* CastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +138,7 @@
 		F145274F1D9A431600CDDA2F /* UserComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserComment.swift; sourceTree = "<group>"; };
 		F14527551D9A46F500CDDA2F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F14527561D9A46F500CDDA2F /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		F18546391D9B72AB00643E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +237,49 @@
 			name = NotificationsViewController;
 			sourceTree = "<group>";
 		};
+		53B719341D9BA506001697C1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				53B719411D9BA5F2001697C1 /* Quicksand */,
+				53B719361D9BA52C001697C1 /* Amatic sc */,
+				53B719351D9BA51E001697C1 /* Lobster two */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		53B719351D9BA51E001697C1 /* Lobster two */ = {
+			isa = PBXGroup;
+			children = (
+				53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */,
+				53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */,
+				53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */,
+				53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */,
+			);
+			name = "Lobster two";
+			sourceTree = "<group>";
+		};
+		53B719361D9BA52C001697C1 /* Amatic sc */ = {
+			isa = PBXGroup;
+			children = (
+				53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */,
+				53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */,
+			);
+			name = "Amatic sc";
+			sourceTree = "<group>";
+		};
+		53B719411D9BA5F2001697C1 /* Quicksand */ = {
+			isa = PBXGroup;
+			children = (
+				53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */,
+				53B7193C1D9BA5ED001697C1 /* Quicksand-BoldItalic.ttf */,
+				53B7193D1D9BA5ED001697C1 /* Quicksand-Italic.ttf */,
+				53B7193E1D9BA5ED001697C1 /* Quicksand-Light.ttf */,
+				53B7193F1D9BA5ED001697C1 /* Quicksand-LightItalic.ttf */,
+				53B719401D9BA5ED001697C1 /* Quicksand-Regular.ttf */,
+			);
+			name = Quicksand;
+			sourceTree = "<group>";
+		};
 		53DEFDE71D9A1C1400078C36 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +305,7 @@
 		53DEFDF21D9A1C1400078C36 /* Cast */ = {
 			isa = PBXGroup;
 			children = (
+				F18546391D9B72AB00643E18 /* Assets.xcassets */,
 				B5F148E81D9A87CE00286B3F /* Cast.entitlements */,
 				B5F148E41D9A7BBD00286B3F /* AccountKitStrings.bundle */,
 				B5F148E51D9A7BBD00286B3F /* FacebookSDKStrings.bundle */,
@@ -256,11 +316,11 @@
 				F145274A1D9A42E400CDDA2F /* Models */,
 				53DEFE251D9A1C3A00078C36 /* Controllers */,
 				53DEFE241D9A1C2E00078C36 /* Storyboards */,
-				53DEFDFD1D9A1C1400078C36 /* Assets.xcassets */,
 				53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */,
 				53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */,
 				53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */,
 				53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */,
+				53B719341D9BA506001697C1 /* Fonts */,
 				53DEFDFF1D9A1C1400078C36 /* LaunchScreen.storyboard */,
 				53DEFE021D9A1C1400078C36 /* Info.plist */,
 				530922C81D9A288E00AA9EEB /* GoogleService-Info.plist */,
@@ -459,6 +519,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53B719421D9BA606001697C1 /* Quicksand-Bold.ttf in Resources */,
+				53B719431D9BA606001697C1 /* Quicksand-BoldItalic.ttf in Resources */,
+				53B719441D9BA606001697C1 /* Quicksand-Italic.ttf in Resources */,
+				53B719451D9BA606001697C1 /* Quicksand-Light.ttf in Resources */,
+				53B719461D9BA606001697C1 /* Quicksand-LightItalic.ttf in Resources */,
+				53B719471D9BA606001697C1 /* Quicksand-Regular.ttf in Resources */,
+				53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */,
+				53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */,
 				53B719301D9AC53E001697C1 /* lobster-two.bold-italic.ttf in Resources */,
 				53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */,
 				53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */,
@@ -468,12 +536,12 @@
 				530922BA1D9A21A800AA9EEB /* Collaborators.storyboard in Resources */,
 				B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */,
 				530922B61D9A210700AA9EEB /* AppOverview.storyboard in Resources */,
-				53DEFDFE1D9A1C1400078C36 /* Assets.xcassets in Resources */,
 				530922BC1D9A21B500AA9EEB /* Cast.storyboard in Resources */,
 				530922C01D9A221A00AA9EEB /* Notifications.storyboard in Resources */,
 				530922C91D9A288E00AA9EEB /* GoogleService-Info.plist in Resources */,
 				530922BE1D9A21E100AA9EEB /* Search.storyboard in Resources */,
 				B5F148E61D9A7BBD00286B3F /* AccountKitStrings.bundle in Resources */,
+				F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */,
 				53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
