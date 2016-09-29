@@ -66,6 +66,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 
                 //calling the firebaseAuthApps
                 self.firebaseAuthByApps(credential)
+                self.performSegue(withIdentifier: "overviewSegue", sender: self)
             }
         }
         
