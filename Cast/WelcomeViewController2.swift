@@ -17,7 +17,8 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
     @IBOutlet weak var portfolioTextField: UITextField!
     @IBOutlet weak var roleTextField: UITextField!
     
-    
+    var fireBaseRef = FIRDatabase.database().reference()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,9 +28,7 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard)))
         
-        var desription = descriptionTextField.text
-        var portfolio = portfolioTextField.text
-        var role = roleTextField.text
+
         
     }
 
@@ -43,15 +42,20 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
         
     }
 
-        
-
-
-    
 
     @IBAction func genderSegment(_ sender: AnyObject) {
+        
     }
   
     @IBAction func nextButton(_ sender: AnyObject) {
+        
+        if let description = descriptionTextField.text, let portfolio = portfolioTextField.text, let role = roleTextField.text {
+            let userDictionary = ["ProfileDescription": description, "PortfolioLink" : portfolio, "Role" : role]
+            self.fireBaseRef.child("users").child(Session.currentUserUid).setValue(userDictionary)
+            Session.storeUserSession()
+        
+        }
+        performSegue(withIdentifier: "toOverviewSegue", sender: self)
     }
 
 }
