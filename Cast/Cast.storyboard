@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="45W-Hr-Xxz">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ddn-EL-ZDB">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-
+        <!--Cast-->
         <scene sceneID="Oee-UG-NEa">
             <objects>
                 <viewController storyboardIdentifier="NewCastVC" title="Cast" id="45W-Hr-Xxz" customClass="NewCastViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
@@ -259,6 +259,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="categoryTxt" destination="fLE-oO-gof" id="3bh-D9-7ZD"/>
                         <outlet property="datePicker" destination="TIl-wC-aa4" id="aFV-G3-Eoj"/>
                         <outlet property="datePickerHeightConstraint" destination="uef-XV-Gmo" id="xoD-Vn-VB1"/>
                         <outlet property="descriptionTxt" destination="Rqg-is-MkO" id="wyA-dc-7T4"/>
@@ -269,9 +270,28 @@
                         <outlet property="nameTxt" destination="i8Z-Jc-9VF" id="I4u-ul-FTZ"/>
                         <outlet property="photogphBtn" destination="wgM-D7-coR" id="tFb-Vo-LIz"/>
                         <outlet property="rewardTxt" destination="hXb-9B-mA5" id="12z-vY-ees"/>
+                        <outlet property="rewardType" destination="KSy-8N-HCT" id="RtM-cA-DMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMK-nU-OfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484" y="-204.64767616191907"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9if-dj-G7I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ddn-EL-ZDB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UKW-ac-Mt5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="45W-Hr-Xxz" kind="relationship" relationship="rootViewController" id="VMv-ka-jD6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6A-G9-LOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2544.8000000000002" y="-204.64767616191907"/>
         </scene>
