@@ -21,9 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         FIRApp.configure()
         FIRDatabase.database().persistenceEnabled = true
-//        if(Session.isUserLoggedIn()){
-//            
-//        }
+        
+        if(Session.isUserLoggedIn()){
+            let storyBoard = UIStoryboard(name: "AppOverview", bundle: Bundle.main)
+            // load view controller with the storyboardID of HomeTabBarController
+            let tabBarController = storyBoard.instantiateViewController(withIdentifier: "AppOverviewID")
+            self.window?.rootViewController = tabBarController
+        }
+        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
 
         return true

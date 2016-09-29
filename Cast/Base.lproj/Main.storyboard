@@ -136,9 +136,9 @@
                     <connections>
                         <outlet property="emailTextField" destination="Fyg-PY-JP3" id="IVb-bM-Oh5"/>
                         <outlet property="passwordTextField" destination="My6-5r-ctF" id="fp4-T4-ONc"/>
-                        <segue destination="kiS-ck-T3T" kind="show" id="YvI-Jd-1Lr"/>
                         <segue destination="HyY-zm-IdO" kind="presentation" identifier="SignUpSegue" id="eJg-Rx-xee"/>
                         <segue destination="xaz-lV-zg9" kind="presentation" identifier="forgotPassSegue" id="Xc3-n6-34a"/>
+                        <segue destination="OiI-vF-L6y" kind="presentation" identifier="overviewSegue" id="qmW-nZ-GMq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -352,12 +352,12 @@
                         <outlet property="emailTextField" destination="Pya-HO-5b1" id="LFv-ux-LoG"/>
                         <outlet property="passwordTextField" destination="Yp4-Yd-Nv6" id="jb8-q1-Msw"/>
                         <outlet property="usernameTextField" destination="YO0-pL-uqH" id="R5d-zn-64B"/>
-                        <segue destination="kiS-ck-T3T" kind="show" id="Imn-zc-6n4"/>
+                        <segue destination="kiS-ck-T3T" kind="presentation" identifier="welcomeSegue" id="0fZ-DR-sEh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeT-6P-Zoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="878"/>
+            <point key="canvasLocation" x="538" y="803"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="Ho3-Aw-omD">
@@ -378,16 +378,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRt-io-ktf">
+                                <frame key="frameInset" minX="163" minY="318" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="kiS-ck-T3T" eventType="touchUpInside" id="W3v-a9-rVH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="OiI-vF-L6y" kind="show" id="PZw-5b-9Jc"/>
+                        <segue destination="OiI-vF-L6y" kind="presentation" identifier="submitSegue" id="eV4-U5-4FH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AkW-kF-ZqM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="878"/>
+            <point key="canvasLocation" x="1254" y="803"/>
         </scene>
         <!--AppOverview-->
         <scene sceneID="mAW-cb-BT3">
@@ -395,7 +403,7 @@
                 <viewControllerPlaceholder storyboardName="AppOverview" id="OiI-vF-L6y" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mg-oi-FU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="877"/>
+            <point key="canvasLocation" x="1966" y="515"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uqw-dd-qrs">
@@ -422,6 +430,6 @@
         <image name="pexels-photo" width="509" height="655"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Imn-zc-6n4"/>
+        <segue reference="eV4-U5-4FH"/>
     </inferredMetricsTieBreakers>
 </document>

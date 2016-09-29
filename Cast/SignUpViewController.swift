@@ -57,10 +57,11 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 if let person = user {
                 let userDictionary = ["email": email, "username": username]
                     self.fireBaseRef.child("users").child(person.uid).setValue(userDictionary)
-
+                    Session.storeUserSession()
                 }
                 
             print ("user successfully authenticated with Firebase")
+                self.performSegue(withIdentifier: "welcomeSegue", sender: self)
             }
         })
         }

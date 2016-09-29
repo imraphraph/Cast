@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Collaborator-->
         <scene sceneID="sFo-N6-Dnh">
             <objects>
-                <viewController id="nyB-co-7n2" sceneMemberID="viewController">
+                <viewController title="Collaborator" id="nyB-co-7n2" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N55-8x-wQm"/>
                         <viewControllerLayoutGuide type="bottom" id="Vmi-8W-4om"/>

@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Notification-->
         <scene sceneID="6PG-XR-WV6">
             <objects>
-                <viewController id="4bj-pB-f6J" sceneMemberID="viewController">
+                <viewController title="Notification" id="4bj-pB-f6J" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kAd-9m-VJD"/>
                         <viewControllerLayoutGuide type="bottom" id="aHM-dy-Re1"/>
