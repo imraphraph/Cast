@@ -112,9 +112,9 @@ class Cast {
         let dictRewardType = dict["reward_type"] as! String
         //print("cash.swift \(dictRewardType)")
         switch dictRewardType {
-        case "cash":
+        case "Cash":
             self.rewardType = RewardType.cash
-        case "tradeforprint":
+        case "TradeForPrint":
             self.rewardType = RewardType.tradeforprint
         default:
             self.rewardType = RewardType.cash
