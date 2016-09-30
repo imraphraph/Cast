@@ -61,6 +61,10 @@
 		53ED3C1B1D9D0E12006D85D1 /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C1A1D9D0E12006D85D1 /* MyDateFormatter.swift */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
+		B558CB6E1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */; };
+		B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */; };
+		B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */; };
+		B558CB711D9DFDCA005F7D49 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */; };
 		B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */; };
 		B5F148DE1D9A741200286B3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */; };
 		B5F148DF1D9A741200286B3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */; };
@@ -162,11 +166,11 @@
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
+		B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
+		B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
+		B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController2.swift; sourceTree = "<group>"; };
-		B5CE8F8E1D9D1AEA00488C27 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
-		B5CE8F8F1D9D1AEA00488C27 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
-		B5CE8F901D9D1AEA00488C27 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
-		B5CE8F911D9D1AEA00488C27 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B5F148E21D9A7B7800286B3F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -296,10 +300,10 @@
 		53B719351D9BA51E001697C1 /* Lobster two */ = {
 			isa = PBXGroup;
 			children = (
-				B5CE8F8E1D9D1AEA00488C27 /* lobster-two.bold-italic.ttf */,
-				B5CE8F8F1D9D1AEA00488C27 /* lobster-two.bold.ttf */,
-				B5CE8F901D9D1AEA00488C27 /* lobster-two.italic.ttf */,
-				B5CE8F911D9D1AEA00488C27 /* lobster-two.regular.ttf */,
+				B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */,
+				B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */,
+				B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */,
+				B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */,
 			);
 			name = "Lobster two";
 			sourceTree = "<group>";
@@ -597,6 +601,7 @@
 				53ED3C0F1D9CE453006D85D1 /* Raleway-Italic.ttf in Resources */,
 				53ED3C101D9CE453006D85D1 /* Raleway-Light.ttf in Resources */,
 				53ED3C111D9CE453006D85D1 /* Raleway-LightItalic.ttf in Resources */,
+				B558CB6E1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf in Resources */,
 				53ED3C121D9CE453006D85D1 /* Raleway-Medium.ttf in Resources */,
 				53ED3C131D9CE453006D85D1 /* Raleway-MediumItalic.ttf in Resources */,
 				53ED3C141D9CE453006D85D1 /* Raleway-Regular.ttf in Resources */,
@@ -615,18 +620,21 @@
 				53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */,
 				53B719301D9AC53E001697C1 /* lobster-two.bold-italic.ttf in Resources */,
 				53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */,
+				B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */,
 				53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */,
 				53B719331D9AC53E001697C1 /* lobster-two.regular.ttf in Resources */,
 				530922B81D9A219A00AA9EEB /* Feed.storyboard in Resources */,
 				53DEFE011D9A1C1400078C36 /* LaunchScreen.storyboard in Resources */,
 				530922BA1D9A21A800AA9EEB /* Collaborators.storyboard in Resources */,
 				B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */,
+				B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */,
 				530922B61D9A210700AA9EEB /* AppOverview.storyboard in Resources */,
 				530922BC1D9A21B500AA9EEB /* Cast.storyboard in Resources */,
 				530922C01D9A221A00AA9EEB /* Notifications.storyboard in Resources */,
 				530922C91D9A288E00AA9EEB /* GoogleService-Info.plist in Resources */,
 				530922BE1D9A21E100AA9EEB /* Search.storyboard in Resources */,
 				B5F148E61D9A7BBD00286B3F /* AccountKitStrings.bundle in Resources */,
+				B558CB711D9DFDCA005F7D49 /* lobster-two.regular.ttf in Resources */,
 				F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */,
 				53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */,
 			);
