@@ -9,17 +9,61 @@
 import UIKit
 
 class DetailCastViewController: UIViewController {
+    
+    
+    var  currentCast = [Cast]()
 
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var collaborateButton: UIButton!
     @IBOutlet weak var requestSent: UIImageView!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         requestSent.isHidden = true
         collaborateButton.isHidden = false
         
-        // Do any additional setup after loading the view.
+        let selectedCast = currentCast[0]
+        let UID = selectedCast.castID
+        
+        
+      ////Get the UserName
+        
+//        DataService.userRef.observe(.value, with: { (snapshot) in
+//            
+//            
+//            
+//            for userID in snapshot.children {
+//                
+//                
+//                if userID == UID {
+//                    DataService.userRef.child("").observe(.value, with: {(snapshot) in
+//                    })
+//                
+//                }
+//            }
+//            
+//        })
+        
+        self.usernameLabel.text = "Gene"
+        self.titleLabel.text = selectedCast.castName
+        self.textView.text = selectedCast.description
+        self.locationLabel.text = selectedCast.location
+        
+        let interval = selectedCast.eventDate
+        let date = NSDate(timeIntervalSince1970: interval)
+        
+        let dayTimePeriodFormatter = DateFormatter()
+        dayTimePeriodFormatter.dateFormat = "MMM dd YYYY"
+        
+        let dateString = dayTimePeriodFormatter.string(from: date as Date)
+        self.dateLabel.text = dateString
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
