@@ -13,6 +13,7 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var collectionView: UICollectionView!
     var images = [UIImage]()
     var cast = [Cast]()
+    var sendingTheCast = [Cast]()
     
     
     override func viewDidLoad() {
@@ -82,9 +83,21 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
             cell.rewardsImageView.image = UIImage(named: "")
         }
         
+        let eventLocation = currentCast.location // convert to city area
         
+        cell.locationLabel.text = eventLocation
+        
+        self.sendingTheCast = [currentCast]
         
         // Configure the cell
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue"{
+            let destination = segue.destination as! DetailCastViewController
+            destination.currentCast = self.sendingTheCast
+        }
+    }
+
 }
