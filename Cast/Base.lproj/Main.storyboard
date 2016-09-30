@@ -482,7 +482,7 @@
                                     <segment title="Male"/>
                                     <segment title="Female"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.67758367279999998" blue="0.20626513830000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.8980392157" green="0.76470588240000004" blue="0.1058823529" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="genderSegment:" destination="Nix-rw-Hbr" eventType="valueChanged" id="Lor-Y2-mMp"/>
                                 </connections>
@@ -546,7 +546,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HSp-LD-e9R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Kp-3W-PTP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Kp-3W-PTP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
