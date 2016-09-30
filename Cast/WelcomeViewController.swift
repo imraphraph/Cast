@@ -81,7 +81,7 @@ class WelcomeViewController: UIViewController, UITextFieldDelegate, UINavigation
                 
                 if  !snapshot.exists() {
                     let userDictionary = ["username": username]
-                    self.fireBaseRef.child("users").child(Session.currentUserUid).setValue(userDictionary)
+                    self.fireBaseRef.child("users").child(Session.currentUserUid).updateChildValues(userDictionary) //
                     self.performSegue(withIdentifier: "welcomeSegue2", sender: self)
                 
                 } else {

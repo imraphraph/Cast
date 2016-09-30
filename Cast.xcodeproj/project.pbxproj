@@ -61,6 +61,8 @@
 		53ED3C1B1D9D0E12006D85D1 /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C1A1D9D0E12006D85D1 /* MyDateFormatter.swift */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
+		B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */; };
+		B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */; };
 		B558CB6E1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */; };
 		B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */; };
 		B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */; };
@@ -166,6 +168,8 @@
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
 		B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
 		B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 				530922B91D9A21A800AA9EEB /* Collaborators.storyboard */,
 				530922BB1D9A21B500AA9EEB /* Cast.storyboard */,
 				530922BD1D9A21E100AA9EEB /* Search.storyboard */,
+				B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */,
 				530922BF1D9A221A00AA9EEB /* Notifications.storyboard */,
 			);
 			name = Storyboards;
@@ -415,6 +420,7 @@
 				530922C41D9A23BF00AA9EEB /* CollaboratorsViewController */,
 				530922C51D9A23C300AA9EEB /* CastViewController */,
 				530922C61D9A241700AA9EEB /* SearchViewController */,
+				B53A74BC1D9E3A1F005BCC16 /* ProfileViewController */,
 				530922C71D9A242D00AA9EEB /* NotificationsViewController */,
 			);
 			name = Controllers;
@@ -443,6 +449,14 @@
 				53ED3BF51D9CE425006D85D1 /* Raleway-Black.ttf */,
 			);
 			name = Raleway;
+			sourceTree = "<group>";
+		};
+		B53A74BC1D9E3A1F005BCC16 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */,
+			);
+			name = ProfileViewController;
 			sourceTree = "<group>";
 		};
 		B581A65EC411D42021380029 /* Frameworks */ = {
@@ -605,6 +619,7 @@
 				53ED3C121D9CE453006D85D1 /* Raleway-Medium.ttf in Resources */,
 				53ED3C131D9CE453006D85D1 /* Raleway-MediumItalic.ttf in Resources */,
 				53ED3C141D9CE453006D85D1 /* Raleway-Regular.ttf in Resources */,
+				B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */,
 				53ED3C151D9CE453006D85D1 /* Raleway-SemiBold.ttf in Resources */,
 				53ED3C161D9CE453006D85D1 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				53ED3C171D9CE453006D85D1 /* Raleway-Thin.ttf in Resources */,
@@ -802,6 +817,7 @@
 				530922C31D9A22A700AA9EEB /* FeedViewController.swift in Sources */,
 				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
 				F14527531D9A431600CDDA2F /* User.swift in Sources */,
+				B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */,
 				F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */,
 				F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */,
 			);

@@ -29,9 +29,11 @@ open class Session{
     }
     
     static var currentUserUid:  String {
+        
         if let user = FIRAuth.auth()!.currentUser{
             return user.uid
         }
+        
         return (UserDefaults.standard.object(forKey: Session.sessionKey) as? String)!
     }
     
