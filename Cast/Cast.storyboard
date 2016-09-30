@@ -95,6 +95,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="45W-Hr-Xxz" id="EoM-KN-zhq"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5v-hm-stX">
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,6 +128,9 @@
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="45W-Hr-Xxz" id="apf-BG-tUX"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXb-9B-mA5">
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -222,24 +228,47 @@
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TIl-wC-aa4">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="172" id="uef-XV-Gmo"/>
+                                    <constraint firstAttribute="height" constant="100" id="uef-XV-Gmo"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="496659489.05401599">
                                     <!--2016-09-27 08:58:09 +0000-->
                                 </date>
                             </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-oN-OrW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="mC0-6J-W6o"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="45W-Hr-Xxz" id="AJw-n3-SwN"/>
+                                    <outlet property="delegate" destination="45W-Hr-Xxz" id="rRW-4L-sOt"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpY-bK-V4J">
+                                <frame key="frameInset" minX="45" minY="426" height="127" maxX="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="GgQ-MQ-3is"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="45W-Hr-Xxz" id="Tvu-tJ-GXV"/>
+                                    <outlet property="delegate" destination="45W-Hr-Xxz" id="x7q-Vq-aac"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TIl-wC-aa4" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leading" id="3QA-qH-46n"/>
-                            <constraint firstAttribute="trailing" secondItem="TIl-wC-aa4" secondAttribute="trailing" id="ACF-Fx-jQG"/>
+                            <constraint firstItem="TIl-wC-aa4" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leading" constant="10" id="3QA-qH-46n" userLabel="Date Picker.leading = Label Stack View.trailing + 10"/>
+                            <constraint firstAttribute="bottom" secondItem="cpY-bK-V4J" secondAttribute="bottom" constant="50" id="8dX-uz-ctD" userLabel="Bottom Layout Guide.top = Reward Type Picker View.bottom"/>
+                            <constraint firstAttribute="trailing" secondItem="TIl-wC-aa4" secondAttribute="trailing" constant="10" id="ACF-Fx-jQG"/>
                             <constraint firstItem="P90-q6-jpR" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leadingMargin" constant="10" id="DId-6o-tq3"/>
                             <constraint firstItem="Rqg-is-MkO" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leading" id="DaE-KR-ubp"/>
                             <constraint firstItem="Pji-dm-d0S" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leadingMargin" constant="109" id="FI9-V3-6U0"/>
                             <constraint firstItem="dQ1-Lu-51Q" firstAttribute="top" secondItem="Rqg-is-MkO" secondAttribute="bottom" constant="10" id="FII-T5-JGq"/>
+                            <constraint firstItem="ePK-oN-OrW" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leadingMargin" constant="10" id="Gj3-CP-oDV"/>
                             <constraint firstItem="HF1-RR-32B" firstAttribute="top" secondItem="P90-q6-jpR" secondAttribute="top" id="NH2-Oo-LWY"/>
                             <constraint firstItem="HIh-FI-czG" firstAttribute="top" secondItem="dQ1-Lu-51Q" secondAttribute="bottom" constant="10" id="RSm-dR-Pe0"/>
+                            <constraint firstItem="OXn-6x-r7R" firstAttribute="top" secondItem="ePK-oN-OrW" secondAttribute="bottom" id="T14-td-36s"/>
                             <constraint firstItem="dQ1-Lu-51Q" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leadingMargin" constant="109" id="XXT-zh-hhQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ePK-oN-OrW" secondAttribute="trailing" constant="10" id="Xed-jD-Tnb"/>
                             <constraint firstItem="OXn-6x-r7R" firstAttribute="top" secondItem="TIl-wC-aa4" secondAttribute="bottom" id="fMy-GN-WWI"/>
                             <constraint firstItem="HIh-FI-czG" firstAttribute="leading" secondItem="jda-4k-C1V" secondAttribute="leadingMargin" id="lTB-kx-syi"/>
                             <constraint firstItem="P90-q6-jpR" firstAttribute="top" secondItem="uHd-LV-U4C" secondAttribute="bottom" constant="10" id="lkJ-iP-TSY"/>
@@ -260,6 +289,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoryTxt" destination="fLE-oO-gof" id="3bh-D9-7ZD"/>
+                        <outlet property="categoryView" destination="ePK-oN-OrW" id="vYD-mU-GuS"/>
                         <outlet property="datePicker" destination="TIl-wC-aa4" id="aFV-G3-Eoj"/>
                         <outlet property="datePickerHeightConstraint" destination="uef-XV-Gmo" id="xoD-Vn-VB1"/>
                         <outlet property="descriptionTxt" destination="Rqg-is-MkO" id="wyA-dc-7T4"/>
@@ -271,6 +301,7 @@
                         <outlet property="photogphBtn" destination="wgM-D7-coR" id="tFb-Vo-LIz"/>
                         <outlet property="rewardTxt" destination="hXb-9B-mA5" id="12z-vY-ees"/>
                         <outlet property="rewardType" destination="KSy-8N-HCT" id="RtM-cA-DMZ"/>
+                        <outlet property="rewardTypePickerView" destination="cpY-bK-V4J" id="tln-Un-7fn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMK-nU-OfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
