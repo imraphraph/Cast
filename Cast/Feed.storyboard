@@ -8,14 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Raleway-Bold.ttf">
-            <string>Raleway-Bold</string>
-        </array>
         <array key="Raleway-Italic.ttf">
             <string>Raleway-Italic</string>
         </array>
         <array key="Raleway-Light.ttf">
             <string>Raleway-Light</string>
+        </array>
+        <array key="Raleway-Medium.ttf">
+            <string>Raleway-Medium</string>
         </array>
         <array key="Raleway-Regular.ttf">
             <string>Raleway-Regular</string>
@@ -234,7 +234,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="castLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-At-ef5" userLabel="backgroundImage"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZpC-At-ef5" userLabel="backgroundImage"/>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7K-Ki-wt5" userLabel="Head Visual Effect View">
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fF4-Bd-Kqd">
                                     <frame key="frameInset"/>
@@ -354,7 +354,7 @@
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 </state>
                                                                 <connections>
-                                                                    <segue destination="wAz-eH-AAC" kind="show" id="Lv2-LQ-C0L"/>
+                                                                    <segue destination="wAz-eH-AAC" kind="show" identifier="detailSegue" id="Lv2-LQ-C0L"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
@@ -479,46 +479,7 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Id-UOb">
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLi-jC-bDz" userLabel="Hosted Stack View">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Castor:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtY-tM-TsX">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="70" id="m2p-9T-xfb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-d1-0NJ">
-                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown" translatesAutoresizingMaskIntoConstraints="NO" id="roQ-MD-0Io">
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="QRq-al-IWM"/>
-                                            <constraint firstAttribute="height" constant="40" id="y79-HJ-tQE"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="roQ-MD-0Io" firstAttribute="leading" secondItem="FCe-d1-0NJ" secondAttribute="trailing" id="0hq-aW-C0C"/>
-                                    <constraint firstItem="FCe-d1-0NJ" firstAttribute="leading" secondItem="dtY-tM-TsX" secondAttribute="trailing" id="2Ne-sX-MgB"/>
-                                    <constraint firstItem="roQ-MD-0Io" firstAttribute="leading" secondItem="FCe-d1-0NJ" secondAttribute="trailing" id="BTe-tl-Xiz"/>
-                                    <constraint firstItem="dtY-tM-TsX" firstAttribute="centerY" secondItem="cLi-jC-bDz" secondAttribute="centerY" id="Q1D-jw-7NS"/>
-                                    <constraint firstAttribute="trailing" secondItem="roQ-MD-0Io" secondAttribute="trailing" id="Sjv-Fn-9d2"/>
-                                    <constraint firstItem="roQ-MD-0Io" firstAttribute="centerY" secondItem="cLi-jC-bDz" secondAttribute="centerY" id="hDC-50-8Bn"/>
-                                    <constraint firstItem="FCe-d1-0NJ" firstAttribute="centerY" secondItem="cLi-jC-bDz" secondAttribute="centerY" id="hqt-pp-ZFb"/>
-                                    <constraint firstItem="dtY-tM-TsX" firstAttribute="leading" secondItem="cLi-jC-bDz" secondAttribute="leading" id="j3A-Kz-ndm"/>
-                                    <constraint firstAttribute="width" constant="250" id="jGm-q9-2Zt"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-GK-rvl" userLabel="Date Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Vhz-GK-rvl" userLabel="Date Stack View">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar-256" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-xj-5Cy">
                                         <constraints>
@@ -526,20 +487,17 @@
                                             <constraint firstAttribute="height" constant="20" id="r7X-0S-CXq"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thurs, 12/12/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iu9-KE-o7G">
-                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thurs, 12/12/16" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iu9-KE-o7G">
+                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="C9p-HF-BuF"/>
-                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="52F-nX-nET" userLabel="Icons Stack View">
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera-icon-png-clipart-panda-free-clipart-images-Bv0inb-clipart" translatesAutoresizingMaskIntoConstraints="NO" id="d6H-Nk-8t6"/>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W0k-LA-o5o"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W0k-LA-o5o"/>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar" translatesAutoresizingMaskIntoConstraints="NO" id="Qiq-R3-5bP"/>
                                 </subviews>
                                 <constraints>
@@ -547,7 +505,7 @@
                                     <constraint firstAttribute="width" constant="150" id="foJ-7u-vzP"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Taking pictures of pretty mei meis in KLCC, Kuala Lumpur. Looking for pretty Mei Meis under 25 ;)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="x75-6f-S6B">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="description" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="x75-6f-S6B">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -555,7 +513,7 @@
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oJ-Pc-F3i" userLabel="RespondView">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-Uk-2Ud">
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.2463316941624365" green="0.2463316941624365" blue="0.2463316941624365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="30"/>
                                         <state key="normal" title="Collaborate">
                                             <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -579,8 +537,7 @@
                                     <constraint firstItem="AfG-o1-SwJ" firstAttribute="centerX" secondItem="7oJ-Pc-F3i" secondAttribute="centerX" id="yxK-xK-ah3"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-NE-aQ4" userLabel="Location Stack View">
-                                <frame key="frameInset" minX="87" minY="161" width="181" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-NE-aQ4" userLabel="Location Stack View">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-pin-512" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-oY-fXA">
                                         <constraints>
@@ -589,58 +546,79 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuala Lumpur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wur-Xd-A6u">
-                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Id-UOb">
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-d1-0NJ">
+                                <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crown" translatesAutoresizingMaskIntoConstraints="NO" id="roQ-MD-0Io">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="fua-Mz-rXW"/>
+                                    <constraint firstAttribute="height" constant="20" id="lK8-IC-Iwh"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="52F-nX-nET" firstAttribute="centerX" secondItem="kfQ-fG-fd0" secondAttribute="centerX" id="0Cg-VC-Jfc"/>
                             <constraint firstAttribute="trailing" secondItem="M8Z-Bl-Rau" secondAttribute="trailing" id="1Ww-nt-sK3"/>
                             <constraint firstAttribute="trailing" secondItem="7oJ-Pc-F3i" secondAttribute="trailing" constant="10" id="1u4-s4-1tf"/>
-                            <constraint firstItem="cLi-jC-bDz" firstAttribute="centerX" secondItem="kfQ-fG-fd0" secondAttribute="centerX" id="39S-oY-Azb"/>
                             <constraint firstAttribute="trailing" secondItem="x75-6f-S6B" secondAttribute="trailing" constant="10" id="3RI-Y5-BQO"/>
                             <constraint firstItem="0Ar-Zf-ben" firstAttribute="top" secondItem="kfQ-fG-fd0" secondAttribute="top" constant="15" id="Bih-Az-eg4"/>
                             <constraint firstItem="x75-6f-S6B" firstAttribute="leading" secondItem="kfQ-fG-fd0" secondAttribute="leading" constant="10" id="CSr-UV-fZK"/>
                             <constraint firstItem="0Ar-Zf-ben" firstAttribute="leading" secondItem="kfQ-fG-fd0" secondAttribute="leading" id="DBP-aQ-SAy"/>
                             <constraint firstItem="Vhz-GK-rvl" firstAttribute="centerX" secondItem="kfQ-fG-fd0" secondAttribute="centerX" id="EVS-o4-AOY"/>
                             <constraint firstAttribute="trailing" secondItem="0Ar-Zf-ben" secondAttribute="trailing" id="EZs-2s-VTy"/>
+                            <constraint firstItem="r9K-Id-UOb" firstAttribute="top" secondItem="FCe-d1-0NJ" secondAttribute="bottom" constant="5" id="Haf-cK-5hu"/>
                             <constraint firstItem="7oJ-Pc-F3i" firstAttribute="top" secondItem="x75-6f-S6B" secondAttribute="bottom" constant="5" id="IEq-bd-qGL"/>
-                            <constraint firstItem="Yf3-NE-aQ4" firstAttribute="top" secondItem="cLi-jC-bDz" secondAttribute="bottom" constant="10" id="UDi-mf-3bd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="r9K-Id-UOb" secondAttribute="trailing" id="Vvo-jb-79k"/>
+                            <constraint firstItem="r9K-Id-UOb" firstAttribute="centerX" secondItem="kfQ-fG-fd0" secondAttribute="centerX" id="IW5-II-iN6"/>
+                            <constraint firstItem="Yf3-NE-aQ4" firstAttribute="width" secondItem="Vhz-GK-rvl" secondAttribute="width" id="P5e-Rx-9cG"/>
+                            <constraint firstItem="Yf3-NE-aQ4" firstAttribute="top" secondItem="r9K-Id-UOb" secondAttribute="bottom" constant="10" id="R42-Rp-cls"/>
+                            <constraint firstItem="FCe-d1-0NJ" firstAttribute="top" secondItem="0Ar-Zf-ben" secondAttribute="bottom" constant="5" id="TOf-QK-oRH"/>
                             <constraint firstItem="M8Z-Bl-Rau" firstAttribute="top" secondItem="kfQ-fG-fd0" secondAttribute="top" id="XF9-Es-6ZZ"/>
-                            <constraint firstItem="r9K-Id-UOb" firstAttribute="top" secondItem="0Ar-Zf-ben" secondAttribute="bottom" constant="15" id="XM8-4J-N0j"/>
                             <constraint firstItem="Yf3-NE-aQ4" firstAttribute="centerX" secondItem="kfQ-fG-fd0" secondAttribute="centerX" id="aHR-wX-YXy"/>
                             <constraint firstItem="52F-nX-nET" firstAttribute="top" secondItem="Vhz-GK-rvl" secondAttribute="bottom" constant="10" id="j0h-sk-uVr"/>
                             <constraint firstItem="6XE-5e-0Uq" firstAttribute="top" secondItem="M8Z-Bl-Rau" secondAttribute="bottom" id="jb6-XP-AF8"/>
                             <constraint firstItem="7oJ-Pc-F3i" firstAttribute="leading" secondItem="kfQ-fG-fd0" secondAttribute="leading" constant="10" id="k8k-cP-Xg1"/>
                             <constraint firstItem="6XE-5e-0Uq" firstAttribute="top" secondItem="7oJ-Pc-F3i" secondAttribute="bottom" constant="10" id="ke3-e6-8sm"/>
-                            <constraint firstItem="r9K-Id-UOb" firstAttribute="leading" secondItem="kfQ-fG-fd0" secondAttribute="leadingMargin" id="n5V-E7-Yyk"/>
-                            <constraint firstItem="cLi-jC-bDz" firstAttribute="top" secondItem="r9K-Id-UOb" secondAttribute="bottom" constant="10" id="n7q-N0-0Rb"/>
+                            <constraint firstItem="roQ-MD-0Io" firstAttribute="leading" secondItem="FCe-d1-0NJ" secondAttribute="trailing" constant="5" id="m4q-pT-6gD"/>
                             <constraint firstItem="x75-6f-S6B" firstAttribute="top" secondItem="52F-nX-nET" secondAttribute="bottom" constant="20" id="rfe-WO-uwE"/>
+                            <constraint firstItem="FCe-d1-0NJ" firstAttribute="centerX" secondItem="kfQ-fG-fd0" secondAttribute="centerX" id="ulr-Iq-aEj"/>
+                            <constraint firstItem="roQ-MD-0Io" firstAttribute="top" secondItem="0Ar-Zf-ben" secondAttribute="bottom" constant="5" id="vpx-OQ-Kad"/>
                             <constraint firstItem="M8Z-Bl-Rau" firstAttribute="leading" secondItem="kfQ-fG-fd0" secondAttribute="leading" id="w4d-1u-zXn"/>
                             <constraint firstItem="Vhz-GK-rvl" firstAttribute="top" secondItem="Yf3-NE-aQ4" secondAttribute="bottom" constant="10" id="yjK-0S-OmP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collaborateButton" destination="Vfb-Uk-2Ud" id="rta-8S-76r"/>
+                        <outlet property="dateLabel" destination="iu9-KE-o7G" id="pLL-Kc-wou"/>
+                        <outlet property="locationLabel" destination="Wur-Xd-A6u" id="rLF-A4-UJj"/>
                         <outlet property="requestSent" destination="AfG-o1-SwJ" id="Xdl-gn-2bM"/>
                         <outlet property="textView" destination="x75-6f-S6B" id="RH8-hK-0xb"/>
+                        <outlet property="titleLabel" destination="r9K-Id-UOb" id="k3u-f2-kwu"/>
+                        <outlet property="usernameLabel" destination="FCe-d1-0NJ" id="nt4-jZ-pUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G30-LD-nqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2412" y="464"/>
+            <point key="canvasLocation" x="2516" y="463.71814092953525"/>
         </scene>
     </scenes>
     <resources>
         <image name="accept-tick-icon-12" width="256" height="256"/>
         <image name="calendar-256" width="128" height="128"/>
         <image name="camera-icon-png-clipart-panda-free-clipart-images-Bv0inb-clipart" width="499" height="384"/>
-        <image name="castLogo" width="2874" height="1606"/>
         <image name="cosplay" width="300" height="168"/>
         <image name="crown" width="256" height="223"/>
         <image name="dollar" width="128" height="256"/>
