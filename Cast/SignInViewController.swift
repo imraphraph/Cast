@@ -15,14 +15,20 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var facebookLogin: FBSDKLoginManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        var profileImageLink : NSURL? = ""
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard)))
+        
+        self.facebookLogin = FBSDKLoginManager()
+        
         
     }
     
@@ -39,7 +45,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+
         
     }
     
@@ -50,20 +58,25 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func facebookButton(_ sender: AnyObject) {
         
-        let facebookLogin = FBSDKLoginManager()
         
         //read from email address
         //viewcontroller requesting it
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+        self.facebookLogin!.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print ("Unable to authenticate with Facebook - \(error)")
+                print ("Unable to authenticate with Facebook)")
             }else if result?.isCancelled == true {
                 print("User cancelled Facebook authentication")
             } else {
                 print("successfully authenticated with Facebook")
                 //use token string to authenticate with Firebase
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                
+            
+//                let fbGraphRequest = FBSDKGraphRequest(graphPath: "/me/picture", parameters: ["type" : "large"])
+//                fbGraphRequest?.start(completionHandler: { (connection, result, error) in
+                    // get the json object here
+//                    let profileImagePath = result["data"]["url"] as String
+//                    fetchUserImage(path: profileImagePath!)
+//                })
                 //calling the firebaseAuthApps
                 self.firebaseAuthByApps(credential)
                 print("successfully authenticated")
@@ -73,6 +86,12 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    func fetchUserImage(path: String){
+    
+    }
+    
+    
     
     func firebaseAuthByApps(_ credential: FIRAuthCredential) {
         

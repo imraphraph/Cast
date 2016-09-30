@@ -59,7 +59,7 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
         
         if let description = descriptionTextField.text, let portfolio = portfolioTextField.text, let role = roleTextField.text {
             let userDictionary = ["Gender": self.gender, "ProfileDescription": description, "PortfolioLink" : portfolio, "Role" : role]
-            self.fireBaseRef.child("users").child(Session.currentUserUid).setValue(userDictionary)
+            self.fireBaseRef.child("users").child(Session.currentUserUid).updateChildValues(userDictionary)
             Session.storeUserSession()
         
         }
