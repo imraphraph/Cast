@@ -23,10 +23,7 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
             if let allCast = Cast(snapshot: snapshot) {
                 self.cast.append(allCast)
                 self.collectionView.reloadData()
-                
             }
-        
-            
         })
     }
     
