@@ -26,8 +26,6 @@ open class User{
     var profilePhotoURL: String?
     var weblinks: String?
     
-    var points : Int
-    
     var collaborators = [Collaborator]()
     
     enum Gender{
@@ -46,7 +44,6 @@ open class User{
         phone = ""
         profilePhotoURL=""
         weblinks = ""
-        points = 0
         gender = .Undefined
     }
     
@@ -102,10 +99,10 @@ open class User{
         }
         
         
-        if let points = dict["points"] as? Int {
-            self.points = points
+        if let profilePhotoURL = dict["profilePhotoURL"] as? String {
+            self.profilePhotoURL = profilePhotoURL
         } else {
-            self.points = 0
+            self.profilePhotoURL = ""
         }
         
         if let gender = dict["gender"] as? Gender {

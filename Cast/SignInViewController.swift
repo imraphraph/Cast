@@ -14,12 +14,12 @@ import FBSDKLoginKit
 class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    var facebookLogin: FBSDKLoginManager?
+    var facebookLogin : FBSDKLoginManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.facebookLogin = FBSDKLoginManager()
 //        var profileImageLink : NSURL? = ""
         
         emailTextField.delegate = self
@@ -57,7 +57,6 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
         
     }
     @IBAction func facebookButton(_ sender: AnyObject) {
-        
         
         //read from email address
         //viewcontroller requesting it
