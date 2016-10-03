@@ -14,10 +14,12 @@ import FBSDKLoginKit
 class SignInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var facebookLogin : FBSDKLoginManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.facebookLogin = FBSDKLoginManager()
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
@@ -50,11 +52,9 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func facebookButton(_ sender: AnyObject) {
         
-        let facebookLogin = FBSDKLoginManager()
-        
         //read from email address
         //viewcontroller requesting it
-        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+        self.facebookLogin!.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
                 print ("Unable to authenticate with Facebook - \(error)")
             }else if result?.isCancelled == true {

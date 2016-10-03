@@ -244,7 +244,7 @@
                                 </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpY-bK-V4J">
-                                <frame key="frameInset" minX="45" minY="426" height="127" maxX="10"/>
+                                <frame key="frameInset" minX="45" minY="426" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="GgQ-MQ-3is"/>
                                 </constraints>

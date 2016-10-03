@@ -68,6 +68,8 @@
 		B5F148E61D9A7BBD00286B3F /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F148E41D9A7BBD00286B3F /* AccountKitStrings.bundle */; };
 		B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F148E51D9A7BBD00286B3F /* FacebookSDKStrings.bundle */; };
 		CB167F6CEFBE2BCF49E2F95B /* Pods_Cast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37583446EB682F1C0F7FA25 /* Pods_Cast.framework */; };
+		F11B6A5D1D9E48AA008D8C68 /* NotificationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B6A5C1D9E48AA008D8C68 /* NotificationViewCell.swift */; };
+		F11B6A5F1D9E4A3E008D8C68 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B6A5E1D9E4A3E008D8C68 /* NotificationViewController.swift */; };
 		F14527501D9A431600CDDA2F /* Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274B1D9A431600CDDA2F /* Cast.swift */; };
 		F14527511D9A431600CDDA2F /* Collaborator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274C1D9A431600CDDA2F /* Collaborator.swift */; };
 		F14527521D9A431600CDDA2F /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F145274D1D9A431600CDDA2F /* Session.swift */; };
@@ -76,6 +78,7 @@
 		F14527571D9A46F500CDDA2F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14527551D9A46F500CDDA2F /* DataService.swift */; };
 		F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14527561D9A46F500CDDA2F /* StorageService.swift */; };
 		F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18546391D9B72AB00643E18 /* Assets.xcassets */; };
+		F1A952791D9FB9D8008D65A5 /* CastNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A952781D9FB9D8008D65A5 /* CastNotification.swift */; };
 		F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -175,6 +178,8 @@
 		B5F148E81D9A87CE00286B3F /* Cast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Cast.entitlements; sourceTree = "<group>"; };
 		D37583446EB682F1C0F7FA25 /* Pods_Cast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DA57DD8934C9C0A682C6A5 /* Pods-CastUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastUITests/Pods-CastUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F11B6A5C1D9E48AA008D8C68 /* NotificationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewCell.swift; sourceTree = "<group>"; };
+		F11B6A5E1D9E4A3E008D8C68 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F145274B1D9A431600CDDA2F /* Cast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cast.swift; sourceTree = "<group>"; };
 		F145274C1D9A431600CDDA2F /* Collaborator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collaborator.swift; sourceTree = "<group>"; };
 		F145274D1D9A431600CDDA2F /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -183,6 +188,7 @@
 		F14527551D9A46F500CDDA2F /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F14527561D9A46F500CDDA2F /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		F18546391D9B72AB00643E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1A952781D9FB9D8008D65A5 /* CastNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastNotification.swift; sourceTree = "<group>"; };
 		F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +284,8 @@
 		530922C71D9A242D00AA9EEB /* NotificationsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F11B6A5C1D9E48AA008D8C68 /* NotificationViewCell.swift */,
+				F11B6A5E1D9E4A3E008D8C68 /* NotificationViewController.swift */,
 			);
 			name = NotificationsViewController;
 			sourceTree = "<group>";
@@ -462,6 +470,7 @@
 				F145274D1D9A431600CDDA2F /* Session.swift */,
 				F145274E1D9A431600CDDA2F /* User.swift */,
 				F145274F1D9A431600CDDA2F /* UserComment.swift */,
+				F1A952781D9FB9D8008D65A5 /* CastNotification.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -778,6 +787,8 @@
 			files = (
 				F14527521D9A431600CDDA2F /* Session.swift in Sources */,
 				F14527571D9A46F500CDDA2F /* DataService.swift in Sources */,
+				F11B6A5D1D9E48AA008D8C68 /* NotificationViewCell.swift in Sources */,
+				F1A952791D9FB9D8008D65A5 /* CastNotification.swift in Sources */,
 				F14527501D9A431600CDDA2F /* Cast.swift in Sources */,
 				530922AF1D9A1FF700AA9EEB /* SignInViewController.swift in Sources */,
 				B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */,
@@ -787,6 +798,7 @@
 				F14527511D9A431600CDDA2F /* Collaborator.swift in Sources */,
 				530922D11D9A72DE00AA9EEB /* DetailCastCollectionViewCell.swift in Sources */,
 				53DEFDFC1D9A1C1400078C36 /* Cast.xcdatamodeld in Sources */,
+				F11B6A5F1D9E4A3E008D8C68 /* NotificationViewController.swift in Sources */,
 				F14527541D9A431600CDDA2F /* UserComment.swift in Sources */,
 				530922B41D9A205000AA9EEB /* WelcomeViewController.swift in Sources */,
 				53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */,
