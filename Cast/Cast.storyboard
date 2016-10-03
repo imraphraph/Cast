@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rcz-oA-KOB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dBg-Ry-98c">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -315,20 +315,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMK-nU-OfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5566" y="-225"/>
+            <point key="canvasLocation" x="6504.8000000000002" y="-225.33733133433284"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="P2K-qi-uXL">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="rcz-oA-KOB" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="rcz-oA-KOB" customClass="PageViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxF-l9-cvu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3420" y="-870"/>
+            <point key="canvasLocation" x="4359.1999999999998" y="-870.31484257871068"/>
+        </scene>
+        <!--Cast-->
+        <scene sceneID="dha-QT-pmJ">
+            <objects>
+                <viewController id="TwP-7k-tgd" customClass="ViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CzI-DK-W45"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uvf-qi-dLb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0sI-Mz-OUU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="lae-Re-IJc">
+                                <color key="pageIndicatorTintColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.6307091346" green="0.1928705268" blue="0.60930249579999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="pageControl:" destination="TwP-7k-tgd" eventType="valueChanged" id="PXg-ga-aIC"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Uvf-qi-dLb" firstAttribute="top" secondItem="lae-Re-IJc" secondAttribute="bottom" constant="50" id="ALP-7K-qCL"/>
+                            <constraint firstItem="lae-Re-IJc" firstAttribute="centerX" secondItem="0sI-Mz-OUU" secondAttribute="centerX" id="OhV-N5-ToJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cast" id="zL9-dx-ipI">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                                <color key="value" red="0.740234375" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a6L-6N-G9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792.8000000000002" y="-225.33733133433284"/>
         </scene>
         <!--New Cast-->
         <scene sceneID="sf3-YX-Gsw">
             <objects>
-                <viewController storyboardIdentifier="TitleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pe2-U8-X3m" customClass="TitleViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pe2-U8-X3m" customClass="TitleViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tzZ-Xg-q3X"/>
                         <viewControllerLayoutGuide type="bottom" id="76c-mf-EnS"/>
@@ -375,10 +413,11 @@
                                 </constraints>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-nO-h6q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cast Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umS-of-X2h">
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="K2N-iA-2pr"/>
+                                    <constraint firstAttribute="height" constant="60" id="ImD-kv-eVU"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Jfb-0L-umd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -387,12 +426,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.18823529411764706" green="0.78823529411764703" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5nr-nO-h6q" firstAttribute="leading" secondItem="F1B-FT-0Gm" secondAttribute="leading" id="49h-tb-1mD"/>
+                            <constraint firstItem="umS-of-X2h" firstAttribute="leading" secondItem="F1B-FT-0Gm" secondAttribute="leading" id="Hht-Eq-2tN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rT1-no-JSX" secondAttribute="trailing" constant="10" id="Qm9-zN-iMJ"/>
+                            <constraint firstItem="umS-of-X2h" firstAttribute="top" secondItem="tzZ-Xg-q3X" secondAttribute="bottom" id="ffD-qA-JRS"/>
                             <constraint firstItem="rT1-no-JSX" firstAttribute="leading" secondItem="F1B-FT-0Gm" secondAttribute="leadingMargin" constant="10" id="jmZ-3q-KFB"/>
-                            <constraint firstAttribute="trailing" secondItem="5nr-nO-h6q" secondAttribute="trailing" id="nyL-Ay-uyD"/>
                             <constraint firstItem="rT1-no-JSX" firstAttribute="centerY" secondItem="F1B-FT-0Gm" secondAttribute="centerY" constant="-30" id="pcK-BR-cA2"/>
-                            <constraint firstItem="5nr-nO-h6q" firstAttribute="top" secondItem="tzZ-Xg-q3X" secondAttribute="bottom" id="wke-rA-wNb"/>
+                            <constraint firstAttribute="trailing" secondItem="umS-of-X2h" secondAttribute="trailing" id="uRP-UD-32I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Cast" id="zCC-kP-yJt">
@@ -405,12 +444,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXO-YK-o8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2719" y="-225"/>
+            <point key="canvasLocation" x="3656.8000000000002" y="-225.33733133433284"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="bq6-e9-dJb">
             <objects>
-                <viewController storyboardIdentifier="DescriptionVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4g1-SK-bH1" customClass="DescriptionViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4g1-SK-bH1" customClass="DescriptionViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0du-fn-WjF"/>
                         <viewControllerLayoutGuide type="bottom" id="g6N-ED-HHq"/>
@@ -454,11 +493,11 @@
                                 </view>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPf-aR-MEJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give a Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-eU-IzB">
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="QX3-RW-rfw"/>
-                                    <constraint firstAttribute="height" constant="60" id="Xoj-DU-hSa"/>
+                                    <constraint firstAttribute="height" constant="60" id="2Kd-Kq-QZ7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Fay-e9-P6K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -467,24 +506,24 @@
                         </subviews>
                         <color key="backgroundColor" red="0.18823529411764706" green="0.78823529411764703" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mPf-aR-MEJ" firstAttribute="top" secondItem="0du-fn-WjF" secondAttribute="bottom" id="KSn-dQ-esL"/>
+                            <constraint firstItem="aYP-eU-IzB" firstAttribute="leading" secondItem="v3u-H1-Opm" secondAttribute="leading" id="Hgk-Lj-iU8"/>
+                            <constraint firstItem="aYP-eU-IzB" firstAttribute="top" secondItem="0du-fn-WjF" secondAttribute="bottom" id="L1a-5Q-VoM"/>
                             <constraint firstItem="Svx-L8-xCT" firstAttribute="width" secondItem="Svx-L8-xCT" secondAttribute="height" multiplier="4:3" id="Prd-5a-hpR"/>
-                            <constraint firstItem="mPf-aR-MEJ" firstAttribute="leading" secondItem="v3u-H1-Opm" secondAttribute="leading" id="UXy-qY-cCQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Svx-L8-xCT" secondAttribute="trailing" constant="10" id="Ve7-t9-Sog"/>
                             <constraint firstItem="Svx-L8-xCT" firstAttribute="leading" secondItem="v3u-H1-Opm" secondAttribute="leadingMargin" constant="10" id="cEN-Bm-iob"/>
-                            <constraint firstAttribute="trailing" secondItem="mPf-aR-MEJ" secondAttribute="trailing" id="eyk-uD-2ay"/>
+                            <constraint firstAttribute="trailing" secondItem="aYP-eU-IzB" secondAttribute="trailing" id="rwU-7s-WFI"/>
                             <constraint firstItem="Svx-L8-xCT" firstAttribute="centerY" secondItem="v3u-H1-Opm" secondAttribute="centerY" constant="-30" id="zpC-la-GXw"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELg-iZ-ygV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3382" y="-225"/>
+            <point key="canvasLocation" x="4280.8000000000002" y="-225.33733133433284"/>
         </scene>
         <!--Image Picker View Controller-->
         <scene sceneID="Z31-1g-iSn">
             <objects>
-                <viewController storyboardIdentifier="ImagePickerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KKh-jW-BN1" customClass="ImagePickerViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="thirdVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KKh-jW-BN1" customClass="ImagePickerViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aY1-pO-ukT"/>
                         <viewControllerLayoutGuide type="bottom" id="ehz-Zy-fIE"/>
@@ -506,7 +545,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-NC-0oi">
                                 <state key="normal" title="upload"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1t-eA-RYM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1t-eA-RYM">
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Uuw-Y6-2Qd"/>
@@ -537,12 +576,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaV-eV-unA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4033" y="-225"/>
+            <point key="canvasLocation" x="4972" y="-225.33733133433284"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4db-pf-sN2">
             <objects>
-                <viewController id="SvZ-wo-sNE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fourthVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SvZ-wo-sNE" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xbq-nv-jeD"/>
                         <viewControllerLayoutGuide type="bottom" id="OWB-AI-NS4"/>
@@ -595,10 +634,11 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="XJa-9c-HMc" firstAttribute="centerX" secondItem="fXS-NL-zzf" secondAttribute="centerX" id="19R-bf-as2"/>
+                                        <constraint firstAttribute="trailing" secondItem="XJa-9c-HMc" secondAttribute="trailing" constant="10" id="34e-4Q-RMO"/>
                                         <constraint firstAttribute="bottom" secondItem="DnP-jq-20w" secondAttribute="bottom" constant="10" id="FFf-O0-ced"/>
                                         <constraint firstItem="DnP-jq-20w" firstAttribute="centerX" secondItem="fXS-NL-zzf" secondAttribute="centerX" id="KrT-rE-xcz"/>
                                         <constraint firstItem="XJa-9c-HMc" firstAttribute="centerY" secondItem="fXS-NL-zzf" secondAttribute="centerY" constant="-15" id="MkU-w3-jm6"/>
+                                        <constraint firstItem="XJa-9c-HMc" firstAttribute="leading" secondItem="fXS-NL-zzf" secondAttribute="leading" constant="10" id="mZj-OF-ZGv"/>
                                     </constraints>
                                 </view>
                                 <constraints>
@@ -606,7 +646,7 @@
                                 </constraints>
                                 <blurEffect style="extraLight"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGv-VS-gtg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGv-VS-gtg">
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2sD-86-aO5"/>
@@ -630,7 +670,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Q7-JE-7OS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4695" y="-225"/>
+            <point key="canvasLocation" x="5632.8000000000002" y="-225.33733133433284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cyZ-jW-Nfb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dBg-Ry-98c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="tgn-gP-ppM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TwP-7k-tgd" kind="relationship" relationship="rootViewController" id="7MT-LW-Wn7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dKN-5N-kKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.5999999999999" y="-225.33733133433284"/>
         </scene>
     </scenes>
     <resources>
