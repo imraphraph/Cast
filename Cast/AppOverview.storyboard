@@ -57,20 +57,20 @@
             </objects>
             <point key="canvasLocation" x="-408" y="-520"/>
         </scene>
-        <!--Search-->
+        <!--Notifications-->
         <scene sceneID="DKs-gM-vA5">
             <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="db7-5u-Kxg" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notifications" id="db7-5u-Kxg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="search" id="KeX-OX-LRW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmS-uN-VfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-383" y="-367"/>
         </scene>
-        <!--Notifications-->
+        <!--Profile-->
         <scene sceneID="qYw-4Q-N3R">
             <objects>
-                <viewControllerPlaceholder storyboardName="Notifications" id="Fmk-wV-W7a" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Profile" id="Fmk-wV-W7a" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notifications" id="Kvz-cT-XyW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhP-Hh-wpy" userLabel="First Responder" sceneMemberID="firstResponder"/>

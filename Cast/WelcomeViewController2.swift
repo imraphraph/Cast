@@ -11,12 +11,14 @@ import Firebase
 import FirebaseDatabase
 
 class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDelegate {
+    
     @IBOutlet weak var genderSegment: UISegmentedControl!
 
     @IBOutlet weak var descriptionTextField: UITextView!
     @IBOutlet weak var portfolioTextField: UITextField!
     @IBOutlet weak var roleTextField: UITextField!
     
+    var gender : String = "male"
     var fireBaseRef = FIRDatabase.database().reference()
 
     override func viewDidLoad() {
@@ -45,13 +47,19 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
 
     @IBAction func genderSegment(_ sender: AnyObject) {
         
+        if genderSegment.selectedSegmentIndex == 0 {
+            self.gender = "male"
+        }
+        if genderSegment.selectedSegmentIndex == 1{
+            self.gender = "female"
+        }
     }
   
     @IBAction func nextButton(_ sender: AnyObject) {
         
         if let description = descriptionTextField.text, let portfolio = portfolioTextField.text, let role = roleTextField.text {
-            let userDictionary = ["ProfileDescription": description, "PortfolioLink" : portfolio, "Role" : role]
-            self.fireBaseRef.child("users").child(Session.currentUserUid).setValue(userDictionary)
+            let userDictionary = ["Gender": self.gender, "ProfileDescription": description, "PortfolioLink" : portfolio, "Role" : role]
+            self.fireBaseRef.child("users").child(Session.currentUserUid).updateChildValues(userDictionary)
             Session.storeUserSession()
         
         }
