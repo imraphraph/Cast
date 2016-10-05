@@ -25,7 +25,7 @@ class Cast {
     var femaleNeeded : String = "false"
     var maleNeeded : String = "false"
     var photogNeeded : String = "false"
-    
+    var userUID : String = ""
     var collaborators = [Collaborator]()
     
     init() {
@@ -56,6 +56,12 @@ class Cast {
         guard let dict = snapshot.value as? [String:AnyObject] else { return nil}
         
         castID = snapshot.key
+        
+        if let dictUserUID = dict["userUID"] as? String {
+            self.userUID = dictUserUID
+        } else {
+            self.userUID = ""
+        }
         
         if let dictCastName = dict["castname"] as? String {
             self.castName = dictCastName

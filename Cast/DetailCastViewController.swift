@@ -12,7 +12,8 @@ class DetailCastViewController: UIViewController {
     
     
     var  currentCast = [Cast]()
-
+    var selectedCast:Cast!
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
@@ -27,7 +28,7 @@ class DetailCastViewController: UIViewController {
         requestSent.isHidden = true
         collaborateButton.isHidden = false
         
-        let selectedCast = currentCast[0]
+        selectedCast = currentCast[0]
         let UID = selectedCast.castID
         
         
@@ -65,11 +66,6 @@ class DetailCastViewController: UIViewController {
         
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @IBAction func backButton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
@@ -77,6 +73,23 @@ class DetailCastViewController: UIViewController {
 
 
     @IBAction func collaborateButtonPressed(_ sender: AnyObject) {
+
+        print(Collaborator.Role.Photographer)
+        
+        //create queue under the cast node
+        let collaborateDict = ["created_at":NSDate().timeIntervalSince1970, "userUID":Session.currentUserUid, "role": "photographer" ] as [String : Any]
+        let queueRef = DataService.rootRef.child("casts").child(selectedCast.castID).child("queue").childByAutoId()
+        queueRef.updateChildValues(collaborateDict)
+        
+        //create notification node
+        let notifyDict = ["created_at":NSDate().timeIntervalSince1970, "From":Session.currentUserUid, "To":selectedCast.userUID, "castID": selectedCast.castID, "message": "I would like to collaborate in this job.", "status":"new" ] as [String : Any]
+        let notifyRef = DataService.rootRef.child("notification").childByAutoId()
+        notifyRef.updateChildValues(notifyDict)
+        
+        //add the notification to the Receiver User
+    DataService.userRef.child(selectedCast.userUID).child("being_notified").updateChildValues([notifyRef.key:true])
+        
+        
         requestSent.isHidden = false
         collaborateButton.isHidden = true
     }
