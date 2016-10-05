@@ -56,15 +56,18 @@
 		53ED3C191D9CE453006D85D1 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3BF51D9CE425006D85D1 /* Raleway-Black.ttf */; };
 		53ED3C1B1D9D0E12006D85D1 /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C1A1D9D0E12006D85D1 /* MyDateFormatter.swift */; };
 		53ED3C1F1D9E3D8E006D85D1 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C1E1D9E3D8E006D85D1 /* TitleViewController.swift */; };
-		53ED3C211D9E3D97006D85D1 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C201D9E3D97006D85D1 /* DescriptionViewController.swift */; };
-		53ED3C231D9E3DAC006D85D1 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C221D9E3DAC006D85D1 /* ImagePickerViewController.swift */; };
 		53ED3C281D9E49EA006D85D1 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C241D9E49C8006D85D1 /* lobster-two.bold-italic.ttf */; };
 		53ED3C291D9E49EA006D85D1 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C251D9E49C8006D85D1 /* lobster-two.bold.ttf */; };
 		53ED3C2A1D9E49EA006D85D1 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C261D9E49C8006D85D1 /* lobster-two.italic.ttf */; };
 		53ED3C2B1D9E49EA006D85D1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C271D9E49C8006D85D1 /* lobster-two.regular.ttf */; };
-		53ED3C2D1D9EF1B5006D85D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C2C1D9EF1B5006D85D1 /* ViewController.swift */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
+		B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */; };
+		B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */; };
+		B558CB6E1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */; };
+		B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */; };
+		B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */; };
+		B558CB711D9DFDCA005F7D49 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */; };
 		B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */; };
 		B5F148DE1D9A741200286B3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */; };
 		B5F148DF1D9A741200286B3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */; };
@@ -158,23 +161,22 @@
 		53ED3C061D9CE425006D85D1 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
 		53ED3C1A1D9D0E12006D85D1 /* MyDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDateFormatter.swift; sourceTree = "<group>"; };
 		53ED3C1E1D9E3D8E006D85D1 /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
-		53ED3C201D9E3D97006D85D1 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
-		53ED3C221D9E3DAC006D85D1 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		53ED3C241D9E49C8006D85D1 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
 		53ED3C251D9E49C8006D85D1 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
 		53ED3C261D9E49C8006D85D1 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
 		53ED3C271D9E49C8006D85D1 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
-		53ED3C2C1D9EF1B5006D85D1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8558E5F0B046311B721F9E7B /* Pods-CastUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CastUITests/Pods-CastUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
+		B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
+		B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
+		B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController2.swift; sourceTree = "<group>"; };
-		B5CE8F8E1D9D1AEA00488C27 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
-		B5CE8F8F1D9D1AEA00488C27 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
-		B5CE8F901D9D1AEA00488C27 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
-		B5CE8F911D9D1AEA00488C27 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B5F148E21D9A7B7800286B3F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -271,10 +273,7 @@
 		530922C51D9A23C300AA9EEB /* CastViewController */ = {
 			isa = PBXGroup;
 			children = (
-				53ED3C2C1D9EF1B5006D85D1 /* ViewController.swift */,
 				53ED3C1E1D9E3D8E006D85D1 /* TitleViewController.swift */,
-				53ED3C201D9E3D97006D85D1 /* DescriptionViewController.swift */,
-				53ED3C221D9E3DAC006D85D1 /* ImagePickerViewController.swift */,
 				F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */,
 			);
 			name = CastViewController;
@@ -308,14 +307,10 @@
 		53B719351D9BA51E001697C1 /* Lobster two */ = {
 			isa = PBXGroup;
 			children = (
-				53ED3C241D9E49C8006D85D1 /* lobster-two.bold-italic.ttf */,
-				53ED3C251D9E49C8006D85D1 /* lobster-two.bold.ttf */,
-				53ED3C261D9E49C8006D85D1 /* lobster-two.italic.ttf */,
-				53ED3C271D9E49C8006D85D1 /* lobster-two.regular.ttf */,
-				B5CE8F8E1D9D1AEA00488C27 /* lobster-two.bold-italic.ttf */,
-				B5CE8F8F1D9D1AEA00488C27 /* lobster-two.bold.ttf */,
-				B5CE8F901D9D1AEA00488C27 /* lobster-two.italic.ttf */,
-				B5CE8F911D9D1AEA00488C27 /* lobster-two.regular.ttf */,
+				B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */,
+				B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */,
+				B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */,
+				B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */,
 			);
 			name = "Lobster two";
 			sourceTree = "<group>";
@@ -414,6 +409,7 @@
 				530922B91D9A21A800AA9EEB /* Collaborators.storyboard */,
 				530922BB1D9A21B500AA9EEB /* Cast.storyboard */,
 				530922BD1D9A21E100AA9EEB /* Search.storyboard */,
+				B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */,
 				530922BF1D9A221A00AA9EEB /* Notifications.storyboard */,
 			);
 			name = Storyboards;
@@ -427,6 +423,7 @@
 				530922C41D9A23BF00AA9EEB /* CollaboratorsViewController */,
 				530922C51D9A23C300AA9EEB /* CastViewController */,
 				530922C61D9A241700AA9EEB /* SearchViewController */,
+				B53A74BC1D9E3A1F005BCC16 /* ProfileViewController */,
 				530922C71D9A242D00AA9EEB /* NotificationsViewController */,
 			);
 			name = Controllers;
@@ -455,6 +452,14 @@
 				53ED3BF51D9CE425006D85D1 /* Raleway-Black.ttf */,
 			);
 			name = Raleway;
+			sourceTree = "<group>";
+		};
+		B53A74BC1D9E3A1F005BCC16 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */,
+			);
+			name = ProfileViewController;
 			sourceTree = "<group>";
 		};
 		B581A65EC411D42021380029 /* Frameworks */ = {
@@ -617,9 +622,11 @@
 				53ED3C0F1D9CE453006D85D1 /* Raleway-Italic.ttf in Resources */,
 				53ED3C101D9CE453006D85D1 /* Raleway-Light.ttf in Resources */,
 				53ED3C111D9CE453006D85D1 /* Raleway-LightItalic.ttf in Resources */,
+				B558CB6E1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf in Resources */,
 				53ED3C121D9CE453006D85D1 /* Raleway-Medium.ttf in Resources */,
 				53ED3C131D9CE453006D85D1 /* Raleway-MediumItalic.ttf in Resources */,
 				53ED3C141D9CE453006D85D1 /* Raleway-Regular.ttf in Resources */,
+				B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */,
 				53ED3C151D9CE453006D85D1 /* Raleway-SemiBold.ttf in Resources */,
 				53ED3C161D9CE453006D85D1 /* Raleway-SemiBoldItalic.ttf in Resources */,
 				53ED3C171D9CE453006D85D1 /* Raleway-Thin.ttf in Resources */,
@@ -633,16 +640,19 @@
 				53B719471D9BA606001697C1 /* Quicksand-Regular.ttf in Resources */,
 				53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */,
 				53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */,
+				B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */,
 				530922B81D9A219A00AA9EEB /* Feed.storyboard in Resources */,
 				53DEFE011D9A1C1400078C36 /* LaunchScreen.storyboard in Resources */,
 				530922BA1D9A21A800AA9EEB /* Collaborators.storyboard in Resources */,
 				B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */,
+				B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */,
 				530922B61D9A210700AA9EEB /* AppOverview.storyboard in Resources */,
 				530922BC1D9A21B500AA9EEB /* Cast.storyboard in Resources */,
 				530922C01D9A221A00AA9EEB /* Notifications.storyboard in Resources */,
 				530922C91D9A288E00AA9EEB /* GoogleService-Info.plist in Resources */,
 				530922BE1D9A21E100AA9EEB /* Search.storyboard in Resources */,
 				B5F148E61D9A7BBD00286B3F /* AccountKitStrings.bundle in Resources */,
+				B558CB711D9DFDCA005F7D49 /* lobster-two.regular.ttf in Resources */,
 				F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */,
 				53DEFDF91D9A1C1400078C36 /* Main.storyboard in Resources */,
 			);
@@ -792,7 +802,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53ED3C2D1D9EF1B5006D85D1 /* ViewController.swift in Sources */,
 				F14527521D9A431600CDDA2F /* Session.swift in Sources */,
 				F14527571D9A46F500CDDA2F /* DataService.swift in Sources */,
 				F14527501D9A431600CDDA2F /* Cast.swift in Sources */,
@@ -810,11 +819,10 @@
 				530922B11D9A200400AA9EEB /* SignUpViewController.swift in Sources */,
 				530922C31D9A22A700AA9EEB /* FeedViewController.swift in Sources */,
 				53ED3C1F1D9E3D8E006D85D1 /* TitleViewController.swift in Sources */,
-				53ED3C231D9E3DAC006D85D1 /* ImagePickerViewController.swift in Sources */,
 				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
 				F14527531D9A431600CDDA2F /* User.swift in Sources */,
+				B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */,
 				F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */,
-				53ED3C211D9E3D97006D85D1 /* DescriptionViewController.swift in Sources */,
 				F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
