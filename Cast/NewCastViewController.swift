@@ -12,12 +12,16 @@ class NewCastViewController: UIViewController, UITextFieldDelegate, UIPickerView
     
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet weak var eventDateTxt: UITextField!
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var locationTxt: UITextField!
     @IBOutlet weak var rewardTxt: UITextField!
+    
     @IBOutlet weak var categoryView: UIPickerView!
     @IBOutlet weak var datePickerHeightConstraint: NSLayoutConstraint!
+    
+    
     @IBOutlet weak var descriptionTxt: UITextView!
     @IBOutlet weak var rewardType: UITextField!
     @IBOutlet weak var categoryTxt: UITextField!
