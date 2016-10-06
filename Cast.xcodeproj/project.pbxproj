@@ -21,10 +21,6 @@
 		530922CB1D9A508400AA9EEB /* CastersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530922CA1D9A508400AA9EEB /* CastersViewController.swift */; };
 		530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530922CC1D9A540700AA9EEB /* DetailCastViewController.swift */; };
 		530922D11D9A72DE00AA9EEB /* DetailCastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530922D01D9A72DE00AA9EEB /* DetailCastCollectionViewCell.swift */; };
-		53B719301D9AC53E001697C1 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */; };
-		53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */; };
-		53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */; };
-		53B719331D9AC53E001697C1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */; };
 		53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */; };
 		53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */; };
 		53B719421D9BA606001697C1 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */; };
@@ -59,6 +55,11 @@
 		53ED3C181D9CE453006D85D1 /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C061D9CE425006D85D1 /* Raleway-ThinItalic.ttf */; };
 		53ED3C191D9CE453006D85D1 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3BF51D9CE425006D85D1 /* Raleway-Black.ttf */; };
 		53ED3C1B1D9D0E12006D85D1 /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C1A1D9D0E12006D85D1 /* MyDateFormatter.swift */; };
+		53ED3C1F1D9E3D8E006D85D1 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED3C1E1D9E3D8E006D85D1 /* TitleViewController.swift */; };
+		53ED3C281D9E49EA006D85D1 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C241D9E49C8006D85D1 /* lobster-two.bold-italic.ttf */; };
+		53ED3C291D9E49EA006D85D1 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C251D9E49C8006D85D1 /* lobster-two.bold.ttf */; };
+		53ED3C2A1D9E49EA006D85D1 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C261D9E49C8006D85D1 /* lobster-two.italic.ttf */; };
+		53ED3C2B1D9E49EA006D85D1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C271D9E49C8006D85D1 /* lobster-two.regular.ttf */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
 		B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */; };
@@ -126,10 +127,6 @@
 		530922CA1D9A508400AA9EEB /* CastersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastersViewController.swift; sourceTree = "<group>"; };
 		530922CC1D9A540700AA9EEB /* DetailCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCastViewController.swift; sourceTree = "<group>"; };
 		530922D01D9A72DE00AA9EEB /* DetailCastCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCastCollectionViewCell.swift; sourceTree = "<group>"; };
-		53B7192C1D9AC497001697C1 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
-		53B7192D1D9AC497001697C1 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
-		53B7192E1D9AC497001697C1 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
-		53B7192F1D9AC497001697C1 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		53B719371D9BA54B001697C1 /* Amatic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amatic-Bold.ttf"; sourceTree = "<group>"; };
 		53B719381D9BA54B001697C1 /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
 		53B7193B1D9BA5ED001697C1 /* Quicksand-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-Bold.ttf"; sourceTree = "<group>"; };
@@ -170,6 +167,11 @@
 		53ED3C051D9CE425006D85D1 /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		53ED3C061D9CE425006D85D1 /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
 		53ED3C1A1D9D0E12006D85D1 /* MyDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDateFormatter.swift; sourceTree = "<group>"; };
+		53ED3C1E1D9E3D8E006D85D1 /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		53ED3C241D9E49C8006D85D1 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
+		53ED3C251D9E49C8006D85D1 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
+		53ED3C261D9E49C8006D85D1 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
+		53ED3C271D9E49C8006D85D1 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
 		81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CastUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8558E5F0B046311B721F9E7B /* Pods-CastUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CastUITests/Pods-CastUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		530922C51D9A23C300AA9EEB /* CastViewController */ = {
 			isa = PBXGroup;
 			children = (
+				53ED3C1E1D9E3D8E006D85D1 /* TitleViewController.swift */,
 				F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */,
 			);
 			name = CastViewController;
@@ -642,6 +645,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53ED3C281D9E49EA006D85D1 /* lobster-two.bold-italic.ttf in Resources */,
+				53ED3C291D9E49EA006D85D1 /* lobster-two.bold.ttf in Resources */,
+				53ED3C2A1D9E49EA006D85D1 /* lobster-two.italic.ttf in Resources */,
+				53ED3C2B1D9E49EA006D85D1 /* lobster-two.regular.ttf in Resources */,
 				53ED3C081D9CE453006D85D1 /* Raleway-BlackItalic.ttf in Resources */,
 				53ED3C091D9CE453006D85D1 /* Raleway-Bold.ttf in Resources */,
 				53ED3C0A1D9CE453006D85D1 /* Raleway-BoldItalic.ttf in Resources */,
@@ -670,11 +677,7 @@
 				53B719471D9BA606001697C1 /* Quicksand-Regular.ttf in Resources */,
 				53B719391D9BA557001697C1 /* Amatic-Bold.ttf in Resources */,
 				53B7193A1D9BA558001697C1 /* AmaticSC-Regular.ttf in Resources */,
-				53B719301D9AC53E001697C1 /* lobster-two.bold-italic.ttf in Resources */,
-				53B719311D9AC53E001697C1 /* lobster-two.bold.ttf in Resources */,
 				B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */,
-				53B719321D9AC53E001697C1 /* lobster-two.italic.ttf in Resources */,
-				53B719331D9AC53E001697C1 /* lobster-two.regular.ttf in Resources */,
 				530922B81D9A219A00AA9EEB /* Feed.storyboard in Resources */,
 				53DEFE011D9A1C1400078C36 /* LaunchScreen.storyboard in Resources */,
 				530922BA1D9A21A800AA9EEB /* Collaborators.storyboard in Resources */,
@@ -859,6 +862,7 @@
 				F17DA5B81DA551A6003BA545 /* DraggableViewBackground.m in Sources */,
 				530922C31D9A22A700AA9EEB /* FeedViewController.swift in Sources */,
 				F17DA5B71DA551A6003BA545 /* DraggableView.m in Sources */,
+				53ED3C1F1D9E3D8E006D85D1 /* TitleViewController.swift in Sources */,
 				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
 				F14527531D9A431600CDDA2F /* User.swift in Sources */,
 				B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */,
