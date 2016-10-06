@@ -18,6 +18,8 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
     @IBOutlet weak var portfolioTextField: UITextField!
     @IBOutlet weak var roleTextField: UITextField!
     
+    @IBOutlet weak var locationTextField: UITextField!
+    
     var gender : String = "male"
     var fireBaseRef = FIRDatabase.database().reference()
 
@@ -27,6 +29,7 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
         descriptionTextField.delegate = self
         portfolioTextField.delegate = self
         roleTextField.delegate = self
+        locationTextField.delegate = self
         
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(SignInViewController.dismissKeyboard)))
         
@@ -40,7 +43,7 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
         descriptionTextField.resignFirstResponder()
         portfolioTextField.resignFirstResponder()
         roleTextField.resignFirstResponder()
-        
+        locationTextField.resignFirstResponder()
         
     }
 
@@ -57,8 +60,8 @@ class WelcomeViewController2: UIViewController, UITextFieldDelegate,UITextViewDe
   
     @IBAction func nextButton(_ sender: AnyObject) {
         
-        if let description = descriptionTextField.text, let portfolio = portfolioTextField.text, let role = roleTextField.text {
-            let userDictionary = ["Gender": self.gender, "ProfileDescription": description, "PortfolioLink" : portfolio, "Role" : role]
+        if let description = descriptionTextField.text, let portfolio = portfolioTextField.text, let location = locationTextField.text, let role = roleTextField.text {
+            let userDictionary = ["Gender": self.gender, "ProfileDescription": description, "PortfolioLink" : portfolio, "Location": location, "Role" : role]
             self.fireBaseRef.child("users").child(Session.currentUserUid).updateChildValues(userDictionary)
             Session.storeUserSession()
         

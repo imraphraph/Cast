@@ -25,6 +25,8 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
                 self.cast.append(allCast)
                 self.collectionView.reloadData()
             }
+            
+            
         })
     }
     

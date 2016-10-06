@@ -10,8 +10,9 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FBSDKCoreKit
+import SafariServices
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, SFSafariViewControllerDelegate{
     @IBOutlet weak var genderTextField: UILabel!
     @IBOutlet weak var usernameTextField: UILabel!
     
@@ -19,17 +20,16 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UILabel!
     @IBOutlet weak var descriptionTextField: UILabel!
-    @IBOutlet weak var portfolio: UILabel!
+//    @IBOutlet weak var portfolio: UILabel!
+    @IBOutlet weak var portfolioButton: UIButton!
     
+    var portfolioLink : String  = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.profileImageView.layer.borderColor = UIColor.white.cgColor
-        self.profileImageView.layer.borderWidth = 1
-        self.profileImageView.layer.masksToBounds = false
-        self.profileImageView.layer.cornerRadius = profileImageView.frame.height/2
-        self.profileImageView.clipsToBounds = true
+        
         
         retrieveUserData()
         retrieveProfileImage()
@@ -54,7 +54,8 @@ class ProfileViewController: UIViewController {
             self.descriptionTextField.text = description
             }
             if let portfolio = userDictionary?["PortfolioLink"]{
-            self.portfolio.text = portfolio
+            self.portfolioLink = portfolio
+                
             }
             
         })
@@ -65,9 +66,10 @@ class ProfileViewController: UIViewController {
         
         DataService.userRef.child(Session.currentUserUid).child("profilePicture").observe(.value, with: {(snapshot) in
            
-            let profileImageLink = snapshot.value as? String
+            
+            if let profileImageLink = snapshot.value as? String {
 //            let randomURL = NSURL(string: <#T##String#>)
-            let profileImageUrl = NSURL(string: profileImageLink!)
+            let profileImageUrl = NSURL(string: profileImageLink)
                 URLSession.shared.dataTask(with: profileImageUrl as! URL, completionHandler: {
                     (data, response, error) in
                     
@@ -82,14 +84,26 @@ class ProfileViewController: UIViewController {
                     })
                     
                 }).resume()
+            }
             })
     }
-    
-    
-    
-    
-    
+    @IBAction func editButton(_ sender: AnyObject) {
+        
+        performSegue(withIdentifier: "editProfileSegue", sender: self)
     }
+    
+    @IBAction func openPortfolio(_ sender: AnyObject) {
+        
+        if self.portfolioLink.lowercased() .hasPrefix("http://"){
+        let myURL = self.portfolioLink
+        UIApplication.shared.openURL(URL(string: myURL)!)
+        } else {
+        let myURL = "http://" + self.portfolioLink
+        UIApplication.shared.openURL(URL(string: myURL)!)
+        }
+        
+    }
+}
 
 
 
