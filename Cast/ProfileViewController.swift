@@ -65,9 +65,10 @@ class ProfileViewController: UIViewController {
         
         DataService.userRef.child(Session.currentUserUid).child("profilePicture").observe(.value, with: {(snapshot) in
            
-            let profileImageLink = snapshot.value as? String
+            
+            if let profileImageLink = snapshot.value as? String {
 //            let randomURL = NSURL(string: <#T##String#>)
-            let profileImageUrl = NSURL(string: profileImageLink!)
+            let profileImageUrl = NSURL(string: profileImageLink)
                 URLSession.shared.dataTask(with: profileImageUrl as! URL, completionHandler: {
                     (data, response, error) in
                     
@@ -82,6 +83,7 @@ class ProfileViewController: UIViewController {
                     })
                     
                 }).resume()
+            }
             })
     }
     

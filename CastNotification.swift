@@ -15,10 +15,11 @@ class CastNotification {
     var senderUID : String
     var receiverUID : String
     var castID : String
+    var queueID : String
     var status = "new"
     var message = ""
-    var sender : User
-    var receiver : User
+    var sender = User()
+    var receiver = User()
     
     
     init() {
@@ -26,6 +27,7 @@ class CastNotification {
         senderUID=""
         receiverUID=""
         castID=""
+        queueID=""
         message = ""
         sender = User()
         receiver = User()
@@ -37,13 +39,13 @@ class CastNotification {
         
         notifyUID = snapshot.key
         
-        if let dictfromUser = dict["senderUID"] as? String {
+        if let dictfromUser = dict["From"] as? String {
             self.senderUID = dictfromUser
         } else {
             self.senderUID = ""
         }
         
-        if let dictToUser = dict["receiverUID"] as? String {
+        if let dictToUser = dict["To"] as? String {
             self.receiverUID = dictToUser
         } else {
             self.receiverUID = ""
@@ -56,6 +58,11 @@ class CastNotification {
             self.castID = ""
         }
         
+        if let dictQID = dict["queueID"] as? String {
+            self.queueID = dictQID
+        } else {
+            self.queueID = ""
+        }
         
         if let dictStatus = dict["status"] as? String {
             self.status = dictStatus
@@ -69,7 +76,6 @@ class CastNotification {
             self.message = ""
         }
         
-        sender = User()
-        receiver = User()
+        
     }
 }

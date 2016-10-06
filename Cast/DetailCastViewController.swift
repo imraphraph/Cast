@@ -32,24 +32,6 @@ class DetailCastViewController: UIViewController {
         let UID = selectedCast.castID
         
         
-      ////Get the UserName
-        
-//        DataService.userRef.observe(.value, with: { (snapshot) in
-//            
-//            
-//            
-//            for userID in snapshot.children {
-//                
-//                
-//                if userID == UID {
-//                    DataService.userRef.child("").observe(.value, with: {(snapshot) in
-//                    })
-//                
-//                }
-//            }
-//            
-//        })
-        
         self.usernameLabel.text = "Gene"
         self.titleLabel.text = selectedCast.castName
         self.textView.text = selectedCast.description
@@ -74,20 +56,26 @@ class DetailCastViewController: UIViewController {
 
     @IBAction func collaborateButtonPressed(_ sender: AnyObject) {
 
-        print(Collaborator.Role.Photographer)
-        
+        //print(Collaborator.Role.Photographer)
+    
         //create queue under the cast node
         let collaborateDict = ["created_at":NSDate().timeIntervalSince1970, "userUID":Session.currentUserUid, "role": "photographer" ] as [String : Any]
         let queueRef = DataService.rootRef.child("casts").child(selectedCast.castID).child("queue").childByAutoId()
         queueRef.updateChildValues(collaborateDict)
         
         //create notification node
-        let notifyDict = ["created_at":NSDate().timeIntervalSince1970, "From":Session.currentUserUid, "To":selectedCast.userUID, "castID": selectedCast.castID, "message": "I would like to collaborate in this job.", "status":"new" ] as [String : Any]
+        let notifyDict = ["created_at":NSDate().timeIntervalSince1970, "From":Session.currentUserUid, "To":selectedCast.userUID, "castID": selectedCast.castID, "message": "To collaborate in job [\(selectedCast.castName)]", "status":"new", "queueID":queueRef.key] as [String : Any]
         let notifyRef = DataService.rootRef.child("notification").childByAutoId()
         notifyRef.updateChildValues(notifyDict)
         
         //add the notification to the Receiver User
     DataService.userRef.child(selectedCast.userUID).child("being_notified").updateChildValues([notifyRef.key:true])
+        
+        //add the cast id to the Requestor -- to keep track what he has requested
+        DataService.userRef.child(Session.currentUserUid).child("request_collaboration").updateChildValues([selectedCast.castID:true])
+        
+        //keep track the notifcation id sent from the Requetor
+    DataService.userRef.child(Session.currentUserUid).child("send_notification").updateChildValues([notifyRef.key:true])
         
         
         requestSent.isHidden = false

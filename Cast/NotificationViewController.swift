@@ -10,82 +10,145 @@ import UIKit
 import FirebaseDatabase
 
 
-class NotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NotificationViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    var mynotifications = [CastNotification]()
+    var mynotifications = [CastNotification]()  //being_notified
+    var sentnotifications = [CastNotification]() //request to collaborate
     
+    @IBOutlet weak var respondBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource=self
-        self.tableView.delegate=self
+    
+        self.title = "Notifications"
+        self.tableView.allowsMultipleSelection=true
         
-        
+        loadNotification()
     }
     
     func loadNotification() {
         
-        /*
-         DataService.userRef.child(User.currentUserUid).child("following").observeEventType(.ChildAdded, withBlock: {(snapshot) in
-         //print("snapshotkey \(snapshot.key)")
-         
-         DataService.userRef.child(snapshot.key).observeSingleEventOfType(.Value, withBlock: {(snap1) in
-         
-         //print("snap1key \(snap1.key)")
-         
-         if let username = InstallkgramUser.init(snapshot: snap1){
-         self.usernameForFeed.append(username)
-         self.retrieveFeed(username)
-         }
-         
-         })
-         })
-         */
-        
         DataService.userRef.child(Session.currentUserUid).child("being_notified").observe(.childAdded, with: { (snapshot) in
-        
-            DataService.rootRef.child("notification").child(snapshot.key).observe(.value, with: {(snap2) in
-        
-                    if let notify = CastNotification.init(snapshot: snap2){
-                        self.mynotifications.append(notify)  //& message
-                        
-                        //retrieve the sender's info - photo & username
-                        DataService.userRef.child(notify.senderUID).observeSingleEvent(of: .childAdded, with: { (snap3) in
-                            if let sender = User.init(snapshot: snap3) {
-                               notify.sender = sender
+            
+            DataService.rootRef.child("notification").child(snapshot.key).observeSingleEvent(of: .value, with: { (snap2) in
+                
+                if let notify = CastNotification.init(snapshot: snap2){
+                    self.mynotifications.append(notify)  //& message
+                
+                    //retrieve the sender's info - photo & username
+                    DataService.userRef.child(notify.senderUID).observeSingleEvent(of: .value, with: { (snap3) in
+                        if let sender = User.init(snapshot: snap3) {
+                            notify.sender = sender
+                            
+                            let newNotification = self.mynotifications.filter({$0.status != "new"})
+                            self.mynotifications = newNotification
+                            self.tableView.reloadData()
+                            
+                            if self.mynotifications.count==0{
+                              self.respondBtn.isEnabled=false
                             }
+                        }
+                        
                         }, withCancel: { (Error) in
                             
-                        })
-                    }
-                })
+                    })
+                    
+                }
             })
+        })
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.mynotifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "notifyCell") as? NotificationViewCell
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: "notifyCell") as? NotificationViewCell
+        //if self.mynotifications.count > 0 {
         let notify = self.mynotifications[indexPath.row]
         cell?.profilePhoto.image = UIImage(named: "cowgirl")
         //cell?.profilePhoto.image.
         cell?.profilePhoto.clipsToBounds = true
-        cell?.profilePhoto.layer.cornerRadius = 10.0
+        cell?.profilePhoto.layer.cornerRadius = 20.0
         cell?.tag = indexPath.row
         
         cell?.usernameTxt.text = notify.sender.username
         cell?.messageTxt.text = notify.message
-        
+        //}
         return cell!
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
     
+    
+    @IBAction func onConfirmBtnPressed(_ sender: UIButton) {
+        
+        let alertController = UIAlertController(title: "Accept", message: "Accept or reject  selected request(s) ?", preferredStyle: .alert)
+        
+        let acceptAction = UIAlertAction(title: "Accept", style: .default) { (UIAlertAction) in
+            if let selectedRequests = self.tableView.indexPathsForSelectedRows {
+                
+                for i in 0..<selectedRequests.count {
+                    
+                    let IP = selectedRequests[i]
+                    let notify = self.mynotifications[IP.row]
+                    self.response(responseType: "ACCEPT",notify:notify)
+                }
+            }
+        }
+        
+        
+        let rejectAction = UIAlertAction(title: "Reject", style: .default) { (UIAlertAction) in
+            if let selectedRequests = self.tableView.indexPathsForSelectedRows {
+                
+                for i in 0..<selectedRequests.count {
+                    
+                    let IP = selectedRequests[i]
+                    let notify = self.mynotifications[IP.row]
+                    self.response(responseType: "REJECT",notify:notify)
+                }
+            }
+            
+        }
+        
+        let dismissAction = UIAlertAction(title: "Dimiss", style: .default, handler: nil)
+        
+        alertController.addAction(rejectAction)
+        alertController.addAction(acceptAction)
+        alertController.addAction(dismissAction)
+        
+        present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    func response(responseType:String, notify:CastNotification){
+        
+        DataService.rootRef.child("casts").child(notify.castID).observeSingleEvent(of: .value, with: { (snap1) in
+            
+            //add to the photographer nodes -- to do: model node
+            let collaUpdateRef = DataService.rootRef.child("casts").child(notify.castID).child("photographer")
+            collaUpdateRef.updateChildValues(["UserUID":Session.currentUserUid])
+            
+            //update the queue with status ACCEPT
+            let queueUpdateDict = ["responsed_at":NSDate().timeIntervalSince1970,"status":responseType.lowercased()] as [String : Any]
+            
+            let queueRef = DataService.rootRef.child("casts").child(notify.castID).child("queue").child(notify.queueID)
+            queueRef.updateChildValues(queueUpdateDict)
+            
+            //update the notification with status RESPONSED
+            let notifyUpdateDict = ["responsed_at":NSDate().timeIntervalSince1970,"status": responseType.lowercased()] as [String : Any]
+            
+            let notifyUpdateRef = DataService.rootRef.child("notification").child(notify.notifyUID)
+            notifyUpdateRef.updateChildValues(notifyUpdateDict)
+            
+        })
+        
+        
+    }
     
     
 }

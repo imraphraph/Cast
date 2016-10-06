@@ -35,6 +35,7 @@ class NewCastViewController: UIViewController, UITextFieldDelegate, UIPickerView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "New Casting Call"
         defaultDateHeight = datePickerHeightConstraint.constant
         datePickerHeightConstraint.constant = 0
         
