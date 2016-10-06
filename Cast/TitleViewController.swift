@@ -33,6 +33,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     @IBOutlet weak var femaleBtn: UIButton!
     @IBOutlet weak var maleBtn: UIButton!
     
+    @IBOutlet weak var dateOK: UIButton!
     var rewardTypeText : String!
     @IBOutlet weak var cashButton: UIButton!
     @IBOutlet weak var tfpButton: UIButton!
@@ -64,27 +65,14 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
        
     }
     
-    @IBAction func locationButtonPressed(_ sender: UIButton) {
-       
-        placesClient?.currentPlace(callback: {
-            (placeLikelihoodList: GMSPlaceLikelihoodList?, error: NSError?) -> Void in
-            
-            if let error = error {
-                print("Pick Place error: \(error.localizedDescription)")
-                return
-            }
-            self.locationTextField.text = "No current place"
-            
-            if let placeLikelihoodList = placeLikelihoodList {
-                let place = placeLikelihoodList.likelihoods.first?.place
-                if let place = place {
-                    self.locationTextField.text = place.name
-
-                }
-            }
-        } as! GMSPlaceLikelihoodListCallback)
+    // Present the Autocomplete view controller when the button is pressed.
+    
+    @IBAction func autocompleteTapped(_ sender: AnyObject) {
+        let autocompleteController = GMSAutocompleteViewController()
+        autocompleteController.delegate = self
+        self.present(autocompleteController, animated: true, completion: nil)
+        print("tapped")
     }
-
 
     func displayEventDate() {
         //Use NSDateFormatter to write out the date in a friendly format
@@ -92,7 +80,8 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         df.dateStyle = .medium
         self.dateTextField.text = "\(df.string(from: self.datePicker.date))"
     }
-    @IBOutlet weak var dateOK: UIButton!
+    
+   
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
          if textField == dateTextField {
@@ -102,6 +91,11 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
             self.datePicker.datePickerMode = .date;
             self.datePicker.addTarget(self, action: #selector(self.displayEventDate), for: .valueChanged)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func dateOK(_ sender: UIButton) {
@@ -257,6 +251,35 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
             view.alpha = 0
             }, completion: nil)
     }
+}
 
+extension TitleViewController: GMSAutocompleteViewControllerDelegate {
     
+    // Handle the user's selection.
+    func viewController(_ viewController: GMSAutocompleteViewController, didAutocompleteWith place: GMSPlace) {
+        print("Place name: ", place.name)
+        print("Place address: ", place.formattedAddress)
+        print("Place attributions: ", place.attributions)
+        self.dismiss(animated: true, completion: nil)
+        self.locationTextField.text = place.formattedAddress
+    }
+    
+    func viewController(_ viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: Error) {
+        // TODO: handle the error.
+        print("Error: ", error.localizedDescription)
+    }
+    
+    // User canceled the operation.
+    func wasCancelled(_ viewController: GMSAutocompleteViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // Turn the network activity indicator on and off again.
+    func didRequestAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    }
+    
+    func didUpdateAutocompletePredictions(_ viewController: GMSAutocompleteViewController) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
 }
