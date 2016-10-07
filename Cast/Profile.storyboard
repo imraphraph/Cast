@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="664-lV-fhe">
             <objects>
-                <viewController id="0Cl-h1-8M7" customClass="ProfileViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="0Cl-h1-8M7" customClass="ProfileViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8HG-23-gvQ"/>
                         <viewControllerLayoutGuide type="bottom" id="koy-6I-SvZ"/>
