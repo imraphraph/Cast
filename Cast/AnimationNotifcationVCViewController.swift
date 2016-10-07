@@ -10,24 +10,23 @@ import UIKit
 import FirebaseDatabase
 
 class AnimationNotifcationVCViewController: UIViewController {
-
+    
     var mynotifications = [CastNotification]()
     var displayNotifications = [String]()
+    var draggableViewBackground: MyDraggableViewBackground!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Notifications"
         loadNotification()
         
-        sleep(60)
         
-        var draggableViewBackground = DraggableViewBackground(frame:self.view.frame)
-        draggableViewBackground.exampleCardLabels = self.displayNotifications
-        self.view.addSubview(draggableViewBackground)
+        self.draggableViewBackground = MyDraggableViewBackground(frame:self.view.frame)
+        self.view.addSubview(self.draggableViewBackground)
         
     }
-
-   
+    
+    
     func loadNotification() {
         
         DataService.userRef.child(Session.currentUserUid).child("being_notified").observe(.childAdded, with: { (snapshot) in
@@ -42,9 +41,11 @@ class AnimationNotifcationVCViewController: UIViewController {
                         if let sender = User.init(snapshot: snap3) {
                             notify.sender = sender
                             
-                            let newNotification = self.mynotifications.filter({$0.status != "new"})
-                            self.mynotifications = newNotification
-                            self.displayNotifications.append("\(sender.username)  \(notify.message)")
+                            //let newNotification = self.mynotifications.filter({$0.status == "new"})
+                            //self.mynotifications = newNotification
+                            //if notify.status == "new"{
+                                self.draggableViewBackground.addToExampleCardLabels(notify: notify)
+                            //}
                         }
                         
                         }, withCancel: { (Error) in
@@ -56,5 +57,7 @@ class AnimationNotifcationVCViewController: UIViewController {
         })
         
     }
+    
+    
     
 }

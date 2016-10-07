@@ -49,7 +49,11 @@
 @property (nonatomic)CGPoint originalPoint;
 @property (nonatomic,strong)OverlayView* overlayView;
 @property (nonatomic,strong)UILabel* information; //%%% a placeholder for any card-specific information
-//@property (nonatomic,strong)UILabel* username;
+@property (nonatomic,strong)UILabel* username;
+@property (nonatomic,strong)UIImageView* profilePhoto;
+@property (nonatomic,strong)NSString* castID;
+@property (nonatomic,strong)NSString* notifyID;
+@property (nonatomic,strong)NSString* queueID;
 
 -(void)leftClickAction;
 -(void)rightClickAction;

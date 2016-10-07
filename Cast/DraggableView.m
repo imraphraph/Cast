@@ -27,7 +27,12 @@
 
 @synthesize panGestureRecognizer;
 @synthesize information;
+@synthesize username;
+@synthesize profilePhoto;
 @synthesize overlayView;
+@synthesize castID;
+@synthesize notifyID;
+@synthesize queueID;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -36,10 +41,23 @@
         [self setupView];
         
 #warning placeholder stuff, replace with card-specific information {
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.frame.size.width, 100)];
+        
+        
+        profilePhoto = [[UIImageView alloc]initWithFrame:CGRectMake(101, 60, 80, 80)];
+        profilePhoto.image = [UIImage imageNamed:@"cowgirl"];
+        profilePhoto.clipsToBounds = true;
+        profilePhoto.layer.cornerRadius = 20.0;
+        
+        username = [[UILabel alloc]initWithFrame:CGRectMake(101, 10, self.frame.size.width-80, 50)];
+        username.text = @"no username given";
+        [username setTextAlignment:NSTextAlignmentLeft];
+        username.textColor = [UIColor grayColor];
+
+        
+        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 140, self.frame.size.width, 100)];
         information.text = @"no info given";
         [information setTextAlignment:NSTextAlignmentCenter];
-        information.textColor = [UIColor blackColor];
+        information.textColor = [UIColor grayColor];
         
         self.backgroundColor = [UIColor whiteColor];
 #warning placeholder stuff, replace with card-specific information }
@@ -50,7 +68,9 @@
         
         [self addGestureRecognizer:panGestureRecognizer];
         [self addSubview:information];
-        
+        [self addSubview:username];
+        [self addSubview:profilePhoto];
+
         overlayView = [[OverlayView alloc]initWithFrame:CGRectMake(self.frame.size.width/2-100, 0, 100, 100)];
         overlayView.alpha = 0;
         [self addSubview:overlayView];

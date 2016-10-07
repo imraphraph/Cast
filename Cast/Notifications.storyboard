@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Trx-27-35Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ym5-Zc-b7o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notification-->
+        <!--Notificationssss-->
         <scene sceneID="6PG-XR-WV6">
             <objects>
-                <viewController title="Notification" automaticallyAdjustsScrollViewInsets="NO" id="4bj-pB-f6J" customClass="NotificationViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notificationssss" automaticallyAdjustsScrollViewInsets="NO" id="4bj-pB-f6J" customClass="NotificationViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kAd-9m-VJD"/>
                         <viewControllerLayoutGuide type="bottom" id="aHM-dy-Re1"/>
@@ -85,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="1255.2" y="-400.74962518740631"/>
         </scene>
-        <!--Animation NotifcationVC View Controller-->
+        <!--Notificationssss-->
         <scene sceneID="buO-i7-1z6">
             <objects>
-                <viewController id="h0z-zb-3d0" customClass="AnimationNotifcationVCViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notificationssss" id="h0z-zb-3d0" customClass="AnimationNotifcationVCViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PuV-8j-cfd"/>
                         <viewControllerLayoutGuide type="bottom" id="MG8-fo-emu"/>
@@ -96,18 +96,18 @@
                     <view key="view" contentMode="scaleToFill" id="2fN-7v-6mh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ON7-pN-tqO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t7I-bl-sus" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1582" y="265"/>
+            <point key="canvasLocation" x="1255" y="274"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Notifications-->
         <scene sceneID="3b7-yP-chk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Trx-27-35Z" sceneMemberID="viewController">
+                <navigationController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="Trx-27-35Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lH2-Y1-5iE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="316" y="-400.74962518740631"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Notifications-->
         <scene sceneID="xAQ-wJ-3ew">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ym5-Zc-b7o" sceneMemberID="viewController">
+                <navigationController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="ym5-Zc-b7o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UWm-5T-wKG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -138,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtQ-80-dEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="742" y="265"/>
+            <point key="canvasLocation" x="294" y="265"/>
         </scene>
     </scenes>
     <resources>

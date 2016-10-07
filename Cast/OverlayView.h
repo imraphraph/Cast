@@ -18,6 +18,6 @@ typedef NS_ENUM(NSUInteger , GGOverlayViewMode) {
 
 @property (nonatomic) GGOverlayViewMode mode;
 @property (nonatomic, strong) UIImageView *imageView;
-//@property (nonatomic, strong) UIImageView *secondImageView;
+
 
 @end
