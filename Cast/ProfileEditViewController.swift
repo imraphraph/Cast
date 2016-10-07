@@ -14,8 +14,11 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileImageView: UIImageView!
-    let profileSections : [String] = ["username", "gender", "title", "bio", "portfolio", "password reset"]
-    let profileImages: [UIImage] = [UIImage(named: "users")!, UIImage(named:"gender")!, UIImage(named: "crown2")!, UIImage(named:"informationbutton")!, UIImage(named:"globe")!, UIImage(named:"mail")!]
+    let profileSections : [String] = ["username", "gender", "title", "bio", "portfolio", "location"]
+    let profileImages: [UIImage] = [UIImage(named: "users")!, UIImage(named:"gender")!, UIImage(named: "crown2")!, UIImage(named:"informationbutton")!, UIImage(named:"globe")!, UIImage(named:"location-pin-512")!]
+//    let profileImages: [String] = ["users", "gender", "crown2", "informationbutton", "globe", "mail"]
+    
+    var selectedCategory : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +26,13 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.delegate = self
         tableView.dataSource = self
         
-
+        
+        
         retrieveProfileImage()
         
         profileImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectProfileImage)))
         profileImageView.isUserInteractionEnabled = true
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.tableView.reloadData()
     }
     
     func selectProfileImage () {
@@ -89,9 +89,9 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! profileEditCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ProfileEditCell
         let categories = self.profileSections[(indexPath as NSIndexPath).row]
-        cell.textLabel!.text = categories
+        cell.usernameLabel.text = categories
         cell.cellImageView.image = profileImages[indexPath.row]
         return cell
     }
@@ -120,9 +120,23 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
         })
     }
     
+    @IBAction func backButton(_ sender: AnyObject) {
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedCategory = profileSections[{indexPath as NSIndexPath}().row]
+        performSegue(withIdentifier: "editSectionSegue", sender: self)
+    }
 
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // pass the user UID
+        // pass which cell was clicked
+        
+        let destination = segue.destination as! EditDetailViewController
+        destination.userUID = Session.currentUserUid
+        destination.category = self.selectedCategory
+    }
 
 }

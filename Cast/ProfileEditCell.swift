@@ -8,13 +8,14 @@
 
 import UIKit
 
-class profileEditCell: UITableViewCell {
+class ProfileEditCell: UITableViewCell {
 
 
     
+    @IBOutlet weak var usernameLabel: UILabel!
+
+
     @IBOutlet weak var cellImageView: UIImageView!
-
-
    
 
 }
