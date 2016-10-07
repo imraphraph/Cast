@@ -47,7 +47,7 @@ class Cast {
     enum Category {
         case cat_cosplay
         case cat_wedding
-        case cat_family
+        case cat_stock
         case cat_fashion
         case other
     }
@@ -87,8 +87,8 @@ class Cast {
             self.category = Category.cat_cosplay
         case "Wedding":
             self.category = Category.cat_wedding
-        case "Family":
-            self.category = Category.cat_family
+        case "Stock":
+            self.category = Category.cat_stock
         case "Fashion":
             self.category = Category.cat_fashion
         default:
