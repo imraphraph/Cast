@@ -103,13 +103,13 @@
                                                     </stackView>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-tf-P3w">
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="COSPLAY-1" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-Sm-Pyu">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-Sm-Pyu">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="cED-EF-qB8" appends="YES" id="UQk-W0-POr"/>
                                                                 </connections>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="STOCK" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-sP-Ua5">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stock" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-sP-Ua5">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="JjY-7R-d6S" appends="YES" id="4lU-Qj-SXd"/>
@@ -119,7 +119,7 @@
                                                     </stackView>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-rP-GCb">
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OTHERS" translatesAutoresizingMaskIntoConstraints="NO" id="590-5H-ikJ">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Others" translatesAutoresizingMaskIntoConstraints="NO" id="590-5H-ikJ">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="r4b-bN-7ps" appends="YES" id="COQ-mH-LQZ"/>
@@ -250,7 +250,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="195"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fashion" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-uL-zdZ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fashion" translatesAutoresizingMaskIntoConstraints="NO" id="GQm-uL-zdZ">
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="GQm-uL-zdZ" secondAttribute="height" multiplier="16:9" id="fCR-bp-4sz"/>
                                                     </constraints>
@@ -268,19 +268,6 @@
                                                         <constraint firstAttribute="height" constant="10" id="5l9-bT-aDP"/>
                                                     </constraints>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIV-7j-hDM">
-                                                    <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="hIV-7j-hDM" secondAttribute="height" multiplier="40:9" id="cij-66-AW7"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="22"/>
-                                                    <state key="normal" title="View">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="wAz-eH-AAC" kind="show" identifier="detailSegue" id="Lv2-LQ-C0L"/>
-                                                    </connections>
-                                                </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="T1z-bA-eyH">
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera@16" translatesAutoresizingMaskIntoConstraints="NO" id="bfh-GW-Hhy">
@@ -318,11 +305,20 @@
                                                         <constraint firstAttribute="height" constant="10" id="CQK-N9-GkY"/>
                                                     </constraints>
                                                 </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="v i e w" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XsL-MA-9qO">
+                                                    <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="PVZ-Ue-dCt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="hIV-7j-hDM" secondAttribute="bottom" id="3tG-kH-gQN"/>
+                                            <constraint firstAttribute="trailing" secondItem="XsL-MA-9qO" secondAttribute="trailing" id="0qg-4d-DzA"/>
                                             <constraint firstItem="GQm-uL-zdZ" firstAttribute="top" secondItem="StL-rK-dIT" secondAttribute="top" id="4wj-Fa-WFt"/>
                                             <constraint firstAttribute="trailing" secondItem="GQm-uL-zdZ" secondAttribute="trailing" id="7Vt-iE-CC2"/>
                                             <constraint firstItem="IYv-C6-Qg2" firstAttribute="leading" secondItem="StL-rK-dIT" secondAttribute="leading" constant="5" id="9Pp-JU-kfh"/>
@@ -330,19 +326,18 @@
                                             <constraint firstItem="Dsx-vd-3qt" firstAttribute="top" secondItem="GQm-uL-zdZ" secondAttribute="bottom" id="GAR-nn-49l"/>
                                             <constraint firstItem="pS4-3y-Wi8" firstAttribute="top" secondItem="Dsx-vd-3qt" secondAttribute="bottom" constant="5" id="Hmm-gn-B3E"/>
                                             <constraint firstAttribute="trailing" secondItem="Ybj-8F-evU" secondAttribute="trailing" constant="2" id="I3h-3X-oAO"/>
-                                            <constraint firstItem="hIV-7j-hDM" firstAttribute="leading" secondItem="StL-rK-dIT" secondAttribute="leading" id="Rtn-qu-YQx"/>
                                             <constraint firstItem="GQm-uL-zdZ" firstAttribute="width" secondItem="StL-rK-dIT" secondAttribute="width" id="Stm-so-kgf"/>
                                             <constraint firstItem="Ybj-8F-evU" firstAttribute="top" secondItem="StL-rK-dIT" secondAttribute="top" constant="2" id="XAi-JV-JGU"/>
                                             <constraint firstItem="T1z-bA-eyH" firstAttribute="top" secondItem="Dsx-vd-3qt" secondAttribute="bottom" constant="5" id="bXq-Dy-mPL"/>
+                                            <constraint firstItem="XsL-MA-9qO" firstAttribute="leading" secondItem="StL-rK-dIT" secondAttribute="leading" id="dWl-0X-Bwg"/>
                                             <constraint firstItem="GQm-uL-zdZ" firstAttribute="leading" secondItem="StL-rK-dIT" secondAttribute="leading" id="hKo-Gy-zMp"/>
                                             <constraint firstItem="IYv-C6-Qg2" firstAttribute="top" secondItem="pS4-3y-Wi8" secondAttribute="bottom" constant="5" id="heK-Dc-ouX"/>
-                                            <constraint firstAttribute="trailing" secondItem="hIV-7j-hDM" secondAttribute="trailing" id="kZq-dt-cdV"/>
+                                            <constraint firstAttribute="bottom" secondItem="XsL-MA-9qO" secondAttribute="bottom" id="pdC-O8-AbX"/>
                                             <constraint firstItem="Dsx-vd-3qt" firstAttribute="leading" secondItem="StL-rK-dIT" secondAttribute="leading" id="rUB-Gm-VRt"/>
                                             <constraint firstItem="pS4-3y-Wi8" firstAttribute="leading" secondItem="StL-rK-dIT" secondAttribute="leading" constant="5" id="vzh-bl-6fE"/>
                                             <constraint firstAttribute="trailing" secondItem="T1z-bA-eyH" secondAttribute="trailing" constant="5" id="yg7-9M-Od6"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="collaborateButton" destination="hIV-7j-hDM" id="CNm-ho-qQF"/>
                                             <outlet property="collaboratorsImageView" destination="bfh-GW-Hhy" id="hy1-B0-OqM"/>
                                             <outlet property="dateLabel" destination="5LV-UZ-5hN" id="axB-zt-fL5"/>
                                             <outlet property="femaleCollab" destination="t63-ug-77r" id="MSF-tD-6HW"/>
@@ -389,6 +384,7 @@
                         <outlet property="collectionView" destination="1kD-sy-C24" id="ltA-b3-7NE"/>
                         <outlet property="navigationBar" destination="Id4-ae-ICv" id="FNW-RY-o9h"/>
                         <outlet property="searchDisplayController" destination="7r6-L9-K6C" id="X3O-0K-yVu"/>
+                        <segue destination="wAz-eH-AAC" kind="show" identifier="detailSegue" id="O1D-Pu-vpU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHk-Fu-5sv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -436,6 +432,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-NE-aQ4" userLabel="Location Stack View">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-pin-512" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-oY-fXA">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Qdc-kF-iid"/>
+                                            <constraint firstAttribute="width" constant="20" id="rBV-4I-wmh"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuala Lumpur" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Wur-Xd-A6u">
+                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="dso-6T-kKz"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="52F-nX-nET" userLabel="Icons Stack View">
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera@240" translatesAutoresizingMaskIntoConstraints="NO" id="d6H-Nk-8t6"/>
@@ -458,7 +472,7 @@
                             <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oJ-Pc-F3i" userLabel="RespondView">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfb-Uk-2Ud">
-                                        <color key="backgroundColor" red="0.2463316941624365" green="0.2463316941624365" blue="0.2463316941624365" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="30"/>
                                         <state key="normal" title="Collaborate">
                                             <color key="titleColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -516,22 +530,7 @@
                                     <constraint firstAttribute="width" constant="30" id="dM0-ji-eZL"/>
                                 </constraints>
                             </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-bD-SSk"/>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Yf3-NE-aQ4" userLabel="Location Stack View">
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-pin-512" translatesAutoresizingMaskIntoConstraints="NO" id="jwG-oY-fXA">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Qdc-kF-iid"/>
-                                            <constraint firstAttribute="width" constant="20" id="rBV-4I-wmh"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuala Lumpur" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wur-Xd-A6u">
-                                        <fontDescription key="fontDescription" name="Raleway-Light" family="Raleway" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-bD-SSk"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -586,10 +585,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="COSPLAY-1" width="512" height="384"/>
+        <image name="Cosplay" width="512" height="384"/>
         <image name="Fashion" width="512" height="384"/>
-        <image name="OTHERS" width="512" height="384"/>
-        <image name="STOCK" width="512" height="384"/>
+        <image name="Others" width="512" height="384"/>
+        <image name="Stock" width="512" height="384"/>
         <image name="Wedding" width="512" height="384"/>
         <image name="accept-tick-icon-12" width="256" height="256"/>
         <image name="calendar-256" width="128" height="128"/>
@@ -609,6 +608,6 @@
         <image name="yuna2" width="800" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7WH-92-wjG"/>
+        <segue reference="PO4-9l-EBw"/>
     </inferredMetricsTieBreakers>
 </document>

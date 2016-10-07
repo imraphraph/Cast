@@ -13,7 +13,6 @@ class DetailCastViewController: UIViewController {
     
     var currentCast = [Cast]()
     var selectedCast:Cast!
-    var selectedImage = [UIImage]()
     var username:String!
     
     @IBOutlet weak var refImageView: UIImageView!
@@ -29,6 +28,8 @@ class DetailCastViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.profilPicImage.layer.cornerRadius = 100
 
         requestSent.alpha = 0
         collaborateButton.alpha = 1
@@ -39,9 +40,27 @@ class DetailCastViewController: UIViewController {
         self.titleLabel.text = selectedCast.castName
         self.textView.text = selectedCast.description
         self.locationLabel.text = selectedCast.location
-        self.refImageView.image = selectedImage[0]
-//        self.categoryLabel.text = selectedCast.category
         
+        
+        if let refImage = selectedCast.refImage {
+           let imageUrl = NSURL(string: refImage)
+        URLSession.shared.dataTask(with: imageUrl as! URL, completionHandler: {
+            (data, response, error) in
+            
+            print("\(imageUrl) printing IMAGEREF")
+            if error != nil {
+                print(error)
+                return
+            }
+            print("\(data) this is data")
+            let image = UIImage(data: data!)
+            DispatchQueue.main.async(execute: {
+              self.refImageView.image = image
+            })
+            }).resume()
+        }
+        
+//        self.categoryLabel.text = selectedCast.category
         let interval = selectedCast.eventDate
         let date = NSDate(timeIntervalSince1970: interval)
         
@@ -54,14 +73,8 @@ class DetailCastViewController: UIViewController {
         DataService.userRef.child(UID).child("username").observe(.value, with: { (snapshot) in
             
             self.username = snapshot.value as! String
-            print(UID)
-            print(snapshot.value as! String)
-            
             self.usernameLabel.text = self.username
-            
         })
-        
-        
     }
 
         
