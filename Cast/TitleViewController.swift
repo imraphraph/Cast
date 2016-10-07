@@ -118,13 +118,15 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     
     @IBAction func onCollabBtnPressed(_ sender: UIButton) {
         
-        print("sender value \(sender.isSelected)")
+       
         if !sender.isSelected {
             sender.isSelected=true
-            sender.setImage(UIImage(named: "add"), for:.normal)
+             print("sender value \(sender.isSelected)")
+            sender.setImage(UIImage(named: "accept-tick-icon-12"), for:.normal)
         } else {
             sender.isSelected = false
-            sender.setImage( UIImage(named:"accept-tick-icon-12"), for: .normal)
+             print("sender value \(sender.isSelected)")
+            sender.setImage( UIImage(named:"add"), for: .normal)
         }
     }
     
@@ -133,7 +135,6 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         rewardTypeText = "Cash"
         print(rewardTypeText)
     
-        
     }
     
     @IBAction func tfpButtonPressed(_ sender: UIButton) {
@@ -173,7 +174,6 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         fadeIn(view: scrollView, delay: 0)
         
     }
- 
     
     func changePage(sender: AnyObject) {
         let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
@@ -225,7 +225,6 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         let evtdatetimeInterval = evtdateTime.timeIntervalSince1970
         
         let castDict = ["created_at":NSDate().timeIntervalSince1970,"userUID":Session.currentUserUid, "castname":castname, "event_date": evtdatetimeInterval, "location": location, "reward_type":rewardType, "description":description, "status":"new","category":category, "female_needed":fmodelNeeded,"male_needed":mmodelNeeded,"photog_needed":photographerNeeded ] as [String : Any]
-        
         
         let castRef = DataService.rootRef.child("casts").childByAutoId()
         castRef.setValue(castDict)

@@ -12,8 +12,7 @@ target 'Cast' do
   	pod 'FirebaseDatabase'
   	pod 'Firebase/Storage'
     pod 'GooglePlaces'
-    pod 'GooglePlacePicker'
-    pod 'GoogleMaps'
+   
 #    pod 'Bolts-Swift'
    
 	

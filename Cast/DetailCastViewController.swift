@@ -11,9 +11,13 @@ import UIKit
 class DetailCastViewController: UIViewController {
     
     
-    var  currentCast = [Cast]()
+    var currentCast = [Cast]()
     var selectedCast:Cast!
+    var selectedImage = [UIImage]()
+    var username:String!
     
+    @IBOutlet weak var refImageView: UIImageView!
+    @IBOutlet weak var profilPicImage: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
@@ -21,21 +25,22 @@ class DetailCastViewController: UIViewController {
     @IBOutlet weak var requestSent: UIImageView!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestSent.isHidden = true
-        collaborateButton.isHidden = false
+        requestSent.alpha = 0
+        collaborateButton.alpha = 1
         
         selectedCast = currentCast[0]
-        let UID = selectedCast.castID
+        let UID = selectedCast.userUID
         
-        
-        self.usernameLabel.text = "Gene"
         self.titleLabel.text = selectedCast.castName
         self.textView.text = selectedCast.description
         self.locationLabel.text = selectedCast.location
+        self.refImageView.image = selectedImage[0]
+//        self.categoryLabel.text = selectedCast.category
         
         let interval = selectedCast.eventDate
         let date = NSDate(timeIntervalSince1970: interval)
@@ -46,9 +51,20 @@ class DetailCastViewController: UIViewController {
         let dateString = dayTimePeriodFormatter.string(from: date as Date)
         self.dateLabel.text = dateString
         
+        DataService.userRef.child(UID).child("username").observe(.value, with: { (snapshot) in
+            
+            self.username = snapshot.value as! String
+            print(UID)
+            print(snapshot.value as! String)
+            
+            self.usernameLabel.text = self.username
+            
+        })
+        
         
     }
-    
+
+        
     @IBAction func backButton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -77,9 +93,22 @@ class DetailCastViewController: UIViewController {
         //keep track the notifcation id sent from the Requetor
     DataService.userRef.child(Session.currentUserUid).child("send_notification").updateChildValues([notifyRef.key:true])
         
-        
-        requestSent.isHidden = false
+        fadeIn(view: requestSent, delay: 0)
         collaborateButton.isHidden = true
+    }
+    
+    func fadeIn(view : UIView , delay: TimeInterval)  {
+        UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: {
+            
+            view.alpha = 1
+            }, completion: nil)
+    }
+    
+    func fadeOut(view : UIView , delay: TimeInterval)  {
+        UIView.animate(withDuration: 0.3, delay: delay, options: [], animations: {
+            
+            view.alpha = 0
+            }, completion: nil)
     }
 
 }
