@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+import UIActivityIndicator_for_SDWebImage
 
 class CastersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -67,6 +69,12 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
                         numberOfItemsInSection section: Int) -> Int {
         return self.cast.count
     }
+    
+    func setImageWith(_ url: URL, usingActivityIndicatorStyle activityStyle: UIActivityIndicatorViewStyle) {
+        
+        
+    }
+
     //3
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! DetailCastCollectionViewCell
@@ -75,19 +83,10 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let imageURL = NSURL(string:currentCast.refImage)
         print("\(imageURL) printing IMAGEREF casterView")
-        URLSession.shared.dataTask(with: imageURL! as URL, completionHandler: {
-            (data, response, error) in
-            
-            if error != nil {
-                print(error)
-                return
-            }
-            let image = UIImage(data: data!)
-            DispatchQueue.main.async(execute: {
-                cell.imageView.image = image
-            })
-        }).resume()
         
+        cell.imageView!.sd_setImage(with: imageURL as URL!)
+        
+        cell.imageView.setIndicatorStyle(.gray)
         
         cell.nameLabel.text = currentCast.castName
         cell.locationLabel.text = currentCast.location
