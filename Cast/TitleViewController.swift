@@ -8,8 +8,13 @@
 
 import UIKit
 import GooglePlaces
+import FirebaseStorage
+import FirebaseDatabase
 
-class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
+class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    
+    let imagePicker = UIImagePickerController()
 
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -23,7 +28,9 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var categoryLabel: UILabel!
+    
     @IBOutlet weak var imagePickerView: UIImageView!
+    var imagePickerUrl = [String!]()
     
     @IBOutlet weak var locationTextField: UITextField!
     
@@ -45,7 +52,9 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        imagePicker.delegate = self
+        
         self.scrollView.delegate = self
         self.scrollView.isPagingEnabled = true
         
@@ -63,6 +72,34 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         
         placesClient = GMSPlacesClient.shared()
        
+    }
+    
+    @IBAction func openImagePicker(_ sender: UITapGestureRecognizer) {
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var selectedImageFromPicker : UIImage?
+        
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            selectedImageFromPicker = editedImage
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            selectedImageFromPicker = originalImage
+        }
+        
+        imagePickerView.image = selectedImageFromPicker
+        
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     // Present the Autocomplete view controller when the button is pressed.
@@ -170,6 +207,19 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         categoryLabel.text = selectedCell
         print(selectedCell)
         
+        if categoryLabel.text == "Fashion" {
+            imagePickerView.image = UIImage(named: "Fashion")
+        }else if categoryLabel.text == "Wedding" {
+            imagePickerView.image = UIImage(named: "Wedding")
+        }else if categoryLabel.text == "Cosplay" {
+            imagePickerView.image = UIImage(named: "Cosplay")
+        }else if categoryLabel.text == "Stock" {
+            imagePickerView.image = UIImage(named: "Stock")
+        }else if categoryLabel.text == "Others" {
+            imagePickerView.image = UIImage(named: "Others")
+        }
+        
+        
         fadeOut(view: self.ViewTable, delay: 0)
         fadeIn(view: scrollView, delay: 0)
         
@@ -224,10 +274,31 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         let evtdateTime = MyDateFormatter.displayTimestamp(datetime: eventDate)
         let evtdatetimeInterval = evtdateTime.timeIntervalSince1970
         
-        let castDict = ["created_at":NSDate().timeIntervalSince1970,"userUID":Session.currentUserUid, "castname":castname, "event_date": evtdatetimeInterval, "location": location, "reward_type":rewardType, "description":description, "status":"new","category":category, "female_needed":fmodelNeeded,"male_needed":mmodelNeeded,"photog_needed":photographerNeeded ] as [String : Any]
-        
         let castRef = DataService.rootRef.child("casts").childByAutoId()
+        let storageRef = FIRStorage.storage().reference()
+        let castImageRef = storageRef.child("refImage").child(castRef.key)
+        print(castRef.key)
+        
+        
+        let castDict = ["created_at":NSDate().timeIntervalSince1970,"userUID":Session.currentUserUid, "castname":castname, "event_date": evtdatetimeInterval, "location": location, "reward_type":rewardType, "description":description, "status":"new","category":category, "female_needed":fmodelNeeded,"male_needed":mmodelNeeded,"photog_needed":photographerNeeded, "ref_imageURL" : ""] as [String : Any]
+        
+      
         castRef.setValue(castDict)
+        
+        if let uploadData = UIImageJPEGRepresentation(imagePickerView.image!, 0.7) {
+            castImageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                
+                if error != nil{
+                    print(error)
+                    return
+                } else {
+                    
+                    if let imageURL = metadata?.downloadURLs?.first{
+                        castRef.child("ref_imageURL").setValue(imageURL.absoluteString)
+                    }
+                }
+            })
+        }
         
         DataService.userRef.child(Session.currentUserUid).child("casts").updateChildValues([castRef.key:true])
         
@@ -251,6 +322,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
             }, completion: nil)
     }
 }
+
 
 extension TitleViewController: GMSAutocompleteViewControllerDelegate {
     

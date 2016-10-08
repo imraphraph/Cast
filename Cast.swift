@@ -27,6 +27,7 @@ class Cast {
     var photogNeeded : String = "false"
     var userUID : String = ""
     var collaborators = [Collaborator]()
+    var refImage : String!
     
     init() {
         
@@ -145,6 +146,11 @@ class Cast {
         }
         else {
             self.photogNeeded = "false"
+        }
+        if let dictRefImage = dict["ref_imageURL"] as? String {
+            self.refImage = dictRefImage
+        } else {
+            self.refImage = ""
         }
     }
 //    invite()

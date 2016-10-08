@@ -12,7 +12,8 @@ target 'Cast' do
   	pod 'FirebaseDatabase'
   	pod 'Firebase/Storage'
     pod 'GooglePlaces'
-   
+    pod 'SDWebImage', '~>3.8'
+    pod 'UIActivityIndicator-for-SDWebImage'
 #    pod 'Bolts-Swift'
    
 	
