@@ -77,11 +77,29 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emptyView" destination="qMi-7G-8Zl" id="isY-NC-fAJ"/>
+                        <outlet property="messageLbl" destination="FAI-vU-qXc" id="OFc-gP-xdS"/>
                         <outlet property="respondBtn" destination="7d1-kB-A32" id="OBu-bu-5va"/>
                         <outlet property="tableView" destination="MJP-Kc-Zh4" id="WPP-1x-avr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEl-r2-x5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view alpha="0.0" contentMode="scaleToFill" id="qMi-7G-8Zl" userLabel="EmptyView">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no notifcation currently" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAI-vU-qXc">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="FAI-vU-qXc" firstAttribute="centerX" secondItem="qMi-7G-8Zl" secondAttribute="centerX" id="1o5-A4-20a"/>
+                        <constraint firstItem="FAI-vU-qXc" firstAttribute="centerY" secondItem="qMi-7G-8Zl" secondAttribute="centerY" id="PZn-0D-8aX"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="1255.2" y="-400.74962518740631"/>
         </scene>
@@ -143,6 +161,6 @@
     </scenes>
     <resources>
         <image name="confirm (2)" width="32" height="32"/>
-        <image name="cosplay" width="300" height="168"/>
+        <image name="cosplay" width="512" height="384"/>
     </resources>
 </document>

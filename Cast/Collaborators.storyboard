@@ -22,6 +22,7 @@
                                 <state key="normal" image="rotate-to-right"/>
                                 <connections>
                                     <action selector="onRefreshButtonPressed:" destination="nyB-co-7n2" eventType="touchUpInside" id="FbS-P2-PCZ"/>
+                                    <action selector="refresh:" destination="nyB-co-7n2" eventType="touchUpInside" id="Poo-TW-bd9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -37,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1156" y="44.527736131934034"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Collaborators-->
         <scene sceneID="SQs-0C-yhq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFe-bF-BbQ" sceneMemberID="viewController">
+                <navigationController title="Collaborators" automaticallyAdjustsScrollViewInsets="NO" id="PFe-bF-BbQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="axb-J0-Hy1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

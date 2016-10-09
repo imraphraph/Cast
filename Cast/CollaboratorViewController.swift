@@ -15,11 +15,6 @@ class CollaboratorViewController: UIViewController {
 //    var displayUsers = [String]()
     var draggableViewBackground: CollaboratorViewBackground!
     
- 
-    @IBAction func onRefreshButtonPressed(_ sender: UIButton) {
-        //loadUser()
-        print("click")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,5 +50,16 @@ class CollaboratorViewController: UIViewController {
         
     }
 
+    @IBAction func refresh(_ sender: UIButton) {
+        if self.draggableViewBackground != nil && self.draggableViewBackground.exampleCardLabels != nil {
+            self.draggableViewBackground.exampleCardLabels.removeAll()
+        }
+        
+        loadUser()
+        
+        //self.draggableViewBackground = CollaboratorViewBackground(frame:self.view.frame)
+        //self.view.addSubview(self.draggableViewBackground)
+    }
+    
 
 }

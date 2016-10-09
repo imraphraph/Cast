@@ -10,13 +10,16 @@ import UIKit
 import FirebaseDatabase
 
 
-class NotificationViewController: UIViewController, UITableViewDataSource {
+class NotificationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
+    @IBOutlet weak var messageLbl: UILabel!
+    @IBOutlet var emptyView: UIView!
     @IBOutlet weak var tableView: UITableView!
     var mynotifications = [CastNotification]()  //being_notified
     var sentnotifications = [CastNotification]() //request to collaborate
     
     @IBOutlet weak var respondBtn: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.dataSource=self
@@ -24,8 +27,11 @@ class NotificationViewController: UIViewController, UITableViewDataSource {
         self.title = "Notifications"
         self.tableView.allowsMultipleSelection=true
         
+        self.respondBtn.isEnabled=false
+        
         loadNotification()
     }
+
     
     func loadNotification() {
         
@@ -45,9 +51,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource {
                             self.mynotifications = newNotification
                             self.tableView.reloadData()
                             
-                            if self.mynotifications.count==0{
-                              self.respondBtn.isEnabled=false
-                            }
+                            self.canResponse()
                         }
                         
                         }, withCancel: { (Error) in
@@ -60,9 +64,42 @@ class NotificationViewController: UIViewController, UITableViewDataSource {
         
     }
     
+    func canResponse() {
+        if self.mynotifications.count==0{
+            self.respondBtn.isEnabled=false
+        } else {
+            self.respondBtn.isEnabled=true
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.mynotifications.count == 0 {
+            // Show Empty State View
+            self.tableView.addSubview(self.emptyView)
+            self.emptyView.addSubview(messageLbl)
+            messageLbl.alpha=1.0
+            messageLbl.isHidden=false
+            self.emptyView.center = self.view.center
+            self.emptyView.center.y = self.view.frame.height/2 // rough calculation here
+            self.tableView.separatorColor = UIColor.clear
+            //self.tableView.backgroundColor=UIColor.lightGray
+        } else if self.emptyView.superview != nil {
+            // Empty State View is currently visible, but shouldn't
+            self.emptyView.removeFromSuperview()
+            self.tableView.separatorColor = nil
+            self.tableView.backgroundColor=UIColor.clear
+        }
+        
         return self.mynotifications.count
     }
+    
+//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+//        var message = ""
+//        if (self.mynotifications.count == 0) {
+//            message = "You do not have any notifications";
+//        }
+//        return message
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -81,6 +118,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource {
         return cell!
         
     }
+    
     
     
     @IBAction func onConfirmBtnPressed(_ sender: UIButton) {
