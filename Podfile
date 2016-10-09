@@ -12,9 +12,10 @@ target 'Cast' do
   	pod 'FirebaseDatabase'
   	pod 'Firebase/Storage'
     pod 'GooglePlaces'
-    pod 'GooglePlacePicker'
-    pod 'GoogleMaps'
+    pod 'SDWebImage', '~>3.8'
+    pod 'UIActivityIndicator-for-SDWebImage'
 #    pod 'Bolts-Swift'
+   
 	
 
   target 'CastTests' do

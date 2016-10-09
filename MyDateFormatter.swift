@@ -81,11 +81,11 @@ class MyDateFormatter {
         if d < 1 {
             return "\(d) hour(s) from now"
         } else if d <= 7 {
-            return "\(d) day(s) from now"
+            return "\(d)d from now"
         } else if d <= 30 {
-            return "\(w) week(s) from now"
+            return "\(w)w from now"
         } else {
-            return "\(m) month(s) from now"
+            return "\(m)m from now"
         }
         
         //        if d < 2 {

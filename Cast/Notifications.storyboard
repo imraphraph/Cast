@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Trx-27-35Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ym5-Zc-b7o">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notification-->
+        <!--Notificationssss-->
         <scene sceneID="6PG-XR-WV6">
             <objects>
-                <viewController title="Notification" automaticallyAdjustsScrollViewInsets="NO" id="4bj-pB-f6J" customClass="NotificationViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Notificationssss" automaticallyAdjustsScrollViewInsets="NO" id="4bj-pB-f6J" customClass="NotificationViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kAd-9m-VJD"/>
                         <viewControllerLayoutGuide type="bottom" id="aHM-dy-Re1"/>
@@ -33,16 +33,16 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq5-cp-uEg">
-                                                    <frame key="frameInset" minX="85" minY="8" width="147" height="21"/>
+                                                    <frame key="frameInset" minX="85" minY="8" width="147" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjX-c4-mKT">
-                                                    <frame key="frameInset" minX="85" minY="37" width="222" height="73"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjX-c4-mKT">
+                                                    <frame key="frameInset" minX="85" minY="37" width="290" height="73"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -55,6 +55,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4bj-pB-f6J" id="kkZ-1U-7az"/>
+                                    <outlet property="delegate" destination="4bj-pB-f6J" id="GpL-A2-4pU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,8 +69,15 @@
                             <constraint firstItem="MJP-Kc-Zh4" firstAttribute="top" secondItem="kAd-9m-VJD" secondAttribute="bottom" id="stb-NV-mCm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="QD4-JY-J9s"/>
+                    <navigationItem key="navigationItem" id="QD4-JY-J9s">
+                        <barButtonItem key="rightBarButtonItem" image="confirm (2)" id="7d1-kB-A32">
+                            <connections>
+                                <action selector="onConfirmBtnPressed:" destination="4bj-pB-f6J" id="q1g-ZP-zOi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="respondBtn" destination="7d1-kB-A32" id="OBu-bu-5va"/>
                         <outlet property="tableView" destination="MJP-Kc-Zh4" id="WPP-1x-avr"/>
                     </connections>
                 </viewController>
@@ -74,10 +85,29 @@
             </objects>
             <point key="canvasLocation" x="1255.2" y="-400.74962518740631"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Notificationssss-->
+        <scene sceneID="buO-i7-1z6">
+            <objects>
+                <viewController title="Notificationssss" id="h0z-zb-3d0" customClass="AnimationNotifcationVCViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PuV-8j-cfd"/>
+                        <viewControllerLayoutGuide type="bottom" id="MG8-fo-emu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2fN-7v-6mh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ON7-pN-tqO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7I-bl-sus" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1255" y="274"/>
+        </scene>
+        <!--Notifications-->
         <scene sceneID="3b7-yP-chk">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Trx-27-35Z" sceneMemberID="viewController">
+                <navigationController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="Trx-27-35Z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lH2-Y1-5iE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -92,8 +122,27 @@
             </objects>
             <point key="canvasLocation" x="316" y="-400.74962518740631"/>
         </scene>
+        <!--Notifications-->
+        <scene sceneID="xAQ-wJ-3ew">
+            <objects>
+                <navigationController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="ym5-Zc-b7o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UWm-5T-wKG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h0z-zb-3d0" kind="relationship" relationship="rootViewController" id="Ti5-gr-69k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtQ-80-dEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294" y="265"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="confirm (2)" width="32" height="32"/>
         <image name="cosplay" width="300" height="168"/>
     </resources>
 </document>

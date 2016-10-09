@@ -14,7 +14,9 @@ class DetailCastCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var rewardsImageView: UIImageView!
     @IBOutlet weak var collaboratorsImageView: UIImageView!
     
-
+    @IBOutlet weak var maleCollab: UIImageView!
+    @IBOutlet weak var femaleCollab: UIImageView!
+    
     @IBOutlet weak var collaborateButton: UIButton!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!

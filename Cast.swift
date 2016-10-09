@@ -27,6 +27,7 @@ class Cast {
     var photogNeeded : String = "false"
     var userUID : String = ""
     var collaborators = [Collaborator]()
+    var refImage : String!
     
     init() {
         
@@ -47,7 +48,7 @@ class Cast {
     enum Category {
         case cat_cosplay
         case cat_wedding
-        case cat_family
+        case cat_stock
         case cat_fashion
         case other
     }
@@ -87,8 +88,8 @@ class Cast {
             self.category = Category.cat_cosplay
         case "Wedding":
             self.category = Category.cat_wedding
-        case "Family":
-            self.category = Category.cat_family
+        case "Stock":
+            self.category = Category.cat_stock
         case "Fashion":
             self.category = Category.cat_fashion
         default:
@@ -145,6 +146,11 @@ class Cast {
         }
         else {
             self.photogNeeded = "false"
+        }
+        if let dictRefImage = dict["ref_imageURL"] as? String {
+            self.refImage = dictRefImage
+        } else {
+            self.refImage = ""
         }
     }
 //    invite()

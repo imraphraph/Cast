@@ -14,36 +14,32 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var image1: UIImageView!
     @IBOutlet weak var image3: UIImageView!
     @IBOutlet weak var image4: UIImageView!
+    @IBOutlet weak var image5: UIImageView!
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var topScrollView: UIScrollView!
+    @IBOutlet weak var widthSlidingView: NSLayoutConstraint!
     
     var modelImage: [UIImage] = [
-        UIImage(named: "cosplay")!,
-        UIImage(named: "cowgirl")!,
-        UIImage(named: "model")!,
-        UIImage(named: "yuna")!,
-        UIImage(named: "yuna2")!
+        UIImage(named: "Fashion")!,
+        UIImage(named: "Wedding")!,
+        UIImage(named: "Cosplay")!,
+        UIImage(named: "Stock")!,
+        UIImage(named: "Others")!
     ]
   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // configure for tabbar
-//        title = ""
-//        tabBarItem.image =
-//        tabBarItem.selectedImage
+        let viewWidth = self.view.frame.size.width
+        widthSlidingView.constant = viewWidth * 3
         
         configurePageControl()
         
         self.topScrollView.delegate = self
+        self.topScrollView.isPagingEnabled = true
         
-        for index in 0..<4 {
-            
-            self.topScrollView.isPagingEnabled = true
-        }
-        
-        let selector = #selector(changePage(sender:)) // swift 3
+//        let selector = #selector(changePage(sender:)) // swift 3
         pageControl.addTarget(self, action: Selector("changePage:"), for: UIControlEvents.valueChanged)
     }
 
@@ -89,6 +85,10 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
         }
         else if segue.identifier == "4thSegue"{
             destination.images = [image4.image!]
+            destination.images += modelImage
+        }
+        else if segue.identifier == "5thSegue"{
+            destination.images = [image5.image!]
             destination.images += modelImage
         }
     }
