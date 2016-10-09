@@ -92,7 +92,7 @@ open class User{
             self.phone = ""
         }
         
-        if let weblinks = dict["weblinks"] as? String{
+        if let weblinks = dict["PortfolioLink"] as? String{
             self.weblinks = weblinks
         }else {
             self.weblinks = ""

@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nyB-co-7n2">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PFe-bF-BbQ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collaborator-->
+        <!--Collaborators-->
         <scene sceneID="sFo-N6-Dnh">
             <objects>
-                <viewController title="Collaborator" id="nyB-co-7n2" sceneMemberID="viewController">
+                <viewController title="Collaborators" id="nyB-co-7n2" customClass="CollaboratorViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N55-8x-wQm"/>
                         <viewControllerLayoutGuide type="bottom" id="Vmi-8W-4om"/>
@@ -17,12 +17,46 @@
                     <view key="view" contentMode="scaleToFill" id="UdH-lK-uaJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wt-Wt-5T4">
+                                <state key="normal" image="rotate-to-right"/>
+                                <connections>
+                                    <action selector="onRefreshButtonPressed:" destination="nyB-co-7n2" eventType="touchUpInside" id="FbS-P2-PCZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18823529410000001" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Wt-Wt-5T4" firstAttribute="centerY" secondItem="UdH-lK-uaJ" secondAttribute="centerY" id="mCL-C9-J5x"/>
+                            <constraint firstItem="9Wt-Wt-5T4" firstAttribute="centerX" secondItem="UdH-lK-uaJ" secondAttribute="centerX" id="zNC-rQ-NvW"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OLA-kD-7Ei"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHM-Is-U8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="45"/>
+            <point key="canvasLocation" x="1156" y="44.527736131934034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SQs-0C-yhq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PFe-bF-BbQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="axb-J0-Hy1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nyB-co-7n2" kind="relationship" relationship="rootViewController" id="s4r-mc-9cS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEI-kd-Wzr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="44.527736131934034"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rotate-to-right" width="64" height="64"/>
+    </resources>
 </document>

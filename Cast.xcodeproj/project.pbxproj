@@ -92,6 +92,8 @@
 		F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18546391D9B72AB00643E18 /* Assets.xcassets */; };
 		F1A952791D9FB9D8008D65A5 /* CastNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A952781D9FB9D8008D65A5 /* CastNotification.swift */; };
 		F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */; };
+		F1FEE3C91DA74BD900896840 /* CollaboratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FEE3C81DA74BD900896840 /* CollaboratorViewController.swift */; };
+		F1FEE3CB1DA74C0700896840 /* CollaboratorViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FEE3CA1DA74C0700896840 /* CollaboratorViewBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +216,8 @@
 		F18546391D9B72AB00643E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1A952781D9FB9D8008D65A5 /* CastNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastNotification.swift; sourceTree = "<group>"; };
 		F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCastViewController.swift; sourceTree = "<group>"; };
+		F1FEE3C81DA74BD900896840 /* CollaboratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollaboratorViewController.swift; sourceTree = "<group>"; };
+		F1FEE3CA1DA74C0700896840 /* CollaboratorViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollaboratorViewBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,8 @@
 		530922C41D9A23BF00AA9EEB /* CollaboratorsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F1FEE3C81DA74BD900896840 /* CollaboratorViewController.swift */,
+				F1FEE3CA1DA74C0700896840 /* CollaboratorViewBackground.swift */,
 			);
 			name = CollaboratorsViewController;
 			sourceTree = "<group>";
@@ -861,6 +867,8 @@
 				F11B6A5F1D9E4A3E008D8C68 /* NotificationViewController.swift in Sources */,
 				F14527541D9A431600CDDA2F /* UserComment.swift in Sources */,
 				530922B41D9A205000AA9EEB /* WelcomeViewController.swift in Sources */,
+				F1FEE3C91DA74BD900896840 /* CollaboratorViewController.swift in Sources */,
+				F1FEE3CB1DA74C0700896840 /* CollaboratorViewBackground.swift in Sources */,
 				53DEFDF41D9A1C1400078C36 /* AppDelegate.swift in Sources */,
 				530922B11D9A200400AA9EEB /* SignUpViewController.swift in Sources */,
 				F17DA5B81DA551A6003BA545 /* DraggableViewBackground.m in Sources */,

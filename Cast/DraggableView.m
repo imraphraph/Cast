@@ -43,20 +43,21 @@
 #warning placeholder stuff, replace with card-specific information {
         
         
-        profilePhoto = [[UIImageView alloc]initWithFrame:CGRectMake(101, 60, 80, 80)];
+        profilePhoto = [[UIImageView alloc]initWithFrame:CGRectMake(80, 60, 100, 100)];
         profilePhoto.image = [UIImage imageNamed:@"cowgirl"];
         profilePhoto.clipsToBounds = true;
         profilePhoto.layer.cornerRadius = 20.0;
         
-        username = [[UILabel alloc]initWithFrame:CGRectMake(101, 10, self.frame.size.width-80, 50)];
+        username = [[UILabel alloc]initWithFrame:CGRectMake(60, 10, self.frame.size.width-80, 50)];
         username.text = @"no username given";
         [username setTextAlignment:NSTextAlignmentLeft];
         username.textColor = [UIColor grayColor];
 
         
-        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 140, self.frame.size.width, 100)];
-        information.text = @"no info given";
-        [information setTextAlignment:NSTextAlignmentCenter];
+        information = [[UILabel alloc]initWithFrame:CGRectMake(0, 180, self.frame.size.width, 100)];
+        information.text = @"";
+        [information setTextAlignment:NSTextAlignmentLeft];
+        [information setTextColor:[UIColor blueColor]];
         information.textColor = [UIColor grayColor];
         
         self.backgroundColor = [UIColor whiteColor];
