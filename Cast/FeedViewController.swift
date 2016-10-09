@@ -21,11 +21,11 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var widthSlidingView: NSLayoutConstraint!
     
     var modelImage: [UIImage] = [
-        UIImage(named: "cosplay")!,
-        UIImage(named: "cowgirl")!,
-        UIImage(named: "model")!,
-        UIImage(named: "yuna")!,
-        UIImage(named: "yuna2")!
+        UIImage(named: "Fashion")!,
+        UIImage(named: "Wedding")!,
+        UIImage(named: "Cosplay")!,
+        UIImage(named: "Stock")!,
+        UIImage(named: "Others")!
     ]
   
     override func viewDidLoad() {

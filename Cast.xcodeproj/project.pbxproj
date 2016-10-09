@@ -68,7 +68,10 @@
 		B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */; };
 		B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */; };
 		B558CB711D9DFDCA005F7D49 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */; };
+		B5BFBEF61DA73ECF00E76D70 /* EditDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BFBEF51DA73ECF00E76D70 /* EditDetailViewController.swift */; };
 		B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */; };
+		B5DC0EDF1DA6267700F4FA2B /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC0EDE1DA6267700F4FA2B /* ProfileEditViewController.swift */; };
+		B5DC0EE11DA6309300F4FA2B /* ProfileEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DC0EE01DA6309300F4FA2B /* ProfileEditCell.swift */; };
 		B5F148DE1D9A741200286B3F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */; };
 		B5F148DF1D9A741200286B3F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */; };
 		B5F148E31D9A7B7800286B3F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F148E21D9A7B7800286B3F /* Bolts.framework */; };
@@ -186,7 +189,10 @@
 		B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
 		B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
 		B558CB6D1D9DFDCA005F7D49 /* lobster-two.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.regular.ttf"; sourceTree = "<group>"; };
+		B5BFBEF51DA73ECF00E76D70 /* EditDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDetailViewController.swift; sourceTree = "<group>"; };
 		B5CE8F8C1D9D102B00488C27 /* WelcomeViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController2.swift; sourceTree = "<group>"; };
+		B5DC0EDE1DA6267700F4FA2B /* ProfileEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
+		B5DC0EE01DA6309300F4FA2B /* ProfileEditCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileEditCell.swift; sourceTree = "<group>"; };
 		B5F148DC1D9A741200286B3F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B5F148DD1D9A741200286B3F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B5F148E21D9A7B7800286B3F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -490,6 +496,9 @@
 			isa = PBXGroup;
 			children = (
 				B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */,
+				B5DC0EE01DA6309300F4FA2B /* ProfileEditCell.swift */,
+				B5DC0EDE1DA6267700F4FA2B /* ProfileEditViewController.swift */,
+				B5BFBEF51DA73ECF00E76D70 /* EditDetailViewController.swift */,
 			);
 			name = ProfileViewController;
 			sourceTree = "<group>";
@@ -876,9 +885,12 @@
 				F17DA5B71DA551A6003BA545 /* DraggableView.m in Sources */,
 				53ED3C1F1D9E3D8E006D85D1 /* TitleViewController.swift in Sources */,
 				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
+				B5BFBEF61DA73ECF00E76D70 /* EditDetailViewController.swift in Sources */,
 				F14527531D9A431600CDDA2F /* User.swift in Sources */,
 				B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */,
 				F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */,
+				B5DC0EDF1DA6267700F4FA2B /* ProfileEditViewController.swift in Sources */,
+				B5DC0EE11DA6309300F4FA2B /* ProfileEditCell.swift in Sources */,
 				F14527581D9A46F500CDDA2F /* StorageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

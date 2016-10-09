@@ -10,9 +10,9 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FBSDKCoreKit
-import SafariServices
 
-class ProfileViewController: UIViewController, SFSafariViewControllerDelegate{
+
+class ProfileViewController: UIViewController {
     @IBOutlet weak var genderTextField: UILabel!
     @IBOutlet weak var usernameTextField: UILabel!
     
@@ -95,6 +95,9 @@ class ProfileViewController: UIViewController, SFSafariViewControllerDelegate{
     @IBAction func openPortfolio(_ sender: AnyObject) {
         
         if self.portfolioLink.lowercased() .hasPrefix("http://"){
+        let myURL = self.portfolioLink
+        UIApplication.shared.openURL(URL(string: myURL)!)
+        } else if self.portfolioLink.lowercased() .hasPrefix("https://"){
         let myURL = self.portfolioLink
         UIApplication.shared.openURL(URL(string: myURL)!)
         } else {
