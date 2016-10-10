@@ -98,6 +98,7 @@
 		F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */; };
 		F1EA1B881DAB4A42008167E9 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EA1B871DAB4A42008167E9 /* ContactsViewController.swift */; };
 		F1EA1B8A1DAB4A72008167E9 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1EA1B891DAB4A72008167E9 /* Chat.storyboard */; };
+		F1EA1B8C1DAB64EB008167E9 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1EA1B8B1DAB64EB008167E9 /* ChatViewController.swift */; };
 		F1FEE3C91DA74BD900896840 /* CollaboratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FEE3C81DA74BD900896840 /* CollaboratorViewController.swift */; };
 		F1FEE3CB1DA74C0700896840 /* CollaboratorViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FEE3CA1DA74C0700896840 /* CollaboratorViewBackground.swift */; };
 /* End PBXBuildFile section */
@@ -228,6 +229,7 @@
 		F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCastViewController.swift; sourceTree = "<group>"; };
 		F1EA1B871DAB4A42008167E9 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		F1EA1B891DAB4A72008167E9 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		F1EA1B8B1DAB64EB008167E9 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F1FEE3C81DA74BD900896840 /* CollaboratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollaboratorViewController.swift; sourceTree = "<group>"; };
 		F1FEE3CA1DA74C0700896840 /* CollaboratorViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollaboratorViewBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -556,6 +558,7 @@
 			isa = PBXGroup;
 			children = (
 				F1EA1B871DAB4A42008167E9 /* ContactsViewController.swift */,
+				F1EA1B8B1DAB64EB008167E9 /* ChatViewController.swift */,
 			);
 			name = ChatControllers;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				53ED3C1F1D9E3D8E006D85D1 /* TitleViewController.swift in Sources */,
 				530922CD1D9A540700AA9EEB /* DetailCastViewController.swift in Sources */,
 				B5BFBEF61DA73ECF00E76D70 /* EditDetailViewController.swift in Sources */,
+				F1EA1B8C1DAB64EB008167E9 /* ChatViewController.swift in Sources */,
 				F14527531D9A431600CDDA2F /* User.swift in Sources */,
 				F1291E901DAB2157002092D4 /* DraggableView-error.swift in Sources */,
 				B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */,
