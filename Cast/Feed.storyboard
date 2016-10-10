@@ -31,10 +31,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--FeedViewController-->
+        <!--Browse-->
         <scene sceneID="OUY-Jr-CxD">
             <objects>
-                <viewController storyboardIdentifier="FeedViewController" title="FeedViewController" id="jgK-YP-0NM" customClass="FeedViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" title="Browse" id="jgK-YP-0NM" customClass="FeedViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NEm-xB-gA1"/>
                         <viewControllerLayoutGuide type="bottom" id="PHL-3l-mAS"/>

@@ -24,6 +24,13 @@ class ChatViewController: JSQMessagesViewController {
         
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
+        
+        addMessage(id: "fz", text: "Hey I am interested in the Photoshoot, how can we proceed?!")
+        // messages sent from local sender
+        addMessage(id: senderId, text: "Hey!")
+        addMessage(id: senderId, text: "Nice to meet you!")
+        // animates the receiving of a new message on the view
+        finishReceivingMessage()
     }
 
     
@@ -58,6 +65,26 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     
+    func addMessage(id: String, text: String) {
+        let message = JSQMessage(senderId: id, displayName: "", text: text)
+        messages.append(message!)
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = super.collectionView(collectionView, cellForItemAt: indexPath)
+            as! JSQMessagesCollectionViewCell
+        
+        let message = messages[indexPath.item]
+        
+        if message.senderId == senderId {
+            cell.textView!.textColor = UIColor.white
+        } else {
+            cell.textView!.textColor = UIColor.black
+        }
+        
+        return cell
+    }
     
     
     
