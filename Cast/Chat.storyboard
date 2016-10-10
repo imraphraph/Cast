@@ -31,6 +31,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yQy-2t-5eP" kind="show" identifier="chatSegue" id="gya-NU-8Qk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,6 +46,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDi-0D-13F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1012" y="12.143928035982009"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="BzT-66-Acw">
+            <objects>
+                <viewController id="yQy-2t-5eP" customClass="ChatViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oqw-IK-WMT"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Mp-MJ-n1X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qj3-Vh-sSi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xgr-eX-axc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1795" y="25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="z8l-dt-MMH">

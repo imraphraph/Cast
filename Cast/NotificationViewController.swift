@@ -47,7 +47,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                         if let sender = User.init(snapshot: snap3) {
                             notify.sender = sender
                             
-                            let newNotification = self.mynotifications.filter({$0.status != "new"})
+                            let newNotification = self.mynotifications.filter({$0.status == "new"})
                             self.mynotifications = newNotification
                             self.tableView.reloadData()
                             

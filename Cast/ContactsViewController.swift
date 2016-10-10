@@ -33,7 +33,16 @@ class ContactsViewController: UITableViewController {
         return cell
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let chatVc = segue.destination as! ChatViewController // 1
+        //_ = navVc.viewControllers.first as! ChatViewController // 2
+        if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
+            chatVc.senderId = self.contactList[selectedRow] // 3
+            chatVc.senderDisplayName = self.contactList[selectedRow] // 4
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
