@@ -49,7 +49,7 @@ class DetailCastViewController: UIViewController {
         let imageUrl = NSURL(string: selectedCast.refImage)
         self.refImageView.sd_setImage(with: imageUrl as URL!)
     
-//        self.categoryLabel.text = selectedCast.category
+        self.categoryLabel.text = selectedCast.category
         let interval = selectedCast.eventDate
         let date = NSDate(timeIntervalSince1970: interval)
         
@@ -135,7 +135,6 @@ class DetailCastViewController: UIViewController {
             }, completion: nil)
     }
 
-
     
     @IBOutlet weak var panView: UIView!
     @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
@@ -164,56 +163,4 @@ class DetailCastViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-//    if newCenter.y <= maxTopPoint * 1.60 {
-//    UIView.animate(withDuration: 0.5, animations: {view.center.y = maxTopPoint}, completion: nil)
-//    sender.setTranslation( CGPoint(x:0, y: 0), in: self.view)
-//    }
-//    view.center = newCenter
-//    if newCenter.y == maxTopPoint * 1.60 {
-//    UIView.animate(withDuration: 0.5, animations: {view.center.y = maxLowPoint}, completion: nil)
-//    sender.setTranslation( CGPoint(x:0, y: 0), in: self.view)
-//    }
-//    sender.setTranslation( CGPoint(x:0, y: 0), in: self.view)
 }
-
-
-
- //                UIView.animate(withDuration: Double(slideFactor * 2),delay: 0, options: UIViewAnimationOptions.curveEaseOut, animations: {sender.view!.center = finalPoint },completion: nil)
-        
-        //Only allow movement up to within 100 pixels of the right bound of the screen
-//        if point.x < UIScreen.main.bounds.size.width - 100 {
-//            var newframe = CGRect(x: point.x, y: point.y, width: self.bottomHalfView.frame.size.width, height: self.bottomHalfView.frame.size.height)
-//            self.bottomHalfView.frame = newframe
-//        }
-        
-        
-//        if sender.state == UIGestureRecognizerState.began{
-//            // 1
-//            let velocity = sender.velocity(in: self.view)
-//            let magnitude = sqrt((velocity.x * velocity.x) + (velocity.y * velocity.y))
-//            let slideMultiplier = magnitude / 200
-//            print("magnitude: \(magnitude), slideMultiplier: \(slideMultiplier)")
-//            
-//            // 2
-//            let slideFactor = 0.1 * slideMultiplier     //Increase for more of a slide
-//            // 3
-//            var finalPoint = CGPoint(x:sender.view!.center.x,
-//                                     y:sender.view!.center.y + (velocity.y * slideFactor))
-//            // 4
-//            finalPoint.x = min(max(finalPoint.x, 0), self.view.bounds.size.width)
-//            finalPoint.y = min(max(finalPoint.y, 100), self.view.bounds.size.height * 0.25)
-//            
-//            
-//            // 5
-//            UIView.animate(withDuration: Double(slideFactor * 2),
-//                                       delay: 0,
-//                                       // 6
-//                options: UIViewAnimationOptions.curveEaseOut,
-//                animations: {sender.view!.center = finalPoint },
-//                completion: nil)
-//        }
-    
-

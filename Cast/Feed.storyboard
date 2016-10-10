@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jgK-YP-0NM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jgK-YP-0NM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Raleway-ExtraLight.ttf">
-            <string>Raleway-ExtraLight</string>
-        </array>
         <array key="Raleway-Italic.ttf">
             <string>Raleway-Italic</string>
         </array>
@@ -494,7 +491,7 @@
                                                 <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Id-UOb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Id-UOb">
                                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -522,10 +519,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pull up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Pe-DCV">
-                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="11"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="==" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Pe-DCV">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="adg-Pe-DCV" secondAttribute="height" multiplier="1:1" id="Wm4-Wb-got"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -542,7 +541,7 @@
                                             <constraint firstItem="52F-nX-nET" firstAttribute="top" secondItem="Vhz-GK-rvl" secondAttribute="bottom" constant="10" id="M2I-c8-JZb"/>
                                             <constraint firstItem="r9K-Id-UOb" firstAttribute="top" secondItem="roQ-MD-0Io" secondAttribute="bottom" constant="20" id="Mtl-p8-Otc"/>
                                             <constraint firstItem="V1K-gV-tC1" firstAttribute="leading" secondItem="qNl-Le-RMG" secondAttribute="leading" constant="20" id="Pyo-f4-iP8"/>
-                                            <constraint firstAttribute="bottom" secondItem="adg-Pe-DCV" secondAttribute="bottom" constant="15" id="RQJ-kQ-Ouu"/>
+                                            <constraint firstAttribute="bottom" secondItem="adg-Pe-DCV" secondAttribute="bottom" id="RQJ-kQ-Ouu"/>
                                             <constraint firstItem="x75-6f-S6B" firstAttribute="width" secondItem="qNl-Le-RMG" secondAttribute="width" multiplier="0.5" id="bPp-xj-RXf"/>
                                             <constraint firstItem="FCe-d1-0NJ" firstAttribute="centerX" secondItem="qNl-Le-RMG" secondAttribute="centerX" id="hua-oC-1SZ"/>
                                             <constraint firstItem="Yf3-NE-aQ4" firstAttribute="top" secondItem="V1K-gV-tC1" secondAttribute="bottom" constant="10" id="pAS-DT-omB"/>

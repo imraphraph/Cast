@@ -47,7 +47,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     
     var placesClient: GMSPlacesClient?
     
-    var categoryList = ["Cosplay","Wedding","Family","Fashion","Other"]
+    var categoryList = ["Cosplay","Wedding","Stock","Fashion","Other"]
     var rewardTypeList = ["Cash","TradeForPrint"]
     
     override func viewDidLoad() {
