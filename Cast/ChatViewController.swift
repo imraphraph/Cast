@@ -14,6 +14,7 @@ class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
+    var receiver:User!
     
     
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class ChatViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        addMessage(id: "fz", text: "Hey I am interested in the Photoshoot, how can we proceed?!")
+        addMessage(id: receiver.username, text: "Hey I am interested in the Photoshoot, how can we proceed?!")
         // messages sent from local sender
         addMessage(id: senderId, text: "Hey!")
         addMessage(id: senderId, text: "Nice to meet you!")
@@ -84,6 +85,32 @@ class ChatViewController: JSQMessagesViewController {
         }
         
         return cell
+    }
+    
+    
+    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
+    
+        //chatroom + message
+        //userchats
+        
+        let chatRoomDict = ["text":text,"sender":senderId] as [String : Any]
+        
+        let chatRoomRef = DataService.rootRef.child("chatroom").child(Session.currentUserUid+receiver.userUID).child("messages").childByAutoId()
+        chatRoomRef.setValue(chatRoomDict)
+        
+        let userChatSenderDict = [receiver.userUID:Session.currentUserUid+receiver.userUID] as [String : Any]
+        let userChatsRef = DataService.rootRef.child("userchats").child(Session.currentUserUid).child(receiver.userUID)
+        userChatsRef.setValue(userChatSenderDict)
+
+        let userChatReceiverDict = [receiver.userUID:Session.currentUserUid+receiver.userUID] as [String : Any]
+        let userChatReceiverRef = DataService.rootRef.child("userchats").child(receiver.userUID).child(Session.currentUserUid)
+        userChatReceiverRef.setValue(userChatReceiverDict)
+        
+        // 4
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+        
+        // 5
+        finishSendingMessage()
     }
     
     

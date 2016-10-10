@@ -25,8 +25,10 @@ open class User{
     var phone: String
     var profilePhotoURL: String?
     var weblinks: String?
+    var location: String?
+    var role: String?
     
-    var collaborators = [Collaborator]()
+//    var collaborators = [Collaborator]()
     
     enum Gender{
         case Female
@@ -45,6 +47,7 @@ open class User{
         profilePhotoURL=""
         weblinks = ""
         gender = .Undefined
+        location = ""
     }
     
 
@@ -99,7 +102,7 @@ open class User{
         }
         
         
-        if let profilePhotoURL = dict["profilePhotoURL"] as? String {
+        if let profilePhotoURL = dict["profilePicture"] as? String {
             self.profilePhotoURL = profilePhotoURL
         } else {
             self.profilePhotoURL = ""
@@ -110,8 +113,15 @@ open class User{
         } else {
             self.gender = Gender.Undefined
         }
-
-    
+        if let location = dict["Location"] as? String {
+            self.location = location
+        } else {
+            self.location = ""
+        }
+        if let role = dict["Role"] as? String {
+            self.role = role
+        } else {
+            self.role = ""
+        }
     }
-    
 }

@@ -7,17 +7,42 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ContactsViewController: UITableViewController {
 
-    var contactList = ["raphael","keith","fz"]
-    
+    var contactList = [User]()
+    var sender : User!
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadUser()
+        
 
          }
+    
+    func loadUser() {
+        
+        DataService.userRef.observe(.childAdded, with: { (snapshot) in
+            if let user1 = User.init(snapshot: snapshot){
+                if user1.userUID != Session.currentUserUid {
+                    self.contactList.append(user1)
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        )}
 
-   
+    override func viewDidAppear(_ animated: Bool) {
+        
+        
+        
+        self.tableView.reloadData()
+        
+        
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -26,66 +51,35 @@ class ContactsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? ContactsCell
+        
+        let user = self.contactList[indexPath.row]
+        cell?.nameLabel.text = user.username
+        cell?.roleLabel.text = "\(user.role!) (\(user.location!))"
+        let imageUrl = NSURL(string:user.profilePhotoURL!)
+        cell?.profileImage.sd_setImage(with: imageUrl as URL!)
+        
 
-        cell.textLabel?.text = self.contactList[indexPath.row]
-
-        return cell
+        return cell!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier=="chatSegue" {
         super.prepare(for: segue, sender: sender)
         let chatVc = segue.destination as! ChatViewController // 1
         //_ = navVc.viewControllers.first as! ChatViewController // 2
         if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
-            chatVc.senderId = self.contactList[selectedRow] // 3
-            chatVc.senderDisplayName = self.contactList[selectedRow] // 4
+//            chatVc.senderId = sender.userUID // 3
+//            chatVc.senderDisplayName = sender.username // 4
+//            chatVc.receiver = self.contactList[selectedRow]
+            
+        }
+//            chatVc.senderId = self.contactList[selectedRow] // 3
+//            chatVc.senderDisplayName = self.contactList[selectedRow] // 4
         }
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
