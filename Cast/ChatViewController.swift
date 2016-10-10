@@ -95,24 +95,24 @@ class ChatViewController: JSQMessagesViewController {
         //chatroom + message
         //userchats
         
-        var existingUserchats = [String]()
-    DataService.rootRef.child("userchats").child(Session.currentUserUid).observeSingleEvent(of: .value) { (snapshot) in
-            let cr = ChatRoom.init(snapshot)
-        
-        }
-        
-        
-        let messageItem = [ // 2
-            "text": text,
-            "senderId": Session.currentUserUid
-        ]
-        itemRef.setValue(messageItem) // 3
-        
-        // 4
-        JSQSystemSoundPlayer.jsq_playMessageSentSound()
-        
-        // 5
-        finishSendingMessage()
+//        var existingUserchats = [String]()
+//    DataService.rootRef.child("userchats").child(Session.currentUserUid).observeSingleEvent(of: .value) { (snapshot) in
+//            let cr = ChatRoom.init(snapshot)
+//        
+//        }
+//        
+//        
+//        let messageItem = [ // 2
+//            "text": text,
+//            "senderId": Session.currentUserUid
+//        ]
+//        itemRef.setValue(messageItem) // 3
+//        
+//        // 4
+//        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+//        
+//        // 5
+//        finishSendingMessage()
     }
     
     
