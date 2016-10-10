@@ -42,6 +42,7 @@ class CastersViewController: UIViewController, UICollectionViewDelegate, UIColle
             }
         })
     }
+    
     func loadData() {
         self.collectionView.reloadData()
         self.collectionView!.performBatchUpdates({() -> Void in

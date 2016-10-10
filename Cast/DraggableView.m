@@ -64,7 +64,6 @@
 #warning placeholder stuff, replace with card-specific information }
         
         
-        
         panGestureRecognizer = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(beingDragged:)];
         
         [self addGestureRecognizer:panGestureRecognizer];
