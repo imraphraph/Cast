@@ -19,15 +19,16 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    @IBOutlet weak var ViewTable: UIView!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var slidingView: UIView!
     @IBOutlet weak var widthSlidingView: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
-    @IBOutlet weak var categoryLabel: UILabel!
+    
+    var categorySelected : String! = ""
     
     @IBOutlet weak var imagePickerView: UIImageView!
     var imagePickerUrl = [String!]()
@@ -58,12 +59,12 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         self.scrollView.delegate = self
         self.scrollView.isPagingEnabled = true
         
+        
         let viewWidth = self.view.frame.size.width
-        widthSlidingView.constant = viewWidth * 3
+        widthSlidingView.constant = viewWidth * 4
         
         self.titleTextField.becomeFirstResponder()
         
-        self.ViewTable.alpha = 0
         self.datePicker.alpha = 0
         dateTextField.delegate = self
         
@@ -74,6 +75,61 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
        
     }
     
+    ////Page Scrollings///
+    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+        moveToNextPage()
+        pageControl.currentPage += 1
+
+    }
+    
+    
+    func moveToNextPage (){
+        
+        let pageWidth:CGFloat = self.scrollView.frame.width
+        let maxWidth:CGFloat = pageWidth * 4
+        let contentOffset:CGFloat = self.scrollView.contentOffset.x
+        
+        let slideToX = contentOffset + pageWidth
+        
+        if  contentOffset + pageWidth == maxWidth
+        {
+            self.nextButton.isHidden = true
+        }
+        self.scrollView.scrollRectToVisible(CGRect(x:slideToX, y:0, width:pageWidth, height:self.scrollView.frame.height), animated: true)
+    }
+    
+        func moveToPage (page : Int){
+        
+        let pageWidth:CGFloat = self.scrollView.frame.width
+        let maxWidth:CGFloat = pageWidth * 4
+        let contentOffset:CGFloat = self.scrollView.contentOffset.x
+        
+        var slideToX = contentOffset - pageWidth
+        
+        if  contentOffset + pageWidth == maxWidth
+        {
+            slideToX = CGFloat(page)
+        }
+        self.scrollView.scrollRectToVisible(CGRect(x:slideToX, y:0, width:pageWidth, height:self.scrollView.frame.height), animated: true)
+    }
+
+
+    
+    func changePage(sender: AnyObject) {
+        let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
+        scrollView.setContentOffset(CGPoint(x:x , y:0), animated: true)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
+    
+    ////Image Picker////
+
     @IBAction func openImagePicker(_ sender: UITapGestureRecognizer) {
         
         imagePicker.allowsEditing = false
@@ -100,6 +156,29 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func useDefaultPicture(_ sender: UIButton) {
+        
+        if self.categorySelected == "Fashion" {
+            imagePickerView.image = UIImage(named: "Fashion")
+        }else if self.categorySelected == "Wedding" {
+            imagePickerView.image = UIImage(named: "Wedding")
+        }else if self.categorySelected == "Cosplay" {
+            imagePickerView.image = UIImage(named: "Cosplay")
+        }else if self.categorySelected == "Stock" {
+            imagePickerView.image = UIImage(named: "Stock")
+        }else if self.categorySelected == "Others" {
+            imagePickerView.image = UIImage(named: "Others")
+        }else if self.categorySelected == "" {
+            
+            let alertView = UIAlertController(title: "Please Select A Category", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            
+            let dismissAction = UIAlertAction(title: "Dismiss", style: .default, handler: nil)
+            
+            alertView.addAction(dismissAction)
+            self.present(alertView, animated: true, completion: { _ in })
+            moveToPage(page: 2)
+        }
     }
     
     // Present the Autocomplete view controller when the button is pressed.
@@ -144,14 +223,6 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         fadeIn(view: scrollView, delay: 0)
     }
     
-  
-    @IBAction func catogoryTapped(_ sender: UITapGestureRecognizer) {
-        
-        fadeIn(view: self.ViewTable, delay: 0.0)
-        fadeOut(view: self.scrollView, delay: 0.0)
-        
-        print("tapped")
-    }
     
     @IBAction func onCollabBtnPressed(_ sender: UIButton) {
         
@@ -204,38 +275,12 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
       
         let selectedCell = categoryList[indexPath.row]
-        categoryLabel.text = selectedCell
+        self.categorySelected = selectedCell
         print(selectedCell)
         
-        if categoryLabel.text == "Fashion" {
-            imagePickerView.image = UIImage(named: "Fashion")
-        }else if categoryLabel.text == "Wedding" {
-            imagePickerView.image = UIImage(named: "Wedding")
-        }else if categoryLabel.text == "Cosplay" {
-            imagePickerView.image = UIImage(named: "Cosplay")
-        }else if categoryLabel.text == "Stock" {
-            imagePickerView.image = UIImage(named: "Stock")
-        }else if categoryLabel.text == "Others" {
-            imagePickerView.image = UIImage(named: "Others")
-        }
-        
-        
-        fadeOut(view: self.ViewTable, delay: 0)
-        fadeIn(view: scrollView, delay: 0)
-        
     }
     
-    func changePage(sender: AnyObject) {
-        let x = CGFloat(pageControl.currentPage) * scrollView.frame.size.width
-        scrollView.setContentOffset(CGPoint(x:x , y:0), animated: true)
-    }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        
-        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
-        pageControl.currentPage = Int(pageNumber)
-    }
-
     
     @IBAction func castButton(_ sender: UIButton) {
         
@@ -250,7 +295,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         guard let location = locationTextField.text else { return }
         guard let rewardType = rewardTypeText else { return }
         guard let description = descriptionTextField.text else { return }
-        guard let category = categoryLabel.text else { return }
+        guard let category = self.categorySelected else { return }
 
         var mmodelNeeded : String, photographerNeeded : String, fmodelNeeded : String
         if femaleBtn.isSelected {
@@ -321,6 +366,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
             view.alpha = 0
             }, completion: nil)
     }
+
 }
 
 
