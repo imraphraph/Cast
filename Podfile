@@ -14,6 +14,7 @@ target 'Cast' do
     pod 'GooglePlaces'
     pod 'SDWebImage', '~>3.8'
     pod 'UIActivityIndicator-for-SDWebImage'
+    pod 'JSQMessagesViewController'
 #    pod 'Bolts-Swift'
    
 	

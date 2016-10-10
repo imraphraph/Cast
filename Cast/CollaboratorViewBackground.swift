@@ -71,8 +71,10 @@ class CollaboratorViewBackground: UIView, DraggableViewDelegate {
         let draggableView = DraggableView(frame: CGRect(x: (self.frame.size.width - CARD_WIDTH) / 2, y: (self.frame.size.height - CARD_HEIGHT) / 2, width: CARD_WIDTH, height: CARD_HEIGHT))
         draggableView.layer.cornerRadius=100.0
         
+        
         let fren = exampleCardLabels[index]
         draggableView.information.text = fren.weblinks
+        
         draggableView.username.text = fren.username
         draggableView.castID = fren.userUID //use the castID placeholder
         

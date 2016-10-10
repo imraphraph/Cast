@@ -21,6 +21,7 @@
                         <segue destination="CoI-oA-pBA" kind="relationship" relationship="viewControllers" id="A8D-zZ-WK5"/>
                         <segue destination="db7-5u-Kxg" kind="relationship" relationship="viewControllers" id="0O4-5N-cJF"/>
                         <segue destination="Fmk-wV-W7a" kind="relationship" relationship="viewControllers" id="t61-vy-H8P"/>
+                        <segue destination="rBp-4a-zlp" kind="relationship" relationship="viewControllers" id="HdG-59-hrB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ryv-Kn-YFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,6 +67,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmS-uN-VfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-383" y="-367"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="kGp-Z0-Bbx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="rBp-4a-zlp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="yck-nO-Y7Z"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVF-DT-qgO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1433" y="-70"/>
         </scene>
         <!--Profile-->
         <scene sceneID="qYw-4Q-N3R">

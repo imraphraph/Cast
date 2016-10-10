@@ -57,8 +57,8 @@ class CollaboratorViewController: UIViewController {
         
         loadUser()
         
-        //self.draggableViewBackground = CollaboratorViewBackground(frame:self.view.frame)
-        //self.view.addSubview(self.draggableViewBackground)
+        self.draggableViewBackground = CollaboratorViewBackground(frame:self.view.frame)
+        self.view.addSubview(self.draggableViewBackground)
     }
     
 
