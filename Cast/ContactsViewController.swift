@@ -65,9 +65,9 @@ class ContactsViewController: UITableViewController {
         let chatVc = segue.destination as! ChatViewController // 1
         //_ = navVc.viewControllers.first as! ChatViewController // 2
         if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
-            chatVc.senderId = sender.userUID // 3
-            chatVc.senderDisplayName = sender.username // 4
-            chatVc.receiver = self.contactList[selectedRow]
+//            chatVc.senderId = sender.userUID // 3
+//            chatVc.senderDisplayName = sender.username // 4
+//            chatVc.receiver = self.contactList[selectedRow]
             
         }
 //            chatVc.senderId = self.contactList[selectedRow] // 3
