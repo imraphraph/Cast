@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ContactsViewController: UITableViewController {
 
@@ -15,10 +17,27 @@ class ContactsViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadUser()
+        
 
          }
+    
+    func loadUser() {
+        
+        DataService.userRef.observe(.childAdded, with: { (snapshot) in
+            if let user1 = User.init(snapshot: snapshot){
+                if user1.userUID != Session.currentUserUid {
+                    self.contactList.append(user1)
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        )}
 
-   
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -27,11 +46,16 @@ class ContactsViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? ContactsCell
 
-        cell.textLabel?.text = self.contactList[indexPath.row]
+        let user = self.contactList[indexPath.row]
+        cell?.nameLabel.text = user.username
+        cell?.roleLabel.text = user.role
+        let imageUrl = NSURL(string:user.profilePhotoURL!)
+        cell?.profileImage.sd_setImage(with: imageUrl as URL!)
+        
 
-        return cell
+        return cell!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,6 +70,8 @@ class ContactsViewController: UITableViewController {
             chatVc.receiver = self.contactList[selectedRow]
             
         }
+//            chatVc.senderId = self.contactList[selectedRow] // 3
+//            chatVc.senderDisplayName = self.contactList[selectedRow] // 4
         }
     }
     

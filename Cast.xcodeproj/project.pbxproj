@@ -64,6 +64,7 @@
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
 		B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */; };
 		B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */; };
+		B53B72471DAB8BC700DFD5D2 /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B72461DAB8BC700DFD5D2 /* ContactsCell.swift */; };
 		B558CB6E1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */; };
 		B558CB6F1D9DFDCA005F7D49 /* lobster-two.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */; };
 		B558CB701D9DFDCA005F7D49 /* lobster-two.italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */; };
@@ -190,6 +191,7 @@
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B53B72461DAB8BC700DFD5D2 /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		B558CB6A1D9DFDCA005F7D49 /* lobster-two.bold-italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold-italic.ttf"; sourceTree = "<group>"; };
 		B558CB6B1D9DFDCA005F7D49 /* lobster-two.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.bold.ttf"; sourceTree = "<group>"; };
 		B558CB6C1D9DFDCA005F7D49 /* lobster-two.italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "lobster-two.italic.ttf"; sourceTree = "<group>"; };
@@ -539,6 +541,7 @@
 				F145274F1D9A431600CDDA2F /* UserComment.swift */,
 				F10B87361DAB8AE7003D4EE1 /* ChatRoom.swift */,
 				F1A952781D9FB9D8008D65A5 /* CastNotification.swift */,
+				B53B72461DAB8BC700DFD5D2 /* ContactsCell.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -883,6 +886,7 @@
 			files = (
 				F14527521D9A431600CDDA2F /* Session.swift in Sources */,
 				F14527571D9A46F500CDDA2F /* DataService.swift in Sources */,
+				B53B72471DAB8BC700DFD5D2 /* ContactsCell.swift in Sources */,
 				F11B6A5D1D9E48AA008D8C68 /* NotificationViewCell.swift in Sources */,
 				F1A952791D9FB9D8008D65A5 /* CastNotification.swift in Sources */,
 				F14527501D9A431600CDDA2F /* Cast.swift in Sources */,
