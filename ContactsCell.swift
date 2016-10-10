@@ -13,6 +13,8 @@ class ContactsCell: UITableViewCell {
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var chatButton: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         

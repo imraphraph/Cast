@@ -49,7 +49,7 @@ class ContactsViewController: UITableViewController {
 
         let user = self.contactList[indexPath.row]
         cell?.nameLabel.text = user.username
-        cell?.roleLabel.text = user.role
+        cell?.roleLabel.text = "\(user.role!) (\(user.location!))"
         let imageUrl = NSURL(string:user.profilePhotoURL!)
         cell?.profileImage.sd_setImage(with: imageUrl as URL!)
         
