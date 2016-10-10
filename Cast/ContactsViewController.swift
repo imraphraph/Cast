@@ -36,7 +36,12 @@ class ContactsViewController: UITableViewController {
         )}
 
     override func viewDidAppear(_ animated: Bool) {
+        
+        
+        
         self.tableView.reloadData()
+        
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +52,7 @@ class ContactsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? ContactsCell
-
+        
         let user = self.contactList[indexPath.row]
         cell?.nameLabel.text = user.username
         cell?.roleLabel.text = "\(user.role!) (\(user.location!))"
