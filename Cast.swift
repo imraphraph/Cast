@@ -21,7 +21,8 @@ class Cast {
     var rewardType : RewardType = .cash
     var description : String = ""
     var status : Status = .new
-    var category : Category = .other
+    //var category : Category = .other
+    var category : String = ""
     var femaleNeeded : String = "false"
     var maleNeeded : String = "false"
     var photogNeeded : String = "false"
@@ -82,19 +83,23 @@ class Cast {
             self.description = ""
         }
         
-        let dictCategory = dict["category"] as! String
-        switch dictCategory {
-        case "Cosplay":
-            self.category = Category.cat_cosplay
-        case "Wedding":
-            self.category = Category.cat_wedding
-        case "Stock":
-            self.category = Category.cat_stock
-        case "Fashion":
-            self.category = Category.cat_fashion
-        default:
-            self.category = Category.other
+        if let dictCategory = dict["category"] as? String {
+            self.category = dictCategory
+        } else {
+            self.category = ""
         }
+//        switch dictCategory {
+//        case "Cosplay":
+//            self.category = Category.cat_cosplay
+//        case "Wedding":
+//            self.category = Category.cat_wedding
+//        case "Stock":
+//            self.category = Category.cat_stock
+//        case "Fashion":
+//            self.category = Category.cat_fashion
+//        default:
+//            self.category = Category.other
+        
         
         let dictStatus = dict["status"] as! String
         switch dictStatus {
