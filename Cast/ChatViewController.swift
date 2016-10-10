@@ -89,30 +89,28 @@ class ChatViewController: JSQMessagesViewController {
     
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        
-        //checkIfChatRoomExist()
-        
+    
         //chatroom + message
         //userchats
         
-//        var existingUserchats = [String]()
-//    DataService.rootRef.child("userchats").child(Session.currentUserUid).observeSingleEvent(of: .value) { (snapshot) in
-//            let cr = ChatRoom.init(snapshot)
-//        
-//        }
-//        
-//        
-//        let messageItem = [ // 2
-//            "text": text,
-//            "senderId": Session.currentUserUid
-//        ]
-//        itemRef.setValue(messageItem) // 3
-//        
-//        // 4
-//        JSQSystemSoundPlayer.jsq_playMessageSentSound()
-//        
-//        // 5
-//        finishSendingMessage()
+        let chatRoomDict = ["text":text,"sender":senderId] as [String : Any]
+        
+        let chatRoomRef = DataService.rootRef.child("chatroom").child(Session.currentUserUid+receiver.userUID).child("messages").childByAutoId()
+        chatRoomRef.setValue(chatRoomDict)
+        
+        let userChatSenderDict = [receiver.userUID:Session.currentUserUid+receiver.userUID] as [String : Any]
+        let userChatsRef = DataService.rootRef.child("userchats").child(Session.currentUserUid).child(receiver.userUID)
+        userChatsRef.setValue(userChatSenderDict)
+
+        let userChatReceiverDict = [receiver.userUID:Session.currentUserUid+receiver.userUID] as [String : Any]
+        let userChatReceiverRef = DataService.rootRef.child("userchats").child(receiver.userUID).child(Session.currentUserUid)
+        userChatReceiverRef.setValue(userChatReceiverDict)
+        
+        // 4
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+        
+        // 5
+        finishSendingMessage()
     }
     
     
