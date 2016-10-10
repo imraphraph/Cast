@@ -107,13 +107,13 @@
                                                     </stackView>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-tf-P3w">
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-Sm-Pyu">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-Sm-Pyu">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="cED-EF-qB8" appends="YES" id="UQk-W0-POr"/>
                                                                 </connections>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stock" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-sP-Ua5">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="STOCK" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-sP-Ua5">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="JjY-7R-d6S" appends="YES" id="4lU-Qj-SXd"/>
@@ -123,7 +123,7 @@
                                                     </stackView>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-rP-GCb">
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Others" translatesAutoresizingMaskIntoConstraints="NO" id="590-5H-ikJ">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OTHERS" translatesAutoresizingMaskIntoConstraints="NO" id="590-5H-ikJ">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="r4b-bN-7ps" appends="YES" id="COQ-mH-LQZ"/>
@@ -651,8 +651,8 @@
     <resources>
         <image name="Cosplay" width="512" height="384"/>
         <image name="Fashion" width="512" height="384"/>
-        <image name="Others" width="512" height="384"/>
-        <image name="Stock" width="512" height="384"/>
+        <image name="OTHERS" width="512" height="384"/>
+        <image name="STOCK" width="512" height="384"/>
         <image name="Wedding" width="512" height="384"/>
         <image name="accept-tick-icon-12" width="256" height="256"/>
         <image name="calendar-256" width="128" height="128"/>
