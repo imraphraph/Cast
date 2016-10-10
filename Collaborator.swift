@@ -10,13 +10,13 @@ import Foundation
 
 class Collaborator : User {
     
-    var role : Role = .None
-    
-    enum Role {
-        case None
-        case Photographer
-        case Model
-    }
+//    var role : Role = .None
+//    
+//    enum Role {
+//        case None
+//        case Photographer
+//        case Model
+//    }
     
     
     
