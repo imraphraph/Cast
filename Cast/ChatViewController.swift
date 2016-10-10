@@ -14,6 +14,7 @@ class ChatViewController: JSQMessagesViewController {
     var messages = [JSQMessage]()
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
+    var receiver:User!
     
     
     override func viewDidLoad() {
@@ -25,7 +26,7 @@ class ChatViewController: JSQMessagesViewController {
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        addMessage(id: "fz", text: "Hey I am interested in the Photoshoot, how can we proceed?!")
+        addMessage(id: receiver.username, text: "Hey I am interested in the Photoshoot, how can we proceed?!")
         // messages sent from local sender
         addMessage(id: senderId, text: "Hey!")
         addMessage(id: senderId, text: "Nice to meet you!")
@@ -84,6 +85,34 @@ class ChatViewController: JSQMessagesViewController {
         }
         
         return cell
+    }
+    
+    
+    override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
+        
+        //checkIfChatRoomExist()
+        
+        //chatroom + message
+        //userchats
+        
+        var existingUserchats = [String]()
+    DataService.rootRef.child("userchats").child(Session.currentUserUid).observeSingleEvent(of: .value) { (snapshot) in
+            let cr = ChatRoom.init(snapshot)
+        
+        }
+        
+        
+        let messageItem = [ // 2
+            "text": text,
+            "senderId": Session.currentUserUid
+        ]
+        itemRef.setValue(messageItem) // 3
+        
+        // 4
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+        
+        // 5
+        finishSendingMessage()
     }
     
     
