@@ -61,31 +61,31 @@ class EditDetailViewController: UIViewController, UITextFieldDelegate {
     
     func loadUserDetails (){
         DataService.userRef.child(Session.currentUserUid).observe(.value, with: { (snapshot) in
-            let userDictionary: [String:String]? = snapshot.value as? [String:String]
+            let userDictionary: [String:AnyObject]? = snapshot.value as? [String:AnyObject]
             
             switch self.category {
             case self.username:
-                if let usernameText = userDictionary?["username"]{
+                if let usernameText = userDictionary?["username"] as? String {
                     self.editTextField.text = usernameText
                 }
             case self.bio:
-                if let bioText = userDictionary?["ProfileDescription"]{
+                if let bioText = userDictionary?["ProfileDescription"] as? String {
                     self.descriptionTextField.text = bioText
                 }
             case self.userTitle:
-                if let titleText = userDictionary?["Role"]{
+                if let titleText = userDictionary?["Role"] as? String {
                     self.editTextField.text = titleText
                 }
             case self.portfolio:
-                if let portfolio = userDictionary?["PortfolioLink"]{
+                if let portfolio = userDictionary?["PortfolioLink"] as? String {
                     self.editTextField.text = portfolio
                 }
             case self.userGender:
-                if let gender = userDictionary?["Gender"]{
+                if let gender = userDictionary?["Gender"] as? String {
                     self.editTextField.text = gender
                 }
             case self.location:
-                if let location = userDictionary?["Location"]{
+                if let location = userDictionary?["Location"] as? String {
                     self.editTextField.text = location
                 }
             default:

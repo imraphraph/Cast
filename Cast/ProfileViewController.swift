@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UILabel!
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var locationTextField: UILabel!
 
     @IBOutlet weak var titleTextField: UILabel!
     @IBOutlet weak var descriptionTextField: UILabel!
@@ -40,24 +41,25 @@ class ProfileViewController: UIViewController {
     
     func retrieveUserData () {
         DataService.userRef.child(Session.currentUserUid).observe(.value, with: { (snapshot) in
-            let userDictionary: [String:String]? = snapshot.value as? [String:String]
-            if let username = userDictionary?["username"]{
+            let userDictionary: [String: AnyObject]? = snapshot.value as? [String: AnyObject]
+            if let username = userDictionary?["username"] as? String{
                 self.usernameTextField.text = username
             }
-            if let title = userDictionary?["Role"]{
+            if let title = userDictionary?["Role"] as? String{
             self.titleTextField.text = title
             }
-            if let gender = userDictionary?["Gender"]{
+            if let gender = userDictionary?["Gender"] as? String{
             self.genderTextField.text = gender
             }
-            if let description = userDictionary?["ProfileDescription"]{
+            if let description = userDictionary?["ProfileDescription"] as? String{
             self.descriptionTextField.text = description
             }
-            if let portfolio = userDictionary?["PortfolioLink"]{
-            self.portfolioLink = portfolio
-                
+            if let portfolio = userDictionary?["PortfolioLink"] as? String{
+                self.portfolioLink = portfolio
             }
-            
+            if let location = userDictionary?["Location"] as? String {
+                self.locationTextField.text = location
+            }
         })
     }
     
