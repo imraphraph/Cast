@@ -32,7 +32,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="yQy-2t-5eP" kind="show" identifier="chatSegue" id="gya-NU-8Qk"/>
+                                    <segue destination="yQy-2t-5eP" kind="show" identifier="chatSegue" id="1ak-2k-DZw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="1012" y="12.143928035982009"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--Chat-->
         <scene sceneID="BzT-66-Acw">
             <objects>
-                <viewController id="yQy-2t-5eP" customClass="ChatViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Chat" hidesBottomBarWhenPushed="YES" id="yQy-2t-5eP" customClass="ChatViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oqw-IK-WMT"/>
                         <viewControllerLayoutGuide type="bottom" id="2Mp-MJ-n1X"/>
@@ -63,14 +63,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgr-eX-axc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795" y="25"/>
+            <point key="canvasLocation" x="1794.4000000000001" y="24.7376311844078"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Chat-->
         <scene sceneID="z8l-dt-MMH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A4k-bk-nlp" sceneMemberID="viewController">
+                <navigationController title="Chat" automaticallyAdjustsScrollViewInsets="NO" id="A4k-bk-nlp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Keu-gK-aBm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Keu-gK-aBm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
