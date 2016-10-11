@@ -55,10 +55,6 @@ class ChatViewController: JSQMessagesViewController {
         })
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        observeMessages()
-//    }
     
     override func textViewDidChange(_ textView: UITextView) {
         super.textViewDidChange(textView)
@@ -141,7 +137,7 @@ class ChatViewController: JSQMessagesViewController {
         // 4
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
-        addMessage(id: senderId, text: text)
+        //addMessage(id: senderId, text: text)
         
         // 5
         finishSendingMessage()
@@ -157,14 +153,6 @@ class ChatViewController: JSQMessagesViewController {
                 self.chatRoomId = chatRoomUID
                 print(self.chatRoomId)
                 self.observeMessages()
-//            } else {
-//                // create a chatroom between current user and receiver
-//            }
-            
-            
-//            if let userChat = UserChat.init(snapshot: snapshot){
-//                roomId = userChat.chatRoomId
-//            }
             
             }
         })
