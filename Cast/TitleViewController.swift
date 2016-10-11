@@ -152,7 +152,6 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
