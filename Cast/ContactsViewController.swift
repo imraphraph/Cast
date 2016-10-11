@@ -10,10 +10,12 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class ContactsViewController: UITableViewController {
+class ContactsViewController: UITableViewController, ContactsCellDelegate {
     
     var contactList = [User]()
     var sender : User!
+    var receiver : User!
+    var selectedReceiver : User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +55,17 @@ class ContactsViewController: UITableViewController {
         cell?.roleLabel.text = "\(user.role!) (\(user.location!))"
         let imageUrl = NSURL(string:user.profilePhotoURL!)
         cell?.profileImage.sd_setImage(with: imageUrl as URL!)
-        
+        cell?.tag = indexPath.row
+        cell?.delegate = self 
         
         return cell!
+    }
+    
+    func goToChat (row:Int) {
+        selectedReceiver = self.contactList[row]
+        performSegue(withIdentifier: "chatSegue", sender: self)
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -78,11 +88,11 @@ class ContactsViewController: UITableViewController {
         if segue.identifier=="chatSegue" {
             let chatVc = segue.destination as! ChatViewController // 1
             //_ = navVc.viewControllers.first as! ChatViewController // 2
-            if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
+            //if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
                 chatVc.senderId = Session.currentUserUid // 3
                 chatVc.senderDisplayName = Session.currentUserUid // 4
-                chatVc.receiver = self.contactList[selectedRow]
-            }
+                chatVc.receiver = selectedReceiver
+            //}
         }
     }
     
