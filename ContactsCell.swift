@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ContactsCellDelegate {
+
+    func goToChat(row:Int)
+    
+}
 
 class ContactsCell: UITableViewCell {
 
@@ -15,6 +20,8 @@ class ContactsCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
 
+    var delegate : ContactsCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -24,6 +31,8 @@ class ContactsCell: UITableViewCell {
         
         profileImage.clipsToBounds = true
 //        profileImage.layer.masksToBounds = true
+        
+        
         
     }
     
@@ -40,6 +49,7 @@ class ContactsCell: UITableViewCell {
     
     @IBAction func chatButton(_ sender: AnyObject) {
         
+        delegate?.goToChat(row: self.tag)
         
     }
 
