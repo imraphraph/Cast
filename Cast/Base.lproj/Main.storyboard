@@ -403,7 +403,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.19215686274509805" green="0.792156862745098" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7LE-Ic-VgT" firstAttribute="top" secondItem="D89-mV-SXd" secondAttribute="bottom" constant="8" id="4lB-96-UrD"/>
                             <constraint firstItem="tRt-io-ktf" firstAttribute="top" secondItem="Q4d-tr-5qM" secondAttribute="bottom" constant="8" id="9ce-s5-h8O"/>
@@ -556,7 +556,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HSp-LD-e9R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Kp-3W-PTP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Kp-3W-PTP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
