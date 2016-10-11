@@ -150,8 +150,14 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
 
     @IBAction func openImagePicker(_ sender: UITapGestureRecognizer) {
         
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func useCameraButtonPressed(_ sender: UIButton) {
+        
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     

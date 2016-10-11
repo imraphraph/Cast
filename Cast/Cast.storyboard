@@ -415,6 +415,16 @@
                                                     </view>
                                                     <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="4sZ-Kn-5Sa" userLabel="Image">
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-df-zTZ" userLabel="camera">
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="9eB-df-zTZ" secondAttribute="height" multiplier="4:3" id="cwc-w3-Fne"/>
+                                                                    <constraint firstAttribute="height" constant="20" id="kub-59-Cl6"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button" image="camera"/>
+                                                                <connections>
+                                                                    <action selector="useCameraButtonPressed:" destination="Pe2-U8-X3m" eventType="touchUpInside" id="Glu-YQ-WoT"/>
+                                                                </connections>
+                                                            </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upload an image reference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ara-3B-yxW">
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -444,6 +454,8 @@
                                                             <constraint firstItem="ara-3B-yxW" firstAttribute="centerX" secondItem="4sZ-Kn-5Sa" secondAttribute="centerX" id="I92-Iw-fWH"/>
                                                             <constraint firstItem="cay-ew-cbB" firstAttribute="centerY" secondItem="4sZ-Kn-5Sa" secondAttribute="centerY" id="NvM-uG-hnS"/>
                                                             <constraint firstItem="FPQ-yK-rid" firstAttribute="centerX" secondItem="4sZ-Kn-5Sa" secondAttribute="centerX" id="ebt-Ga-Wlo"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9eB-df-zTZ" secondAttribute="trailing" constant="20" id="iXi-CT-7St"/>
+                                                            <constraint firstItem="9eB-df-zTZ" firstAttribute="top" secondItem="cay-ew-cbB" secondAttribute="bottom" constant="15" id="plk-g2-W0z"/>
                                                             <constraint firstItem="cay-ew-cbB" firstAttribute="top" secondItem="ara-3B-yxW" secondAttribute="bottom" constant="10" id="spZ-to-etu"/>
                                                             <constraint firstItem="cay-ew-cbB" firstAttribute="centerX" secondItem="4sZ-Kn-5Sa" secondAttribute="centerX" id="t2C-6g-fwN"/>
                                                             <constraint firstItem="FPQ-yK-rid" firstAttribute="top" secondItem="cay-ew-cbB" secondAttribute="bottom" constant="10" id="tgc-yd-5pD"/>
@@ -688,7 +700,8 @@
                                     <constraint firstItem="fyZ-3B-60O" firstAttribute="leading" secondItem="lta-JC-sva" secondAttribute="leading" id="osD-o6-UFh"/>
                                 </constraints>
                             </scrollView>
-                            <datePicker contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-cE-nev">
+                            <datePicker contentMode="scaleToFill" misplaced="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LxP-cE-nev">
+                                <frame key="frameInset" minX="333" minY="415" width="42" height="27"/>
                                 <color key="backgroundColor" red="0.188" green="0.78823529410000004" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="497381157.199413">
                                     <!--2016-10-05 17:25:57 +0000-->
@@ -704,8 +717,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Cast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umS-of-X2h">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="35"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="LobsterTwo" family="Lobster Two" pointSize="28"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="BtR-0i-OQX">
@@ -745,9 +757,6 @@
                             <constraint firstAttribute="trailing" secondItem="umS-of-X2h" secondAttribute="trailing" id="uRP-UD-32I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Cast" id="zCC-kP-yJt">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="ZhT-0k-gJK"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="cashButton" destination="gsV-qB-c65" id="5Os-A0-vpc"/>
                         <outlet property="dateOK" destination="AVm-AE-05C" id="AdY-eT-bkN"/>

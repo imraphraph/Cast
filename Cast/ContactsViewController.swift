@@ -20,6 +20,9 @@ class ContactsViewController: UITableViewController, ContactsCellDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "LobsterTwo", size: 28)!,
+        NSForegroundColorAttributeName : UIColor.black]
+        
         loadUser()
     }
     
