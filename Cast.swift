@@ -101,7 +101,7 @@ class Cast {
 //            self.category = Category.other
         
         
-        let dictStatus = dict["status"] as! String
+        if let dictStatus = dict["status"] as? String{
         switch dictStatus {
         case "new":
             self.status = Status.new
@@ -114,6 +114,7 @@ class Cast {
         default:
             self.status = Status.new
         }
+        }
         
         if let dictEventDate = dict["event_date"] as? Double {
             self.eventDate = dictEventDate
@@ -121,7 +122,7 @@ class Cast {
             self.eventDate = 0.0
         }
         
-        let dictRewardType = dict["reward_type"] as! String
+        if let dictRewardType = dict["reward_type"] as? String {
         //print("cash.swift \(dictRewardType)")
         switch dictRewardType {
         case "Cash":
@@ -130,6 +131,7 @@ class Cast {
             self.rewardType = RewardType.tradeforprint
         default:
             self.rewardType = RewardType.cash
+        }
         }
         
         if let dictFemaleNeeded = dict["female_needed"] as? String {
