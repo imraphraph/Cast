@@ -273,28 +273,18 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         }
     }
     
-    @IBAction func cashButtonPressed(_ sender: UIButton) {
+    @IBAction func exchangeButtonPressed(_ sender: UIButton) {
         
-        if !sender.isSelected {
+        if sender.tag == 1 {
             rewardTypeText = "Cash"
             sender.setImage(UIImage(named: "accept-tick-icon-12"), for:.normal)
-        } else {
-            sender.isSelected = false
-        sender.setImage( UIImage(named:"check-box-empty"), for: .normal)
-        }
-
-    
-    }
-    
-    @IBAction func tfpButtonPressed(_ sender: UIButton) {
-        
-        if !sender.isSelected {
+            tfpButton.setImage(UIImage(named:"check-box-empty"), for: .normal)
+        } else if sender.tag == 2 {
             rewardTypeText = "TradeForPrint"
             sender.setImage(UIImage(named: "accept-tick-icon-12"), for:.normal)
-        } else {
-            sender.isSelected = false
-        sender.setImage( UIImage(named:"check-box-empty"), for: .normal)
+            cashButton.setImage(UIImage(named:"check-box-empty"), for: .normal)
         }
+        print(rewardTypeText)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
