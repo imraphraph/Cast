@@ -31,10 +31,13 @@ class UserProfile: UIViewController {
     
         DataService.userRef.child(userUID).observe(.value, with: { (snapshot) in
             let userDictionary: [String: AnyObject]? = snapshot.value as? [String: AnyObject]
+            
             if let username = userDictionary?["username"] as? String{
                 self.usernameTextField.text = username
             }
+            
             if let title = userDictionary?["Role"] as? String{
+                
                 self.titleTextField.text = title
             }
             if let gender = userDictionary?["Gender"] as? String{
@@ -67,11 +70,11 @@ class UserProfile: UIViewController {
                         print(error)
                         return
                     }
-                    
-                    let image = UIImage(data: data!)
-                    DispatchQueue.main.async(execute: {
-                        self.profileImage.image = image
-                    })
+                    self.profileImage.sd_setImage(with: profileImageUrl as URL!)
+//                    let image = UIImage(data: data!)
+//                    DispatchQueue.main.async(execute: {
+//                        self.profileImage.image = image
+//                    })
                     
                 }).resume()
             }
