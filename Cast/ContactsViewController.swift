@@ -32,16 +32,11 @@ class ContactsViewController: UITableViewController {
                     self.tableView.reloadData()
                 }
             }
-            }
-        )}
+        })
+    }
     
     override func viewDidAppear(_ animated: Bool) {
-        
-        
-        
         self.tableView.reloadData()
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,6 +63,8 @@ class ContactsViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
         
         if segue.identifier == "profileSegue" {
             super.prepare(for: segue, sender: sender)
@@ -78,22 +75,15 @@ class ContactsViewController: UITableViewController {
             }
         }
         
-        
-        //        if segue.identifier=="chatSegue" {
-        //        super.prepare(for: segue, sender: sender)
-        //        let chatVc = segue.destination as! ChatViewController // 1
-        //_ = navVc.viewControllers.first as! ChatViewController // 2
-        //        if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
-        //            chatVc.senderId = sender.userUID // 3
-        //            chatVc.senderDisplayName = sender.username // 4
-        //            chatVc.receiver = self.contactList[selectedRow]
-        
-        //        }
-        //            chatVc.senderId = self.contactList[selectedRow] // 3
-        //            chatVc.senderDisplayName = self.contactList[selectedRow] // 4
-        //        }
+        if segue.identifier=="chatSegue" {
+            let chatVc = segue.destination as! ChatViewController // 1
+            //_ = navVc.viewControllers.first as! ChatViewController // 2
+            if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
+                chatVc.senderId = Session.currentUserUid // 3
+                chatVc.senderDisplayName = Session.currentUserUid // 4
+                chatVc.receiver = self.contactList[selectedRow]
+            }
+        }
     }
-    
-    
     
 }
