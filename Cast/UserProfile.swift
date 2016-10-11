@@ -19,9 +19,20 @@ class UserProfile: UIViewController {
     
     var userUID : String = ""
     var portfolioLink : String = ""
+    var username : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        DataService.userRef.child(userUID).observe(.value, with: { (snapshot) in
+            let userDictionary: [String: AnyObject]? = snapshot.value as? [String: AnyObject]
+            
+            if let username = userDictionary?["username"] as? String{
+                self.title = username
+            }
+            })
+        
+//        navigationController?.navigationBar.barTintColor = UIColor.
 
         loadUserInfo()
         retrieveProfileImage()
