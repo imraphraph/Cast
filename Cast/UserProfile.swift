@@ -27,17 +27,15 @@ class UserProfile: UIViewController {
         DataService.userRef.child(userUID).observe(.value, with: { (snapshot) in
             let userDictionary: [String: AnyObject]? = snapshot.value as? [String: AnyObject]
             
-            let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
-            self.navigationController?.navigationBar.titleTextAttributes = titleDict as! [String : Any]
+
+
             
             if let username = userDictionary?["username"] as? String{
                 self.title = username
                 
             }
             })
-        
-        let color = UIColor(red: 2/10, green: 8/10, blue: 4/10, alpha: 1)
-        navigationController?.navigationBar.barTintColor = color
+
         loadUserInfo()
         retrieveProfileImage()
     }
