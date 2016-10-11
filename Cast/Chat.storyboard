@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Kk-Nb-ytG" id="knR-zl-XrA">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Jc-0m-haK">
@@ -205,7 +205,7 @@
                         <outlet property="genderTextField" destination="mcG-DU-p52" id="aG6-OT-XiQ"/>
                         <outlet property="locationTextField" destination="c2u-yJ-gZk" id="7Ft-LP-MYz"/>
                         <outlet property="profileImage" destination="pmU-FK-uoz" id="Jbf-sO-c5L"/>
-                        <outlet property="titleTextField" destination="mcG-DU-p52" id="ilC-wY-svq"/>
+                        <outlet property="titleTextField" destination="GWm-1g-qR4" id="5MX-kt-mOu"/>
                         <outlet property="usernameTextField" destination="klC-EU-uBC" id="ydB-P9-jDx"/>
                     </connections>
                 </viewController>
@@ -236,7 +236,7 @@
             <objects>
                 <navigationController title="Chat" automaticallyAdjustsScrollViewInsets="NO" id="A4k-bk-nlp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Keu-gK-aBm">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Keu-gK-aBm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
