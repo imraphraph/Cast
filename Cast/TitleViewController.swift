@@ -66,7 +66,8 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         let viewWidth = self.view.frame.size.width
         widthSlidingView.constant = viewWidth * 5
         
-        self.titleTextField.becomeFirstResponder()
+        self.titleTextField.delegate = self
+        self.descriptionTextField.delegate = self
         
         self.datePicker.alpha = 0
         
@@ -75,9 +76,6 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         
         placesClient = GMSPlacesClient.shared()
        
-
-        
-    
     }
     
     ////Page Scrollings///
@@ -88,6 +86,12 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         pageControl.currentPage += 1
 
     }
+    
+    func dismissKeyboard() {
+        titleTextField.resignFirstResponder()
+        descriptionTextField.resignFirstResponder()
+    }
+    
     
     
     func moveToNextPage (){
@@ -148,7 +152,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
         
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary
-        
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -207,8 +211,8 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     @IBOutlet weak var locationStackView: UIStackView!
     @IBOutlet weak var dateStackView: UIStackView!
     @IBAction func dateTapped(_ sender: UITapGestureRecognizer) {
-        print("tapped")
         
+//        scrollView.di
         UIView.animate(withDuration: 0.5, animations: {
             self.dateStackView.center.y -= self.view.bounds.height * 0.1
             print("This is frame\(self.dateStackView.center.y)")
