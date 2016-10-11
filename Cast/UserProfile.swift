@@ -75,20 +75,20 @@ class UserProfile: UIViewController {
             
             if let profileImageLink = snapshot.value as? String {
                 let profileImageUrl = NSURL(string: profileImageLink)
-                URLSession.shared.dataTask(with: profileImageUrl as! URL, completionHandler: {
-                    (data, response, error) in
-                    
-                    if error != nil{
-                        print(error)
-                        return
-                    }
+////                URLSession.shared.dataTask(with: profileImageUrl as! URL, completionHandler: {
+//                    (data, response, error) in
+//                
+//                    if error != nil{
+//                        print(error)
+//                        return
+//                    }
                     self.profileImage.sd_setImage(with: profileImageUrl as URL!)
 //                    let image = UIImage(data: data!)
 //                    DispatchQueue.main.async(execute: {
 //                        self.profileImage.image = image
 //                    })
                     
-                }).resume()
+//                }).resume()
             }
         })
     }
