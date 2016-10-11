@@ -15,25 +15,52 @@ class ChatViewController: JSQMessagesViewController {
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
     var receiver:User!
+    var chatRoomId:String!
+    var defaultChatRoomId:String!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "CastChat"
+        defaultChatRoomId = Session.currentUserUid + "@" + receiver.userUID
+        
         setupBubbles()
         
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        addMessage(id: receiver.username, text: "Hey I am interested in the Photoshoot, how can we proceed?!")
+        setupChat()
+        //observeMessages()
+        //addMessage(id: receiver.userUID, text: "Hey I am interested in the Photoshoot, how can we proceed?!")
         // messages sent from local sender
-        addMessage(id: senderId, text: "Hey!")
-        addMessage(id: senderId, text: "Nice to meet you!")
+        //addMessage(id: senderId, text: "Hey!")
+        //addMessage(id: senderId, text: "Nice to meet you!")
         // animates the receiving of a new message on the view
-        finishReceivingMessage()
+        //finishReceivingMessage()
     }
 
+    func observeMessages() {
+        
+        let messagesQuery = DataService.rootRef.child("chatroom").child(chatRoomId).child("messages").queryLimited(toLast: 25)
+        
+        messagesQuery.observe(.childAdded, with: { (snapshot) in
+            
+            if let chat = ChatMessage.init(snapshot: snapshot){
+                //chat.chatRoomId = self.chatRoomId
+                //chat.sender = self.senderId
+                //chat.receiver = self.receiver.userUID
+                self.addMessage(id: chat.sender, text:chat.messageText)
+                self.finishReceivingMessage()
+            }
+        })
+    }
+    
+    
+    override func textViewDidChange(_ textView: UITextView) {
+        super.textViewDidChange(textView)
+        // If the text is not empty, the user is typing
+        print(textView.text != "")
+    }
     
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item]
@@ -90,29 +117,55 @@ class ChatViewController: JSQMessagesViewController {
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
     
+        //print(messages.count)
         //chatroom + message
         //userchats
+    
+        let chatRoomDict = ["text":text,"sender":senderId, "created_at":NSDate().timeIntervalSince1970] as [String : Any]
         
-        let chatRoomDict = ["text":text,"sender":senderId] as [String : Any]
+        let chatRoomRef = DataService.rootRef.child("chatroom").child(chatRoomId).child("messages").childByAutoId()
+        chatRoomRef.updateChildValues(chatRoomDict)
         
-        let chatRoomRef = DataService.rootRef.child("chatroom").child(Session.currentUserUid+receiver.userUID).child("messages").childByAutoId()
-        chatRoomRef.setValue(chatRoomDict)
-        
-        let userChatSenderDict = [receiver.userUID:Session.currentUserUid+receiver.userUID] as [String : Any]
-        let userChatsRef = DataService.rootRef.child("userchats").child(Session.currentUserUid).child(receiver.userUID)
+        let userChatSenderDict = [receiver.userUID:chatRoomId] as [String : Any]
+        let userChatsRef = DataService.rootRef.child("userchats").child(Session.currentUserUid)
         userChatsRef.setValue(userChatSenderDict)
 
-        let userChatReceiverDict = [receiver.userUID:Session.currentUserUid+receiver.userUID] as [String : Any]
-        let userChatReceiverRef = DataService.rootRef.child("userchats").child(receiver.userUID).child(Session.currentUserUid)
+        let userChatReceiverDict = [Session.currentUserUid:chatRoomId] as [String : Any]
+        let userChatReceiverRef = DataService.rootRef.child("userchats").child(receiver.userUID)
         userChatReceiverRef.setValue(userChatReceiverDict)
         
         // 4
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
+        //addMessage(id: senderId, text: text)
+        
         // 5
         finishSendingMessage()
+        
+        //print(messages.count)
     }
     
+    func setupChat() {
+        
+        DataService.rootRef.child("userchats").child(Session.currentUserUid).child(receiver.userUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            //print(snapshot.value)
+            if let chatRoomUID = snapshot.value as? String {
+                self.chatRoomId = chatRoomUID
+                print(self.chatRoomId)
+                self.observeMessages()
+            
+            }
+        })
+        
+        if let _ = self.chatRoomId  {
+            
+        } else {
+            self.chatRoomId = defaultChatRoomId
+        }
+      
+    }
     
-    
+    override func didPressAccessoryButton(_ sender: UIButton!) {
+        print("Attachment not supported")
+    }
 }

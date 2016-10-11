@@ -20,6 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        UINavigationBar.appearance().isTranslucent = false
+        let color = UIColor(red: 2/10, green: 8/10, blue: 4/10, alpha: 1)
+        UINavigationBar.appearance().barTintColor = color
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
+        
         GMSPlacesClient.provideAPIKey("AIzaSyCqz_GZDda3i0LZHXaVELNmfcRQalAzj9k")
         
         FIRApp.configure()

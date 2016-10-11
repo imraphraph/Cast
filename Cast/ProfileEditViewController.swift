@@ -110,11 +110,11 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
                     print(error)
                     return
                 }
-                
-                let image = UIImage(data: data!)
-                DispatchQueue.main.async(execute: {
-                    self.profileImageView.image = image
-                })
+                self.profileImageView.sd_setImage(with: profileImageUrl as URL!)
+//                let image = UIImage(data: data!)
+//                DispatchQueue.main.async(execute: {
+//                    self.profileImageView.image = image
+//                })
                 
             }).resume()
         })

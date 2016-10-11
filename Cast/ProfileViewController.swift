@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController {
         retrieveProfileImage()
         
         
+        
 
     }
     
@@ -80,15 +81,29 @@ class ProfileViewController: UIViewController {
                         return
                     }
                     
-                    let image = UIImage(data: data!)
-                    DispatchQueue.main.async(execute: {
-                        self.profileImageView.image = image
-                    })
+                    self.profileImageView.sd_setImage(with: profileImageUrl as URL!)
+//                    let image = UIImage(data: data!)
+//                    DispatchQueue.main.async(execute: {
+//                        self.profileImageView.image = image
+//                    })
                     
                 }).resume()
             }
             })
     }
+    
+    @IBAction func logoutButton(_ sender: AnyObject) {
+        
+        try! FIRAuth.auth()!.signOut()
+        UserDefaults.standard.removeObject(forKey: Session.sessionKey)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle:  Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "SignInViewController")
+        
+        self.present(viewController, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func editButton(_ sender: AnyObject) {
         
         performSegue(withIdentifier: "editProfileSegue", sender: self)

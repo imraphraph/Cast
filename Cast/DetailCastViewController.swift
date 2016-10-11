@@ -104,7 +104,8 @@ class DetailCastViewController: UIViewController {
         queueRef.updateChildValues(collaborateDict)
         
         //create notification node
-        let notifyDict = ["created_at":NSDate().timeIntervalSince1970, "From":Session.currentUserUid, "To":selectedCast.userUID, "castID": selectedCast.castID, "message": "To collaborate in job [\(selectedCast.castName)]", "status":"new", "queueID":queueRef.key] as [String : Any]
+        let notifyMessage = "Interested to collaborate in \" \(selectedCast.castName) \" "
+        let notifyDict = ["created_at":NSDate().timeIntervalSince1970, "From":Session.currentUserUid, "To":selectedCast.userUID, "castID": selectedCast.castID, "message": notifyMessage, "status":"new", "queueID":queueRef.key] as [String : Any]
         let notifyRef = DataService.rootRef.child("notification").childByAutoId()
         notifyRef.updateChildValues(notifyDict)
         
