@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts_50" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-x9-aaU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts_50" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-x9-aaU">
                                 <color key="backgroundColor" red="0.99598985910415649" green="0.99221748113632202" blue="0.99198514223098755" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="2sf-5d-cso"/>

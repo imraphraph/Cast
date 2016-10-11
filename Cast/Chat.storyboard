@@ -112,7 +112,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts_50" translatesAutoresizingMaskIntoConstraints="NO" id="pmU-FK-uoz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts_50" translatesAutoresizingMaskIntoConstraints="NO" id="pmU-FK-uoz">
                                 <color key="backgroundColor" red="0.99598985910000004" green="0.99221748109999997" blue="0.9919851422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="emS-b7-l2i"/>
