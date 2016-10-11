@@ -212,7 +212,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     @IBOutlet weak var dateStackView: UIStackView!
     @IBAction func dateTapped(_ sender: UITapGestureRecognizer) {
         
-//        scrollView.di
+        scrollView.isScrollEnabled = false
         UIView.animate(withDuration: 0.5, animations: {
             self.dateStackView.center.y -= self.view.bounds.height * 0.1
             print("This is frame\(self.dateStackView.center.y)")
@@ -232,6 +232,7 @@ class TitleViewController: UIViewController, UIScrollViewDelegate, UITableViewDe
     
     @IBAction func dateOK(_ sender: UIButton) {
         
+        scrollView.isScrollEnabled = true
         self.datePicker.resignFirstResponder()
         fadeOut(view: datePicker, delay: 0.5)
         fadeOut(view: self.dateOK, delay: 0)
