@@ -25,7 +25,9 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         self.tableView.dataSource=self
     
         self.title = "Notifications"
-        self.tableView.allowsMultipleSelection=true
+//        self.tableView.allowsMultipleSelection=true
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "LobsterTwo", size: 28)!,
+            NSForegroundColorAttributeName : UIColor.black]
         
         self.respondBtn.isEnabled=false
         
@@ -140,6 +142,8 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                     self.response(responseType: "ACCEPT",notify:notify)
                 }
             }
+            
+            self.tableView.reloadData()
         }
         
         
@@ -153,7 +157,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                     self.response(responseType: "REJECT",notify:notify)
                 }
             }
-            
+            self.tableView.reloadData()
         }
         
         let dismissAction = UIAlertAction(title: "Dimiss", style: .default, handler: nil)
