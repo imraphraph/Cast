@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jgK-YP-0NM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jgK-YP-0NM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -8,9 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Raleway-ExtraLight.ttf">
-            <string>Raleway-ExtraLight</string>
-        </array>
         <array key="Raleway-Italic.ttf">
             <string>Raleway-Italic</string>
         </array>
@@ -52,10 +49,10 @@
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qCE-ej-3zW">
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="woman-fashion" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-D5-pVL">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="studio" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-D5-pVL">
                                                         <gestureRecognizers/>
                                                     </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="oAL-gu-Gjk"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photographer" translatesAutoresizingMaskIntoConstraints="NO" id="oAL-gu-Gjk"/>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuna2" translatesAutoresizingMaskIntoConstraints="NO" id="cEi-yw-OJA"/>
                                                 </subviews>
                                             </stackView>
@@ -107,13 +104,13 @@
                                                     </stackView>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NvI-tf-P3w">
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-Sm-Pyu">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cosplay" translatesAutoresizingMaskIntoConstraints="NO" id="yjl-Sm-Pyu">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="cED-EF-qB8" appends="YES" id="UQk-W0-POr"/>
                                                                 </connections>
                                                             </imageView>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="STOCK" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-sP-Ua5">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stock" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-sP-Ua5">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="JjY-7R-d6S" appends="YES" id="4lU-Qj-SXd"/>
@@ -123,7 +120,7 @@
                                                     </stackView>
                                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zQY-rP-GCb">
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OTHERS" translatesAutoresizingMaskIntoConstraints="NO" id="590-5H-ikJ">
+                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Others" translatesAutoresizingMaskIntoConstraints="NO" id="590-5H-ikJ">
                                                                 <gestureRecognizers/>
                                                                 <connections>
                                                                     <outletCollection property="gestureRecognizers" destination="r4b-bN-7ps" appends="YES" id="COQ-mH-LQZ"/>
@@ -494,7 +491,7 @@
                                                 <fontDescription key="fontDescription" name="Raleway-LightItalic" family="Raleway" pointSize="13"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Id-UOb">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedding" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9K-Id-UOb">
                                                 <fontDescription key="fontDescription" name="Raleway-Medium" family="Raleway" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -522,10 +519,12 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pull up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Pe-DCV">
-                                                <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="11"/>
-                                                <nil key="textColor"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="==" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adg-Pe-DCV">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="adg-Pe-DCV" secondAttribute="height" multiplier="1:1" id="Wm4-Wb-got"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -542,7 +541,7 @@
                                             <constraint firstItem="52F-nX-nET" firstAttribute="top" secondItem="Vhz-GK-rvl" secondAttribute="bottom" constant="10" id="M2I-c8-JZb"/>
                                             <constraint firstItem="r9K-Id-UOb" firstAttribute="top" secondItem="roQ-MD-0Io" secondAttribute="bottom" constant="20" id="Mtl-p8-Otc"/>
                                             <constraint firstItem="V1K-gV-tC1" firstAttribute="leading" secondItem="qNl-Le-RMG" secondAttribute="leading" constant="20" id="Pyo-f4-iP8"/>
-                                            <constraint firstAttribute="bottom" secondItem="adg-Pe-DCV" secondAttribute="bottom" constant="15" id="RQJ-kQ-Ouu"/>
+                                            <constraint firstAttribute="bottom" secondItem="adg-Pe-DCV" secondAttribute="bottom" id="RQJ-kQ-Ouu"/>
                                             <constraint firstItem="x75-6f-S6B" firstAttribute="width" secondItem="qNl-Le-RMG" secondAttribute="width" multiplier="0.5" id="bPp-xj-RXf"/>
                                             <constraint firstItem="FCe-d1-0NJ" firstAttribute="centerX" secondItem="qNl-Le-RMG" secondAttribute="centerX" id="hua-oC-1SZ"/>
                                             <constraint firstItem="Yf3-NE-aQ4" firstAttribute="top" secondItem="V1K-gV-tC1" secondAttribute="bottom" constant="10" id="pAS-DT-omB"/>
@@ -651,14 +650,13 @@
     <resources>
         <image name="Cosplay" width="512" height="384"/>
         <image name="Fashion" width="512" height="384"/>
-        <image name="OTHERS" width="512" height="384"/>
-        <image name="STOCK" width="512" height="384"/>
+        <image name="Others" width="512" height="384"/>
+        <image name="Stock" width="512" height="384"/>
         <image name="Wedding" width="512" height="384"/>
         <image name="accept-tick-icon-12" width="256" height="256"/>
         <image name="calendar-256" width="128" height="128"/>
         <image name="camera@16" width="16" height="16"/>
         <image name="camera@240" width="120" height="120"/>
-        <image name="cosplay" width="512" height="384"/>
         <image name="crown" width="256" height="223"/>
         <image name="dollar" width="128" height="256"/>
         <image name="female@16" width="16" height="16"/>
@@ -667,8 +665,9 @@
         <image name="location@16" width="16" height="16"/>
         <image name="male@16" width="16" height="16"/>
         <image name="male@240" width="120" height="120"/>
+        <image name="photographer" width="400" height="200"/>
+        <image name="studio" width="600" height="360"/>
         <image name="time@16" width="16" height="16"/>
-        <image name="woman-fashion" width="958" height="320"/>
         <image name="yuna2" width="800" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
