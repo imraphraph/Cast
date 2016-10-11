@@ -62,6 +62,7 @@
 		53ED3C2B1D9E49EA006D85D1 /* lobster-two.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 53ED3C271D9E49C8006D85D1 /* lobster-two.regular.ttf */; };
 		57C9755E88E231C0F8CE945C /* Pods_CastUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BE4E19A39EDCBA13BE560C /* Pods_CastUITests.framework */; };
 		9B6DD768BCFE149B43ABB01E /* Pods_CastTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 232403ACD5D9B21686DB0AB1 /* Pods_CastTests.framework */; };
+		B537A38A1DAC89150042B708 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B537A3891DAC89150042B708 /* UserProfile.swift */; };
 		B53A74BB1D9E1B2C005BCC16 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */; };
 		B53A74BE1D9E3A67005BCC16 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */; };
 		B53B72471DAB8BC700DFD5D2 /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53B72461DAB8BC700DFD5D2 /* ContactsCell.swift */; };
@@ -189,6 +190,7 @@
 		9012387BCF72C079E75093BF /* Pods-Cast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.debug.xcconfig"; sourceTree = "<group>"; };
 		A005F07FC3F3EED23485AB0B /* Pods-Cast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cast.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cast/Pods-Cast.release.xcconfig"; sourceTree = "<group>"; };
 		AE169C105F7C9BCD36E27B2B /* Pods-CastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastTests/Pods-CastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B537A3891DAC89150042B708 /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		B53A74BA1D9E1B2C005BCC16 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		B53A74BD1D9E3A67005BCC16 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B53B72461DAB8BC700DFD5D2 /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 			children = (
 				F1EA1B871DAB4A42008167E9 /* ContactsViewController.swift */,
 				F1EA1B8B1DAB64EB008167E9 /* ChatViewController.swift */,
+				B537A3891DAC89150042B708 /* UserProfile.swift */,
 			);
 			name = ChatControllers;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				53DEFDFC1D9A1C1400078C36 /* Cast.xcdatamodeld in Sources */,
 				F11B6A5F1D9E4A3E008D8C68 /* NotificationViewController.swift in Sources */,
 				F14527541D9A431600CDDA2F /* UserComment.swift in Sources */,
+				B537A38A1DAC89150042B708 /* UserProfile.swift in Sources */,
 				530922B41D9A205000AA9EEB /* WelcomeViewController.swift in Sources */,
 				F1FEE3C91DA74BD900896840 /* CollaboratorViewController.swift in Sources */,
 				F1EA1B881DAB4A42008167E9 /* ContactsViewController.swift in Sources */,
