@@ -9,7 +9,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="SignInViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -577,6 +577,6 @@
         <image name="pexels-photo" width="509" height="655"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B5V-k3-Dyp"/>
+        <segue reference="qmW-nZ-GMq"/>
     </inferredMetricsTieBreakers>
 </document>
