@@ -97,6 +97,9 @@
                                     <constraint firstAttribute="width" constant="48" id="Hho-IS-ewi"/>
                                 </constraints>
                                 <state key="normal" title="log out"/>
+                                <connections>
+                                    <action selector="logoutButton:" destination="0Cl-h1-8M7" eventType="touchUpInside" id="yy9-GK-1Lq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.98613516115320499" blue="0.99653379028830125" alpha="1" colorSpace="calibratedRGB"/>
