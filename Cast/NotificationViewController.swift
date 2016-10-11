@@ -47,7 +47,7 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
                         if let sender = User.init(snapshot: snap3) {
                             notify.sender = sender
                             
-                            let newNotification = self.mynotifications.filter({$0.status == "new"})
+                            let newNotification = self.mynotifications.filter({$0.status != "new"})
                             self.mynotifications = newNotification
                             self.tableView.reloadData()
                             
@@ -63,6 +63,8 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         })
         
     }
+    
+    
     
     func canResponse() {
         if self.mynotifications.count==0{
@@ -101,18 +103,22 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         let notify = self.mynotifications[indexPath.row]
         
         
-//        let imageURL = NSURL(string:notify)
-//        print("\(imageURL) printing IMAGEREF casterView")
-    
         
-        cell?.profilePhoto.image = UIImage(named: "cowgirl")
-        //cell?.profilePhoto.image.
+        if let imageURL = NSURL(string:notify.sender.profilePhotoURL!) {
+            //print("\(imageURL) printing IMAGEREF casterView")
+            cell?.profilePhoto.sd_setImage(with: imageURL as URL!)
+        
+        
+        } else {
+            cell?.profilePhoto.image = UIImage(named: "cowgirl")
+        }
+        
         cell?.profilePhoto.clipsToBounds = true
         cell?.profilePhoto.layer.cornerRadius = 20.0
         cell?.tag = indexPath.row
         
-        cell?.usernameTxt.text = notify.sender.username
-        cell?.messageTxt.text = notify.message
+        //cell?.usernameTxt.text = "eeee"//notify.sender.username
+        cell?.messageTxt.text = "\(notify.sender.username) is \(notify.message)"
         //}
         return cell!
         
