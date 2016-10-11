@@ -19,7 +19,7 @@ open class User{
     
     var lastName: String
     var firstName: String
-    var gender : Gender
+    var gender : String
     
     var email: String
     var phone: String
@@ -30,11 +30,11 @@ open class User{
     
 //    var collaborators = [Collaborator]()
     
-    enum Gender{
-        case Female
-        case Male
-        case Undefined
-    }
+//    enum Gender{
+//        case Female
+//        case Male
+//        case Undefined
+//    }
     
     init() {
         username = ""
@@ -46,7 +46,7 @@ open class User{
         phone = ""
         profilePhotoURL=""
         weblinks = ""
-        gender = .Undefined
+        gender = ""
         location = ""
     }
     
@@ -108,10 +108,10 @@ open class User{
             self.profilePhotoURL = ""
         }
         
-        if let gender = dict["gender"] as? Gender {
+        if let gender = dict["Gender"] as? String {
             self.gender = gender
         } else {
-            self.gender = Gender.Undefined
+            self.gender = ""
         }
         if let location = dict["Location"] as? String {
             self.location = location

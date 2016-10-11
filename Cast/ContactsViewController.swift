@@ -54,11 +54,26 @@ class ContactsViewController: UITableViewController {
         let imageUrl = NSURL(string:user.profilePhotoURL!)
         cell?.profileImage.sd_setImage(with: imageUrl as URL!)
         
+        
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "profileSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        
+        
+        if segue.identifier == "profileSegue" {
+            super.prepare(for: segue, sender: sender)
+            let destination = segue.destination as! UserProfile
+            if let selectedIndex = self.tableView.indexPathForSelectedRow{
+                let user = contactList[selectedIndex.row]
+                destination.userUID = user.userUID
+            }
+        }
         
         if segue.identifier=="chatSegue" {
             let chatVc = segue.destination as! ChatViewController // 1
@@ -67,11 +82,8 @@ class ContactsViewController: UITableViewController {
                 chatVc.senderId = Session.currentUserUid // 3
                 chatVc.senderDisplayName = Session.currentUserUid // 4
                 chatVc.receiver = self.contactList[selectedRow]
-                
             }
         }
     }
-    
-    
     
 }
