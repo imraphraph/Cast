@@ -16,19 +16,21 @@ class ChatViewController: JSQMessagesViewController {
     var incomingBubbleImageView: JSQMessagesBubbleImage!
     var receiver:User!
     var chatRoomId:String!
+    var defaultChatRoomId:String!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "CastChat"
-        chatRoomId = Session.currentUserUid + "@" + receiver.userUID
+        defaultChatRoomId = Session.currentUserUid + "@" + receiver.userUID
         
         setupBubbles()
         
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSize.zero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSize.zero
         
-        observeMessages()
+        setupChat()
+        //observeMessages()
         //addMessage(id: receiver.userUID, text: "Hey I am interested in the Photoshoot, how can we proceed?!")
         // messages sent from local sender
         //addMessage(id: senderId, text: "Hey!")
@@ -122,7 +124,7 @@ class ChatViewController: JSQMessagesViewController {
         //print(messages.count)
         //chatroom + message
         //userchats
-        
+    
         let chatRoomDict = ["text":text,"sender":senderId, "created_at":NSDate().timeIntervalSince1970] as [String : Any]
         
         let chatRoomRef = DataService.rootRef.child("chatroom").child(chatRoomId).child("messages").childByAutoId()
@@ -145,6 +147,34 @@ class ChatViewController: JSQMessagesViewController {
         finishSendingMessage()
         
         //print(messages.count)
+    }
+    
+    func setupChat() {
+        
+        DataService.rootRef.child("userchats").child(Session.currentUserUid).child(receiver.userUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            //print(snapshot.value)
+            if let chatRoomUID = snapshot.value as? String {
+                self.chatRoomId = chatRoomUID
+                print(self.chatRoomId)
+                self.observeMessages()
+//            } else {
+//                // create a chatroom between current user and receiver
+//            }
+            
+            
+//            if let userChat = UserChat.init(snapshot: snapshot){
+//                roomId = userChat.chatRoomId
+//            }
+            
+            }
+        })
+        
+        if let _ = self.chatRoomId  {
+            
+        } else {
+            self.chatRoomId = defaultChatRoomId
+        }
+      
     }
     
     override func didPressAccessoryButton(_ sender: UIButton!) {

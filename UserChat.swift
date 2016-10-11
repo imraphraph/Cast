@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseDatabase
 
-class ChatRoom {
+class UserChat {
     
     var sender : String
     var receiver : String
@@ -24,7 +24,8 @@ class ChatRoom {
     init?(snapshot: FIRDataSnapshot){
         guard let dict = snapshot.value as? [String:AnyObject] else { return nil}
         
-        chatRoomId = snapshot.key
+        chatRoomId=""
+        sender = snapshot.key
     
         if let dictReceiver = dict["receiver"] as? String {
             self.receiver = dictReceiver

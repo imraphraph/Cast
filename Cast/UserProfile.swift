@@ -71,7 +71,6 @@ class UserProfile: UIViewController {
         
         DataService.userRef.child(userUID).child("profilePicture").observe(.value, with: {(snapshot) in
             
-            
             if let profileImageLink = snapshot.value as? String {
                 let profileImageUrl = NSURL(string: profileImageLink)
                 URLSession.shared.dataTask(with: profileImageUrl as! URL, completionHandler: {
@@ -105,7 +104,5 @@ class UserProfile: UIViewController {
             let myURL = "http://" + self.portfolioLink
             UIApplication.shared.openURL(URL(string: myURL)!)
         }
-        
-    
     }
 }
