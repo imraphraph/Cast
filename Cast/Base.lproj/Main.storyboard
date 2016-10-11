@@ -487,7 +487,7 @@
                                     <action selector="genderSegment:" destination="Nix-rw-Hbr" eventType="valueChanged" id="Lor-Y2-mMp"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="portfolio/website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHP-rE-nQn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="instagram weblink" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHP-rE-nQn">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="mkV-gD-kma"/>
                                     <constraint firstAttribute="width" constant="240" id="x0T-iP-BN5"/>
@@ -556,7 +556,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="HSp-LD-e9R" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Kp-3W-PTP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="4Kp-3W-PTP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -577,6 +577,6 @@
         <image name="pexels-photo" width="509" height="655"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qmW-nZ-GMq"/>
+        <segue reference="B5V-k3-Dyp"/>
     </inferredMetricsTieBreakers>
 </document>
