@@ -80,7 +80,7 @@
 		B5F148E71D9A7BBD00286B3F /* FacebookSDKStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B5F148E51D9A7BBD00286B3F /* FacebookSDKStrings.bundle */; };
 		CB167F6CEFBE2BCF49E2F95B /* Pods_Cast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D37583446EB682F1C0F7FA25 /* Pods_Cast.framework */; };
 		F10B87371DAB8AE7003D4EE1 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B87361DAB8AE7003D4EE1 /* ChatRoom.swift */; };
-		F110FF1C1DA6039100EE216C /* MyDraggableViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = F110FF1B1DA6039100EE216C /* MyDraggableViewBackground.swift */; };
+		F10B87391DAC8E1B003D4EE1 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10B87381DAC8E1B003D4EE1 /* ChatMessage.swift */; };
 		F11B6A5D1D9E48AA008D8C68 /* NotificationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B6A5C1D9E48AA008D8C68 /* NotificationViewCell.swift */; };
 		F11B6A5F1D9E4A3E008D8C68 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11B6A5E1D9E4A3E008D8C68 /* NotificationViewController.swift */; };
 		F1291E901DAB2157002092D4 /* DraggableView-error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1291E8F1DAB2157002092D4 /* DraggableView-error.swift */; };
@@ -94,7 +94,6 @@
 		F17DA5B71DA551A6003BA545 /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DA5B41DA551A6003BA545 /* DraggableView.m */; };
 		F17DA5B81DA551A6003BA545 /* DraggableViewBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DA5B61DA551A6003BA545 /* DraggableViewBackground.m */; };
 		F17DA5BB1DA551C5003BA545 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F17DA5BA1DA551C5003BA545 /* OverlayView.m */; };
-		F17DA5BF1DA554A3003BA545 /* AnimationNotifcationVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17DA5BE1DA554A3003BA545 /* AnimationNotifcationVCViewController.swift */; };
 		F185463A1D9B72AB00643E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F18546391D9B72AB00643E18 /* Assets.xcassets */; };
 		F1A952791D9FB9D8008D65A5 /* CastNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A952781D9FB9D8008D65A5 /* CastNotification.swift */; };
 		F1B1A4891D9A5C6B00D5B6C2 /* NewCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */; };
@@ -209,7 +208,7 @@
 		D37583446EB682F1C0F7FA25 /* Pods_Cast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0DA57DD8934C9C0A682C6A5 /* Pods-CastUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CastUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CastUITests/Pods-CastUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F10B87361DAB8AE7003D4EE1 /* ChatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
-		F110FF1B1DA6039100EE216C /* MyDraggableViewBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDraggableViewBackground.swift; sourceTree = "<group>"; };
+		F10B87381DAC8E1B003D4EE1 /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		F11B6A5C1D9E48AA008D8C68 /* NotificationViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewCell.swift; sourceTree = "<group>"; };
 		F11B6A5E1D9E4A3E008D8C68 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		F1291E8F1DAB2157002092D4 /* DraggableView-error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DraggableView-error.swift"; sourceTree = "<group>"; };
@@ -227,7 +226,6 @@
 		F17DA5B61DA551A6003BA545 /* DraggableViewBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableViewBackground.m; sourceTree = "<group>"; };
 		F17DA5B91DA551C4003BA545 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
 		F17DA5BA1DA551C5003BA545 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
-		F17DA5BE1DA554A3003BA545 /* AnimationNotifcationVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationNotifcationVCViewController.swift; sourceTree = "<group>"; };
 		F18546391D9B72AB00643E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1A952781D9FB9D8008D65A5 /* CastNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CastNotification.swift; sourceTree = "<group>"; };
 		F1B1A4881D9A5C6B00D5B6C2 /* NewCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCastViewController.swift; sourceTree = "<group>"; };
@@ -336,8 +334,6 @@
 			children = (
 				F11B6A5C1D9E48AA008D8C68 /* NotificationViewCell.swift */,
 				F11B6A5E1D9E4A3E008D8C68 /* NotificationViewController.swift */,
-				F17DA5BE1DA554A3003BA545 /* AnimationNotifcationVCViewController.swift */,
-				F110FF1B1DA6039100EE216C /* MyDraggableViewBackground.swift */,
 			);
 			name = NotificationsViewController;
 			sourceTree = "<group>";
@@ -540,6 +536,7 @@
 				F145274E1D9A431600CDDA2F /* User.swift */,
 				F145274F1D9A431600CDDA2F /* UserComment.swift */,
 				F10B87361DAB8AE7003D4EE1 /* ChatRoom.swift */,
+				F10B87381DAC8E1B003D4EE1 /* ChatMessage.swift */,
 				F1A952781D9FB9D8008D65A5 /* CastNotification.swift */,
 				B53B72461DAB8BC700DFD5D2 /* ContactsCell.swift */,
 			);
@@ -891,10 +888,9 @@
 				F1A952791D9FB9D8008D65A5 /* CastNotification.swift in Sources */,
 				F14527501D9A431600CDDA2F /* Cast.swift in Sources */,
 				530922AF1D9A1FF700AA9EEB /* SignInViewController.swift in Sources */,
-				F110FF1C1DA6039100EE216C /* MyDraggableViewBackground.swift in Sources */,
 				B5CE8F8D1D9D102B00488C27 /* WelcomeViewController2.swift in Sources */,
-				F17DA5BF1DA554A3003BA545 /* AnimationNotifcationVCViewController.swift in Sources */,
 				F17DA5BB1DA551C5003BA545 /* OverlayView.m in Sources */,
+				F10B87391DAC8E1B003D4EE1 /* ChatMessage.swift in Sources */,
 				53DEFDF61D9A1C1400078C36 /* ForgotPassViewController.swift in Sources */,
 				53ED3C1B1D9D0E12006D85D1 /* MyDateFormatter.swift in Sources */,
 				530922CB1D9A508400AA9EEB /* CastersViewController.swift in Sources */,

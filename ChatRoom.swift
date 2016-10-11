@@ -14,22 +14,18 @@ class ChatRoom {
     var sender : String
     var receiver : String
     var chatRoomId : String
-    var messageText: String
     
     init() {
-        messageText = ""
         chatRoomId = ""
-        receiver = ""
         sender = ""
+        receiver = ""
     }
     
     init?(snapshot: FIRDataSnapshot){
         guard let dict = snapshot.value as? [String:AnyObject] else { return nil}
         
-        
         chatRoomId = snapshot.key
-        
-        
+    
         if let dictReceiver = dict["receiver"] as? String {
             self.receiver = dictReceiver
         } else {
@@ -42,25 +38,10 @@ class ChatRoom {
             self.sender = ""
         }
         
-        if let dictMsg = dict["messageText"] as? String {
-            self.messageText = dictMsg
-        } else {
-            self.messageText = ""
-        }
-        
-        
         
         
     }
     
-//    func retrieveUser() {
-//        
-//        DataService.userRef.child(self.user.userUID).observeSingleEvent(of: .value, with: {(snapshot) in
-//            if let aUser = User.init(snapshot: snapshot){
-//                self.user = aUser
-//                //print("photurl \(self.user.photoURL)")
-//            }
-//        })
-//    }
+
     
 }
