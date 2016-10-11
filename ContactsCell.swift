@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ContactsCell: UITableViewCell {
 
     @IBOutlet weak var roleLabel: UILabel!

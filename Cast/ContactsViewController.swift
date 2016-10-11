@@ -19,8 +19,6 @@ class ContactsViewController: UITableViewController {
         super.viewDidLoad()
         
         loadUser()
-        
-        
     }
     
     func loadUser() {
@@ -77,7 +75,7 @@ class ContactsViewController: UITableViewController {
         
         if segue.identifier=="chatSegue" {
             let chatVc = segue.destination as! ChatViewController // 1
-            //_ = navVc.viewControllers.first as! ChatViewController // 2
+            //_ = navVc.viewControllers.first asa! ChatViewController // 2
             if let selectedRow = self.tableView.indexPathForSelectedRow?.row {
                 chatVc.senderId = Session.currentUserUid // 3
                 chatVc.senderDisplayName = Session.currentUserUid // 4

@@ -93,19 +93,18 @@ class NotificationViewController: UIViewController, UITableViewDataSource, UITab
         return self.mynotifications.count
     }
     
-//    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-//        var message = ""
-//        if (self.mynotifications.count == 0) {
-//            message = "You do not have any notifications";
-//        }
-//        return message
-//    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "notifyCell") as? NotificationViewCell
         //if self.mynotifications.count > 0 {
         let notify = self.mynotifications[indexPath.row]
+        
+        
+//        let imageURL = NSURL(string:notify)
+//        print("\(imageURL) printing IMAGEREF casterView")
+    
+        
         cell?.profilePhoto.image = UIImage(named: "cowgirl")
         //cell?.profilePhoto.image.
         cell?.profilePhoto.clipsToBounds = true
