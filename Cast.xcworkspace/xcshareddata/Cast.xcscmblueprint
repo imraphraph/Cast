@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C32C5E58-2775-49B5-B706-BEFFF506B239",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "28FBE7A174A52AACC7306DD60D1AE5B73553FD57" : "",
+    "28FBE7A174A52AACC7306DD60D1AE5B73553FD57" : "..",
     "A85F51A06FB492496D8D3F4BBED07031DD9ECE9B" : "Cast\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Cast",
