@@ -101,8 +101,8 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
         
         DataService.userRef.child(Session.currentUserUid).child("profilePicture").observe(.value, with: {(snapshot) in
             
-            let profileImageLink = snapshot.value as? String
-            let profileImageUrl = NSURL(string: profileImageLink!)
+            if let profileImageLink = snapshot.value as? String {
+            let profileImageUrl = NSURL(string: profileImageLink)
 //            URLSession.shared.dataTask(with: profileImageUrl as! URL, completionHandler: {
 //                (data, response, error) in
 //                
@@ -117,6 +117,7 @@ class ProfileEditViewController: UIViewController, UITableViewDelegate, UITableV
 //                })
                 
 //            }).resume()
+            }
         })
     }
     
