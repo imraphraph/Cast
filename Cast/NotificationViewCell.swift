@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class NotificationViewCell: UITableViewCell {
     
     @IBOutlet weak var profilePhoto: UIImageView!

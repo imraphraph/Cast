@@ -1,4 +1,12 @@
 //
+//  DetailNotifcationViewController.swift
+//  Cast
+//
+//  Created by khong fong tze on 12/10/2016.
+//  Copyright © 2016 com.cast. All rights reserved.
+//
+
+//
 //  DetailCastViewController.swift
 //  Cast
 //
@@ -9,11 +17,14 @@
 import UIKit
 import SDWebImage
 
-class DetailCastViewController: UIViewController {
-
-    var currentCast = [Cast]()
+class DetailNotificationViewController: UIViewController {
+    
+    
+    @IBOutlet var firstView: UIView!
+    var selectedNotification: CastNotification!
     var selectedCast:Cast!
     var username:String!
+    let message = "Hey I am interested with this job"
     
     @IBOutlet weak var refImageView: UIImageView!
     @IBOutlet weak var profilPicImage: UIImageView!
@@ -30,26 +41,35 @@ class DetailCastViewController: UIViewController {
     @IBOutlet weak var femaleIcon: UIImageView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+//        if let sc = selectedCast, let sn=selectedNotification {
+//            firstView.addSubview(firstView)
+//            print("here")
+//        } else {
+        
+        
+        guard let sc = selectedCast, let sn=selectedNotification else { return }
         
         self.profilPicImage.layer.cornerRadius = 10
         
         self.profilPicImage.layer.borderWidth = 3.0
         self.profilPicImage.layer.borderColor = UIColor.white.cgColor
-
+        
         requestSent.alpha = 0
         collaborateButton.alpha = 1
         
-        selectedCast = currentCast[0]
+        //selectedCast = currentCast[0]
         
-        self.titleLabel.text = selectedCast.castName
-        self.textView.text = selectedCast.description
+        self.titleLabel.text = selectedNotification.sender.role
+        self.textView.text = message
         self.locationLabel.text = selectedCast.location
         
         let imageUrl = NSURL(string: selectedCast.refImage)
         self.refImageView.sd_setImage(with: imageUrl as URL!)
-    
-        self.categoryLabel.text = selectedCast.category
+        
+        self.categoryLabel.text = selectedCast.castName
         let interval = selectedCast.eventDate
         let date = NSDate(timeIntervalSince1970: interval)
         
@@ -59,17 +79,26 @@ class DetailCastViewController: UIViewController {
         let dateString = dayTimePeriodFormatter.string(from: date as Date)
         self.dateLabel.text = dateString
         
-    //go to Database to find username and profile pic///
-        let UID = selectedCast.userUID
-        DataService.userRef.child(UID).child("username").observe(.value, with: { (snapshot) in
-            
-            self.username = snapshot.value as! String
-            self.usernameLabel.text = self.username
-        })
-        DataService.userRef.child(UID).child("profilePicture").observe(.value, with: { (snapshot) in
-            let profileImageUrl = NSURL(string:snapshot.value as! String)
+        //go to Database to find username and profile pic///
+//        let UID = selectedCast.userUID
+//        DataService.userRef.child(UID).child("username").observe(.value, with: { (snapshot) in
+//            
+//            self.username = snapshot.value as! String
+//            self.usernameLabel.text = self.username
+//        })
+        
+        self.usernameLabel.text = self.selectedNotification.sender.username
+        
+        if let collaboratorImage = self.selectedNotification.sender.profilePhotoURL {
+            let profileImageUrl = NSURL(string: collaboratorImage)
             self.profilPicImage.sd_setImage(with: profileImageUrl as URL!)
-        })
+        }
+            //else {
+//            DataService.userRef.child(UID).child("profilePicture").observe(.value, with: { (snapshot) in
+//              let profileImageUrl = NSURL(string:snapshot.value as! String)
+//              self.profilPicImage.sd_setImage(with: profileImageUrl as URL!)
+//            })
+//        }
         
         if selectedCast.photogNeeded == "true" {
             self.cameraIcon.isHidden = false
@@ -86,37 +115,49 @@ class DetailCastViewController: UIViewController {
         } else {
             self.maleIcon.isHidden = true
         }
+            
+        //}
     }
-
-        
+   
+    
     @IBAction func backButton(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
-
-
-    @IBAction func collaborateButtonPressed(_ sender: AnyObject) {
-
-        //print(Collaborator.Role.Photographer)
     
-        //create queue under the cast node
-        let collaborateDict = ["created_at":NSDate().timeIntervalSince1970, "userUID":Session.currentUserUid, "role": "photographer" ] as [String : Any]
-        let queueRef = DataService.rootRef.child("casts").child(selectedCast.castID).child("queue").childByAutoId()
-        queueRef.updateChildValues(collaborateDict)
+    
+    
+    @IBAction func collaborateButtonPressed(_ sender: AnyObject) {
+    
         
-        //create notification node
-        let notifyMessage = "interested to collaborate in \" \(selectedCast.castName) \" "
-        let notifyDict = ["created_at":NSDate().timeIntervalSince1970, "From":Session.currentUserUid, "To":selectedCast.userUID, "castID": selectedCast.castID, "message": notifyMessage, "status":"new", "queueID":queueRef.key] as [String : Any]
-        let notifyRef = DataService.rootRef.child("notification").childByAutoId()
-        notifyRef.updateChildValues(notifyDict)
-        
-        //add the notification to the Receiver User
-    DataService.userRef.child(selectedCast.userUID).child("being_notified").updateChildValues([notifyRef.key:true])
-        
-        //add the cast id to the Requestor -- to keep track what he has requested
-        DataService.userRef.child(Session.currentUserUid).child("request_collaboration").updateChildValues([selectedCast.castID:true])
-        
-        //keep track the notifcation id sent from the Requetor
-    DataService.userRef.child(Session.currentUserUid).child("send_notification").updateChildValues([notifyRef.key:true])
+        if let role = selectedNotification.sender.role {
+            var childnode = ""
+            
+            if role.lowercased().range(of: "model") != nil {
+                childnode = "model"
+            } else if role.lowercased().range(of: "grapher") != nil {
+                childnode = "photographer"
+            } else {
+                childnode = "photographer"
+            }
+            
+            let collaUpdateRef = DataService.rootRef.child("casts").child(selectedCast.castID).child(childnode)
+            
+            collaUpdateRef.updateChildValues(["UserUID":Session.currentUserUid])
+        }
+            //update the queue with status ACCEPT
+            let queueUpdateDict = ["responsed_at":NSDate().timeIntervalSince1970,"status":"accept"] as [String : Any]
+            
+            let queueRef = DataService.rootRef.child("casts").child(selectedNotification.castID).child("queue").child(selectedNotification.queueID)
+            queueRef.updateChildValues(queueUpdateDict)
+            
+            //update the notification with status RESPONSED
+            let notifyUpdateDict = ["responsed_at":NSDate().timeIntervalSince1970,"status": "accept"] as [String : Any]
+            
+            let notifyUpdateRef = DataService.rootRef.child("notification").child(selectedNotification.notifyUID)
+            notifyUpdateRef.updateChildValues(notifyUpdateDict)
+            
+    
+
         
         fadeIn(view: requestSent, delay: 0)
         collaborateButton.isHidden = true
@@ -135,7 +176,7 @@ class DetailCastViewController: UIViewController {
             view.alpha = 0
             }, completion: nil)
     }
-
+    
     
     @IBOutlet weak var panView: UIView!
     @IBAction func panGesture(_ sender: UIPanGestureRecognizer) {
@@ -151,16 +192,16 @@ class DetailCastViewController: UIViewController {
             print("\(maxTopPoint) hehe")
             
             if (newCenter.y >= maxTopPoint && newCenter.y <= maxLowPoint) {
-                 view.center = newCenter
+                view.center = newCenter
                 if sender.state == UIGestureRecognizerState.ended{
                     if newCenter.y <= maxTopPoint * 1.15 {
                         UIView.animate(withDuration: 0.7, animations: {view.center.y = maxTopPoint}, completion: nil)
-        
+                        
                     }else if newCenter.y >= maxTopPoint * 1.15 {
-                            UIView.animate(withDuration: 0.4, animations: {view.center.y = maxLowPoint}, completion: nil)
+                        UIView.animate(withDuration: 0.4, animations: {view.center.y = maxLowPoint}, completion: nil)
                     }
                 }
-                   sender.setTranslation( CGPoint(x:0, y: 0), in: self.view)
+                sender.setTranslation( CGPoint(x:0, y: 0), in: self.view)
             }
         }
     }
