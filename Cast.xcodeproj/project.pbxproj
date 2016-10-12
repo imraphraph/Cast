@@ -1083,7 +1083,7 @@
 				);
 				INFOPLIST_FILE = Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cast.Cast;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cast.Cast-keef-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cast/Cast-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1105,7 +1105,7 @@
 				);
 				INFOPLIST_FILE = Cast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cast.Cast;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cast.Cast-keef-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Cast/Cast-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
