@@ -133,8 +133,10 @@
         <scene sceneID="3b7-yP-chk">
             <objects>
                 <navigationController title="Notifications" automaticallyAdjustsScrollViewInsets="NO" id="Trx-27-35Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notification" image="bell@32" id="vkM-yJ-ZUb"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lH2-Y1-5iE">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lH2-Y1-5iE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -553,5 +555,8 @@
         <image name="female@240" width="120" height="120"/>
         <image name="location-pin-512" width="256" height="256"/>
         <image name="male@240" width="120" height="120"/>
+        <image name="bell@32" width="24" height="24"/>
+        <image name="confirm (2)" width="32" height="32"/>
+        <image name="cosplay" width="64" height="64"/>
     </resources>
 </document>

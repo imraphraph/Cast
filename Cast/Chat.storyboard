@@ -88,9 +88,11 @@
                             <outlet property="delegate" destination="abC-nN-1e8" id="lpx-vu-nWb"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Collaborators" image="group@32" id="Kxr-zV-75h"/>
                     <navigationItem key="navigationItem" title="Collaborators" id="2i6-zJ-pZm">
                         <barButtonItem key="backBarButtonItem" title="back" id="hCa-7F-kyk"/>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="3Dt-TM-PZU" kind="show" identifier="profileSegue" id="cyI-bP-Ksj"/>
                         <segue destination="yQy-2t-5eP" kind="show" identifier="chatSegue" id="Od8-Uw-4Hd"/>
@@ -112,7 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts_50" translatesAutoresizingMaskIntoConstraints="NO" id="pmU-FK-uoz">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts_50" translatesAutoresizingMaskIntoConstraints="NO" id="pmU-FK-uoz">
                                 <color key="backgroundColor" red="0.99598985910000004" green="0.99221748109999997" blue="0.9919851422" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="emS-b7-l2i"/>
@@ -277,5 +279,6 @@
     </scenes>
     <resources>
         <image name="Contacts_50" width="50" height="50"/>
+        <image name="group@32" width="24" height="24"/>
     </resources>
 </document>

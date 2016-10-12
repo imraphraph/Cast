@@ -28,10 +28,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Browse-->
+        <!--Home-->
         <scene sceneID="OUY-Jr-CxD">
             <objects>
-                <viewController storyboardIdentifier="FeedViewController" title="Browse" id="jgK-YP-0NM" customClass="FeedViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedViewController" id="jgK-YP-0NM" customClass="FeedViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NEm-xB-gA1"/>
                         <viewControllerLayoutGuide type="bottom" id="PHL-3l-mAS"/>
@@ -182,7 +182,9 @@
                             <constraint firstItem="UuJ-eZ-x05" firstAttribute="leading" secondItem="nt9-wW-coX" secondAttribute="leading" id="x8e-Jt-Buz"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="home@32" id="8CC-se-lZ7"/>
                     <navigationItem key="navigationItem" id="L4a-jL-HPI"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="image1" destination="exL-B7-yL7" id="TBE-oz-Wtb"/>
                         <outlet property="image2" destination="6Fv-cb-L0q" id="4fj-wu-4c2"/>
@@ -644,7 +646,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4509.6000000000004" y="-379.16041979010498"/>
+            <point key="canvasLocation" x="4486" y="-367"/>
         </scene>
     </scenes>
     <resources>
@@ -662,6 +664,7 @@
         <image name="dollar" width="128" height="256"/>
         <image name="female@16" width="16" height="16"/>
         <image name="female@240" width="120" height="120"/>
+        <image name="home@32" width="24" height="24"/>
         <image name="location-pin-512" width="256" height="256"/>
         <image name="location@16" width="16" height="16"/>
         <image name="male@16" width="16" height="16"/>
