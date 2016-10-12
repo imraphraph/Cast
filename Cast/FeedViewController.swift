@@ -23,9 +23,9 @@ class FeedViewController: UIViewController, UIScrollViewDelegate {
     var modelImage: [UIImage] = [
         UIImage(named: "Fashion")!,
         UIImage(named: "Wedding")!,
-        UIImage(named: "cosplay")!,
-        UIImage(named: "STOCK")!,
-        UIImage(named: "OTHERS")!
+        UIImage(named: "Cosplay")!,
+        UIImage(named: "Stock")!,
+        UIImage(named: "Others")!
     ]
   
     override func viewDidLoad() {
