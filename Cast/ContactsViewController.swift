@@ -16,6 +16,7 @@ class ContactsViewController: UITableViewController, ContactsCellDelegate {
     var sender : User!
     var receiver : User!
     var selectedReceiver : User!
+    var observeStatus = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +30,12 @@ class ContactsViewController: UITableViewController, ContactsCellDelegate {
     func loadUser() {
         
         DataService.userRef.observe(.childAdded, with: { (snapshot) in
-            if let user1 = User.init(snapshot: snapshot){
-                if user1.userUID != Session.currentUserUid {
-                    self.contactList.append(user1)
-                    self.tableView.reloadData()
+            if User.verifyIfComplete(snapshot: snapshot) {
+                if let user1 = User.init(snapshot: snapshot){
+                    if user1.userUID != Session.currentUserUid {
+                        self.contactList.append(user1)
+                        self.tableView.reloadData()
+                    }
                 }
             }
         })
@@ -65,8 +68,6 @@ class ContactsViewController: UITableViewController, ContactsCellDelegate {
     func goToChat (row:Int) {
         selectedReceiver = self.contactList[row]
         performSegue(withIdentifier: "chatSegue", sender: self)
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

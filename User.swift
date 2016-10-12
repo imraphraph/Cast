@@ -124,4 +124,16 @@ open class User{
             self.role = ""
         }
     }
+    
+    class func verifyIfComplete(snapshot: FIRDataSnapshot) -> Bool{
+        guard let dict = snapshot.value as? [String:AnyObject] else { return false}
+        
+        let requiredFields = ["username", "Role"]
+        for key in requiredFields {
+            if dict[key] == nil{
+                return false
+            }
+        }
+        return true
+    }
 }
