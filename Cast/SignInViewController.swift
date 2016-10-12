@@ -12,12 +12,16 @@ import FBSDKLoginKit
 
 
 class SignInViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var facebookOutlet: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var facebookLogin : FBSDKLoginManager?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        self.facebookOutlet.isHidden = true
         
         self.facebookLogin = FBSDKLoginManager()
 //        var profileImageLink : NSURL? = ""
