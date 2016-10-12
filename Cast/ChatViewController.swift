@@ -8,6 +8,9 @@
 
 import UIKit
 import JSQMessagesViewController
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class ChatViewController: JSQMessagesViewController {
 
@@ -17,6 +20,7 @@ class ChatViewController: JSQMessagesViewController {
     var receiver:User!
     var chatRoomId:String!
     var defaultChatRoomId:String!
+    var observeStatus = false
     
     
     override func viewDidLoad() {
@@ -128,6 +132,7 @@ class ChatViewController: JSQMessagesViewController {
         
         let userChatSenderDict = [receiver.userUID:chatRoomId] as [String : Any]
         let userChatsRef = DataService.rootRef.child("userchats").child(Session.currentUserUid)
+        
         userChatsRef.setValue(userChatSenderDict)
 
         let userChatReceiverDict = [Session.currentUserUid:chatRoomId] as [String : Any]
@@ -151,8 +156,11 @@ class ChatViewController: JSQMessagesViewController {
             //print(snapshot.value)
             if let chatRoomUID = snapshot.value as? String {
                 self.chatRoomId = chatRoomUID
-                print(self.chatRoomId)
-                self.observeMessages()
+                //print(self.chatRoomId)
+                if !self.observeStatus {
+                    self.observeStatus=true
+                    self.observeMessages()
+                }
             
             }
         })
@@ -160,7 +168,23 @@ class ChatViewController: JSQMessagesViewController {
         if let _ = self.chatRoomId  {
             
         } else {
-            self.chatRoomId = defaultChatRoomId
+            DataService.rootRef.child("userchats").child(receiver.userUID).child(Session.currentUserUid).observeSingleEvent(of: .value, with: { (snapshot) in
+                //print(snapshot.value)
+                if let chatRoomUID = snapshot.value as? String {
+                    self.chatRoomId = chatRoomUID
+                    //print(self.chatRoomId)
+                    if !self.observeStatus {
+                        self.observeStatus=true
+                        self.observeMessages()
+                    }
+                }
+            })
+            if let _ = self.chatRoomId  {
+                
+            }
+            else {
+                self.chatRoomId = defaultChatRoomId
+            }
         }
       
     }

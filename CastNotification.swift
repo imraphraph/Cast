@@ -20,7 +20,7 @@ class CastNotification {
     var message = ""
     var sender = User()
     var receiver = User()
-    
+    var castObj : Cast?
     
     init() {
         notifyUID=""
