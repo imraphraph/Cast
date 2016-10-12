@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="atS-ER-tMn">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="atS-ER-tMn">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -31,51 +31,58 @@
         <scene sceneID="7Mb-zO-kou">
             <objects>
                 <viewControllerPlaceholder storyboardName="Feed" id="qfy-3t-BRL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Feed" id="Bg3-w2-e0k"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Home" image="home@32" id="Bg3-w2-e0k"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1F-8V-u4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-406" y="-805"/>
+            <point key="canvasLocation" x="-587" y="-862"/>
         </scene>
         <!--Chat-->
         <scene sceneID="igk-T1-r48">
             <objects>
                 <viewControllerPlaceholder storyboardName="Chat" id="lyh-ia-M1e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collabs" id="Cru-81-1Qb"/>
+                    <tabBarItem key="tabBarItem" title="Collabs" image="group@32" id="Cru-81-1Qb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ofC-4c-sAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="-644"/>
+            <point key="canvasLocation" x="-407" y="-727"/>
         </scene>
         <!--Cast-->
         <scene sceneID="ly6-Lg-tBG">
             <objects>
                 <viewControllerPlaceholder storyboardName="Cast" id="CoI-oA-pBA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cast" id="6XO-2p-NM1"/>
+                    <tabBarItem key="tabBarItem" title="Cast" image="cast@32" id="6XO-2p-NM1"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFO-ee-kqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-408" y="-520"/>
+            <point key="canvasLocation" x="-358" y="-531"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="DKs-gM-vA5">
             <objects>
                 <viewControllerPlaceholder storyboardName="Notifications" id="db7-5u-Kxg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="search" id="KeX-OX-LRW"/>
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell@32" id="KeX-OX-LRW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LmS-uN-VfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="-367"/>
+            <point key="canvasLocation" x="-358" y="-390"/>
         </scene>
         <!--Profile-->
         <scene sceneID="qYw-4Q-N3R">
             <objects>
                 <viewControllerPlaceholder storyboardName="Profile" id="Fmk-wV-W7a" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notifications" id="Kvz-cT-XyW"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile@32" id="Kvz-cT-XyW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhP-Hh-wpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-289"/>
+            <point key="canvasLocation" x="-469" y="-232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bell@32" width="24" height="24"/>
+        <image name="cast@32" width="24" height="24"/>
+        <image name="group@32" width="24" height="24"/>
+        <image name="home@32" width="24" height="24"/>
+        <image name="profile@32" width="24" height="24"/>
+    </resources>
 </document>

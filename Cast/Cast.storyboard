@@ -324,10 +324,10 @@
             </objects>
             <point key="canvasLocation" x="5198" y="-1387"/>
         </scene>
-        <!--New Cast-->
+        <!--Cast-->
         <scene sceneID="sf3-YX-Gsw">
             <objects>
-                <viewController storyboardIdentifier="firstVC" title="New Cast" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pe2-U8-X3m" customClass="TitleViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="firstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pe2-U8-X3m" customClass="TitleViewController" customModule="Cast" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tzZ-Xg-q3X"/>
                         <viewControllerLayoutGuide type="bottom" id="76c-mf-EnS"/>
@@ -427,7 +427,7 @@
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="upload an image reference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ara-3B-yxW">
                                                                 <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="textColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cay-ew-cbB">
@@ -757,6 +757,8 @@
                             <constraint firstAttribute="trailing" secondItem="umS-of-X2h" secondAttribute="trailing" id="uRP-UD-32I"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cast" image="cast@32" id="J3q-D3-bF2"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cashButton" destination="gsV-qB-c65" id="5Os-A0-vpc"/>
                         <outlet property="dateOK" destination="AVm-AE-05C" id="AdY-eT-bkN"/>
@@ -808,6 +810,7 @@
         <image name="barter" width="500" height="500"/>
         <image name="calendar-256" width="128" height="128"/>
         <image name="camera" width="499" height="384"/>
+        <image name="cast@32" width="24" height="24"/>
         <image name="check-box-empty" width="64" height="64"/>
         <image name="dollar" width="128" height="256"/>
         <image name="female@48" width="24" height="24"/>
