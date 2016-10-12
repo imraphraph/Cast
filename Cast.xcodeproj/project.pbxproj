@@ -648,7 +648,6 @@
 				TargetAttributes = {
 					53DEFDEF1D9A1C1400078C36 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = F35T3HFQ4T;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -1080,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Cast/Cast.entitlements;
-				DEVELOPMENT_TEAM = F35T3HFQ4T;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cast",
@@ -1102,7 +1101,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Cast/Cast.entitlements;
-				DEVELOPMENT_TEAM = F35T3HFQ4T;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Cast",
